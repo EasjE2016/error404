@@ -43,6 +43,7 @@ namespace kodning.ViewModel
         public event PropertyChangedEventHandler PropertyChanged;
         public Madplan selectedMadplan { get; set; }
         public MadplanListe MadplanListen { get; private set; }
+        public Madplan NewMad { get; private set; }
 
 
         // til JSON
@@ -87,6 +88,8 @@ namespace kodning.ViewModel
         public MadPlanViewModel()
         {
             MadplanListen = new MadplanListe();
+            localfolder = ApplicationData.Current.LocalFolder;
+            NewMad = new Madplan();
         }
     }
 }

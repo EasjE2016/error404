@@ -8,6 +8,10 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="288" Margin="10,200,0,0" VerticalAlignment="Top" Width="340" ItemsSource="{Binding}" SelectedItem="{Binding}">
+            <ListView.DataContext>
+                <local:MadplanListe/>
+            </ListView.DataContext>
+        </ListView>
     </Grid>
 </Page>
