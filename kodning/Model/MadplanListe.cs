@@ -22,14 +22,15 @@ namespace kodning
             string json = JsonConvert.SerializeObject(this);
             return json;
         }
-        //public void IndsætJson(string jsonText)
-        //{
-        //    List<MadplanListe> nyListe = JsonConvert.DeserializeObject<List<Madplan>>(jsonText);
+        public void IndsætJson(string jsonText)
+        {
+            List<Madplan> nyListe = JsonConvert.DeserializeObject<List<Madplan>>(jsonText);
+                
 
-        //    foreach (var Medarbejder in nyListe)
-        //    {
-        //        this.Add(Madplan);
-        //    }
-        //}
+            foreach (var Madplan in nyListe)
+            {
+                this.Add(Madplan);
+            }
+        }
     }
 }

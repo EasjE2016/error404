@@ -68,7 +68,7 @@ namespace kodning.ViewModel
                 this.MadplanListen.Clear();
 
                 //metoden på medarbejderlisten
-                MadplanListe.IndsætJson(jsonText);
+                MadplanListen.IndsætJson(jsonText);
 
                 // Try og catch for at fange en exception for at undgå grimme fejlmeddelser
             }
