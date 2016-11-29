@@ -10,10 +10,11 @@ namespace kodning
     {
         public string Madplannen { get; set; }
         public string Ingredienser { get; set; }
+        public string ugeDag { get; set; }
 
         public override string ToString()
         {
-            return "Ret: " + Madplannen + ". " + "Ingredienser: " + Ingredienser;
+            return "Ugedag = " + ugeDag + "Ret: " + Madplannen + ". " + "Ingredienser: " + Ingredienser;
         }
     }
 }

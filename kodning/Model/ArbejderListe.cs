@@ -16,6 +16,20 @@ namespace kodning.Model
             Nr1.UgeDag = "Mandag";
             Nr1.UgeNR = 48;
         }
-    
+        //public string GetJson()
+        //{
+        //    string json = JsonConvert.SerializeObject(this);
+        //    return json;
+        //}
+        //public void IndsætJson(string jsonText)
+        //{
+        //    List<Madplan> nyListe2 = JsonConvert.DeserializeObject<List<Madplan>>(jsonText);
+
+
+        //    foreach (var ArbejderOversigt in nyListe2)
+        //    {
+        //        this.Add(ArbejderOversigt);
+        //    }
+        //}
     }
 }
