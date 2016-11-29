@@ -7,8 +7,7 @@ using System.ComponentModel;
 using Windows.Storage;
 using Newtonsoft.Json;
 using Windows.UI.Popups;
-
-
+using kodning.Model;
 
 namespace kodning.ViewModel
 {
@@ -44,6 +43,7 @@ namespace kodning.ViewModel
         public Madplan selectedMadplan { get; set; }
         public MadplanListe MadplanListen { get; private set; }
         public Madplan NewMad { get; private set; }
+        
 
 
         // til JSON
@@ -90,6 +90,12 @@ namespace kodning.ViewModel
             MadplanListen = new MadplanListe();
             localfolder = ApplicationData.Current.LocalFolder;
             NewMad = new Madplan();
+            
         }
+
+
+
+        
+        
     }
 }
