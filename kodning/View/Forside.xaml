@@ -8,6 +8,14 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Menu"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Fællesspisning" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="segoe print" FontSize="40"/>
+        <TextBlock Grid.Row="1" Text="i Boligvænget" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="segoe print" FontSize="40"/>
     </Grid>
 </Page>
