@@ -22,7 +22,7 @@
            
         </Grid>
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Menu"/>
-        <TextBlock Grid.Row="0" Grid.Column="1" Text="Fællesspisning" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="segoe print" FontSize="90"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Fællesspisning" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="segoe print" FontSize="40"/>
         <TextBlock Grid.Row="1" Text="Uge" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50"/>
         <Grid Grid.Row="2">
             <Grid.RowDefinitions>
