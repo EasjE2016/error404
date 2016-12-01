@@ -112,6 +112,9 @@
     <Compile Include="View\MadplanUge48.xaml.cs">
       <DependentUpon>MadplanUge48.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Tilmelding.xaml.cs">
+      <DependentUpon>Tilmelding.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -148,6 +151,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MadplanUge48.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tilmelding.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

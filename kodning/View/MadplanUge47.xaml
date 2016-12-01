@@ -54,7 +54,7 @@
             <TextBlock Grid.Row="3" Style="{StaticResource UgedageStyle}" Text="Tirsdag"/>
             <ListView Grid.Row="4" x:Name="Tirsdag47MadPlanList"/>
             <ListView Grid.Row="5" x:Name="Tirsdag47Ingrediens"/>
-            <TextBlock Grid.Row="6" Style="{StaticResource UgedageStyle}" Text="Onsdag"/>
+            <TextBlock Grid.Row="6" Style="{StaticResource UgedageStyle}" Text="Onsdag" Margin="0,4.4,0,0" VerticalAlignment="Top"/>
             <ListView Grid.Row="7" x:Name="Onsdag47MadPlan"/>
             <ListView Grid.Row="8" x:Name="Onsdag47Ingrediens"/>
             <TextBlock Grid.Row="9" Style="{StaticResource UgedageStyle}" Text="Torsdag"/>
