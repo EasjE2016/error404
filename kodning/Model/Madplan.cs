@@ -10,10 +10,16 @@ namespace kodning
     {
         public string Madplannen { get; set; }
         public string Ingredienser { get; set; }
+        public string UgeDag { get; set; }
+        public int UgeNr { get; set; }
+        public double Pris { get; set; }
+        
+        
+
 
         public override string ToString()
         {
-            return "Ret: " + Madplannen + ". " + "Ingredienser: " + Ingredienser;
+            return "Uge: "+UgeNr + " Dag: "+ UgeDag + " Ret: " + Madplannen + " Ingredienser: " + Ingredienser + " pris " + Pris;
         }
     }
 }

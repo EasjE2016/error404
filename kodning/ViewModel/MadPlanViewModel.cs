@@ -7,6 +7,7 @@ using System.ComponentModel;
 using Windows.Storage;
 using Newtonsoft.Json;
 using Windows.UI.Popups;
+using kodning.RelayCommand;
 
 
 
@@ -32,7 +33,7 @@ namespace kodning.ViewModel
         }
 
         //Herunder er RelayCommands.
-        public RelayCommand.RelayCommand AddMadPlan { get; set; }
+        public RelayCommand.RelayCommand AddMadPlanCommand { get; set; }
 
         // Stop RelayCommands.
 
