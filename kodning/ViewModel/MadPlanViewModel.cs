@@ -122,9 +122,7 @@ namespace kodning.ViewModel
             AddMadPlanCommand = new RelayCommand.RelayCommand(AddNewMadplan);
             RemoveMadplanCommand = new RelayCommand.RelayCommand(RemoveMadPlan);
             LoadMadplanCommand = new RelayCommand.RelayCommand(HentdataFraDiskAsync);
-            SaveMadplanCommand = new RelayCommand.RelayCommand(GemDataTilDiskAsync);
-
-            
+            SaveMadplanCommand = new RelayCommand.RelayCommand(GemDataTilDiskAsync);           
         }
     }
 }

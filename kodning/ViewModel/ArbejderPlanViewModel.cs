@@ -15,10 +15,10 @@ namespace kodning.ViewModel
     {
         public Arbejdere SelectedArbejder
         {
-            get { return SelectedArbejder; }
+            get { return selectedArbejder; }
             set
             {
-                SelectedArbejder = value;
+                selectedArbejder = value;
                 OnPropertyChanged(nameof(SelectedArbejder));
             }
         }
@@ -74,6 +74,8 @@ namespace kodning.ViewModel
         public event PropertyChangedEventHandler PropertyChanged;
         public ArbejderListe ArbejderListen { get; private set; }
         public Arbejdere NewArbejder { get; set; }
+        public Arbejdere selectedArbejder { get; set; }
+
 
         public ArbejderPlanViewModel()
         {
@@ -86,6 +88,5 @@ namespace kodning.ViewModel
             LoadArberjderCommand = new RelayCommand.RelayCommand(RemoveArbejder);
             SaveArberjderCommand = new RelayCommand.RelayCommand(GemDataTilDiskAsync); 
         }
-
     }
 }
