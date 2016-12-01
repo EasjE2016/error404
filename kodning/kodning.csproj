@@ -97,8 +97,8 @@
     </Compile>
     <Compile Include="Model\Madplan.cs" />
     <Compile Include="Model\MadplanListe.cs" />
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="EditMadplan.xaml.cs">
+      <DependentUpon>EditMadplan.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelayCommand\RelayCommand.cs" />
@@ -125,7 +125,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainPage.xaml">
+    <Page Include="EditMadplan.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
