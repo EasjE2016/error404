@@ -17,8 +17,6 @@ namespace kodning.ViewModel
 
         public Madplan SelectedMadplan
         {
-            
-
             get { return selectedMadplan; }
             set
             {
