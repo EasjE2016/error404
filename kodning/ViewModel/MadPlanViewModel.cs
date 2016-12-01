@@ -34,7 +34,9 @@ namespace kodning.ViewModel
 
         //Herunder er RelayCommands.
         public RelayCommand.RelayCommand AddMadPlanCommand { get; set; }
-
+        public RelayCommand.RelayCommand DeleteMadPlanCommand { get; set; }
+        public RelayCommand.RelayCommand SaveMadPlanCommand { get; set; }
+        public RelayCommand.RelayCommand NewMadPlanCommand { get; set; }
         // Stop RelayCommands.
 
         // til RelayCommands.
