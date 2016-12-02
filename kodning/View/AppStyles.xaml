@@ -8,13 +8,13 @@
     </Style>
     
     <Style x:Key="SkriftStyle" TargetType="TextBlock">
-        <Setter Property="FontFamily" Value="segoe print"/>
+        <Setter Property="FontFamily" Value="calibri"/>
     </Style>
     
     <Style x:Key="OverskriftStyle" TargetType="TextBlock" BasedOn="{StaticResource SkriftStyle}">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="FontSize" Value="40"/>
+        <Setter Property="FontSize" Value="90"/>
     </Style>
 
     <Style x:Key="Overskrift2" TargetType="TextBlock" BasedOn="{StaticResource SkriftStyle}">
