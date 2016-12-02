@@ -7,60 +7,45 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Margin="10,10,10,10" Style="{StaticResource GridStyle}">
+    <Grid Margin="10,20,10,20" Style="{StaticResource GridStyle}">
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="7*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="10*"/>
-            </Grid.ColumnDefinitions>
 
-        </Grid>
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="Menu"/>
-        <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource OverskriftStyle}" Text="Fællesspisning"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Bolig nr. " Margin="0,0,150,100" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="50"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="48" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="50" Margin="0,0,70,0"/>
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Ændre tilmelding" FontSize="50"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Ændre menu" FontSize="50"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Se kokke og hjælpere" FontSize="50"/>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+            </Grid>
+           
+            
         </Grid>
-        
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="Uge 47" Style="{StaticResource Overskrift2}"/>
-        <Grid Grid.Row="2">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Style="{StaticResource UgedageStyle}" Text="Mandag"/>
-            <ListView Grid.Row="1" x:Name="Mandag47MadPlanList"/>
-            <ListView Grid.Row="2" x:Name="Mandag47Ingrediens"/>
-            <TextBlock Grid.Row="3" Style="{StaticResource UgedageStyle}" Text="Tirsdag"/>
-            <ListView Grid.Row="4" x:Name="Tirsdag47MadPlanList"/>
-            <ListView Grid.Row="5" x:Name="Tirsdag47Ingrediens"/>
-            <TextBlock Grid.Row="6" Style="{StaticResource UgedageStyle}" Text="Onsdag" Margin="0,4.4,0,0" VerticalAlignment="Top"/>
-            <ListView Grid.Row="7" x:Name="Onsdag47MadPlan"/>
-            <ListView Grid.Row="8" x:Name="Onsdag47Ingrediens"/>
-            <TextBlock Grid.Row="9" Style="{StaticResource UgedageStyle}" Text="Torsdag"/>
-            <ListView Grid.Row="10" x:Name="Torsdag47MadPlan"/>
-            <ListView Grid.Row="11" x:Name="Torsdag47Ingrediens"/>
-        </Grid>
+
+        <Button Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Tilmeld" FontSize="50" Width="200" Height="100"  Margin="0,0,50,40"/>
+    
     </Grid>
     
 </Page>

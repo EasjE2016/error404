@@ -109,9 +109,6 @@
     <Compile Include="RelayCommand\RelayCommand.cs" />
     <Compile Include="ViewModel\ArbejderPlanViewModel.cs" />
     <Compile Include="ViewModel\MadPlanViewModel.cs" />
-    <Compile Include="View\MadplanUge48.xaml.cs">
-      <DependentUpon>MadplanUge48.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Tilmelding.xaml.cs">
       <DependentUpon>Tilmelding.xaml</DependentUpon>
     </Compile>
@@ -147,10 +144,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MadplanUge47.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\MadplanUge48.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
