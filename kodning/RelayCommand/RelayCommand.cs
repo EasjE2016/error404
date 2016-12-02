@@ -24,5 +24,14 @@ namespace kodning.RelayCommand
         {
             this.execute = execute;
         }
+
+
+
+        //Til at oprette ny på liste så den ikke overwriter.
+        //Model.Medarbejder TempMedarbejder = new Model.Medarbejder();
+        //TempMedarbejder.funktion = NewMedarbejder.funktion;
+        //        TempMedarbejder.ID = NewMedarbejder.ID;
+        //        TempMedarbejder.navn = NewMedarbejder.navn;
+                //Medarbejderliste.Add(TempMedarbejder);
     }
 }
