@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Margin="10,10,10,10" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Margin="10,10,10,10" Style="{StaticResource GridStyle}">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>

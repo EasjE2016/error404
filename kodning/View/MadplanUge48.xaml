@@ -1,13 +1,14 @@
 ﻿<Page
-    x:Class="kodning.View.MadplanUge48"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:kodning.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:kodning="using:kodning"
+    x:Class="kodning.View.MadplanUge48"
     mc:Ignorable="d">
 
-    <Grid Margin="10,10,10,10" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Margin="10,10,10,10" Style="{StaticResource GridStyle}">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -22,7 +23,7 @@
             </Grid.ColumnDefinitions>
 
         </Grid>
-        
+
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Menu"/>
         <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource OverskriftStyle}" Text="Fællesspisning"/>
 
@@ -44,18 +45,19 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Style="{StaticResource UgedageStyle}" Text="Mandag"/>
-            <ListView Grid.Row="1" x:Name="Mandag48MadPlanList"/>
+            <ListView Grid.Row="1" x:Name="Mandag48MadPlanList">
+            </ListView>
             <ListView Grid.Row="2" x:Name="Mandag48Ingrediens"/>
             <TextBlock Grid.Row="3" Style="{StaticResource UgedageStyle}" Text="Tirsdag"/>
             <ListView Grid.Row="4" x:Name="Tirsdag48MadPlanList"/>
             <ListView Grid.Row="5" x:Name="Tirsdag48Ingrediens"/>
             <TextBlock Grid.Row="6" Style="{StaticResource UgedageStyle}" Text="Onsdag"/>
             <ListView Grid.Row="7" x:Name="Onsdag48MadPlan"/>
-            <ListView Grid.Row="8" x:Name="Onsdag48Ingrediens" Height="44" Margin="0,0,0,43" Grid.RowSpan="2" VerticalAlignment="Bottom"/>
+            <ListView Grid.Row="8" x:Name="Onsdag48Ingrediens"/>
             <TextBlock Grid.Row="9" Style="{StaticResource UgedageStyle}" Text="Torsdag"/>
             <ListView Grid.Row="10" x:Name="Torsdag48MadPlan"/>
             <ListView Grid.Row="11" x:Name="Torsdag48Ingrediens"/>
         </Grid>
-        
+
     </Grid>
 </Page>

@@ -7,7 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Margin="10,10,10,10" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Margin="10,10,10,10" Style="{StaticResource GridStyle}">
+
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -30,7 +32,7 @@
         </Grid>
 
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Menu"/>
-        <TextBlock Grid.Row="0" Style="{StaticResource OverskriftStyle}" Text="Fællesspisning" HorizontalAlignment="Left" Margin="68,6,0,6.2"/>
+        <TextBlock Grid.Row="0" Style="{StaticResource OverskriftStyle}" Text="Fællesspisning"/>
         <TextBlock Grid.Row="1" Style="{StaticResource OverskriftStyle}" Text="i Boligvænget"/>
 
         <Grid Grid.Row="2">
