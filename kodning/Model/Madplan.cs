@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace kodning
 {
-    class Madplan
+    public class Madplan
     {
         public string Madplannen { get; set; }
         public string Ingredienser { get; set; }
+        
 
         public override string ToString()
         {

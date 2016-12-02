@@ -15,6 +15,7 @@ namespace kodning
             Madplan Mandag = new Madplan();
             Mandag.Madplannen = "Boller i karry";
             Mandag.Ingredienser = "Kød, karry, æbler";
+            
             Add(Mandag);
         }
         public string GetJson()

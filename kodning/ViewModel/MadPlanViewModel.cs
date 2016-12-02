@@ -13,6 +13,8 @@ namespace kodning.ViewModel
 {
     class MadPlanViewModel : INotifyPropertyChanged
     {
+
+
         public Madplan SelectedMadplan
         {
             get { return selectedMadplan; }
@@ -22,6 +24,33 @@ namespace kodning.ViewModel
                 OnPropertyChanged(nameof(SelectedMadplan));
             }
         }
+
+        public void AddNewMadplan()
+        {
+            MadplanListen.Add(NewMad);
+        }
+
+        public void RemoveMadPlan()
+        {
+            MadplanListen.Remove(SelectedMadplan);
+        }
+
+        StorageFolder localfolder = null;
+
+        private readonly string Madplanfilnavn = "JsonText.json";
+
+        public async void HentdataFraDiskAsync()
+        {
+            this.MadplanListen.Clear();
+
+            StorageFile Madplanfile = await localfolder.GetFileAsync(Madplanfilnavn);
+            string jsonText = await FileIO.ReadTextAsync(Madplanfile);
+
+            MadplanListen.IndsætJson(jsonText);
+        } 
+
+
+
         protected virtual void OnPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)
@@ -31,11 +60,10 @@ namespace kodning.ViewModel
         }
 
         //Herunder er RelayCommands.
-        public RelayCommand.RelayCommand AddMadPlan { get; set; }
-
-        // Stop RelayCommands.
-
-        // til RelayCommands.
+        public RelayCommand.RelayCommand AddMadPlanCommand { get; set; }
+        public RelayCommand.RelayCommand RemoveMadplanCommand { get; set; }
+        public RelayCommand.RelayCommand LoadMadplanCommand { get; set; }
+        public RelayCommand.RelayCommand SaveMadplanCommand { get; set; }
 
         // Slut af Relays.
 
@@ -47,13 +75,13 @@ namespace kodning.ViewModel
 
 
         // til JSON
-        StorageFolder localfolder = null;
-        private readonly string filnavn = "JsonText.json";
+        
+        private readonly string file = "JsonText.json";
 
         public async void GemDataTilDiskAsync()
         {
             string jsonText = this.MadplanListen.GetJson();
-            StorageFile file = await localfolder.CreateFileAsync(filnavn, CreationCollisionOption.ReplaceExisting);
+            StorageFile file = await localfolder.CreateFileAsync(Madplanfilnavn, CreationCollisionOption.ReplaceExisting);
             await FileIO.WriteTextAsync(file, jsonText);
         }
 
@@ -62,7 +90,7 @@ namespace kodning.ViewModel
 
             try
             {
-                StorageFile file = await localfolder.GetFileAsync(filnavn);
+                StorageFile file = await localfolder.GetFileAsync(Madplanfilnavn);
 
                 string jsonText = await FileIO.ReadTextAsync(file);
 
@@ -90,12 +118,11 @@ namespace kodning.ViewModel
             MadplanListen = new MadplanListe();
             localfolder = ApplicationData.Current.LocalFolder;
             NewMad = new Madplan();
-            
+            SelectedMadplan = new Madplan();
+            AddMadPlanCommand = new RelayCommand.RelayCommand(AddNewMadplan);
+            RemoveMadplanCommand = new RelayCommand.RelayCommand(RemoveMadPlan);
+            LoadMadplanCommand = new RelayCommand.RelayCommand(HentdataFraDiskAsync);
+            SaveMadplanCommand = new RelayCommand.RelayCommand(GemDataTilDiskAsync);           
         }
-
-
-
-        
-        
     }
 }
