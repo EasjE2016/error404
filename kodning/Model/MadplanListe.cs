@@ -12,11 +12,14 @@ namespace kodning
     {
         public MadplanListe()
         {
-            Madplan Mandag = new Madplan();
-            Mandag.Madplannen = "Boller i karry";
-            Mandag.Ingredienser = "Kød, karry, æbler";
+            Madplan MadplanInstance = new Madplan();
+            MadplanInstance.Madplannen = "";
+
+            this.Add(new Madplan() { Ingredienser = "Salt, Peper", UgeDag="Mandag", Madplannen="Kylling og kartoffler", UgeNr= 41, Pris= 150 });
+            this.Add(new Madplan() { Ingredienser = "Ost, Skinke", UgeDag = "Fredag",  Madplannen = "Pariser toast", UgeNr = 42, Pris = 110 });
+            this.Add(new Madplan() { Ingredienser = "Sved, orve, orme", UgeDag = "Tirsdag", Madplannen = "Orve testikler", UgeNr = 43, Pris = 170 });
             
-            Add(Mandag);
+
         }
         public string GetJson()
         {

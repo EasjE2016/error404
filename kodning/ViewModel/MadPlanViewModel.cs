@@ -49,8 +49,6 @@ namespace kodning.ViewModel
             MadplanListen.IndsætJson(jsonText);
         } 
 
-
-
         protected virtual void OnPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)
