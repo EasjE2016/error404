@@ -10,7 +10,7 @@
     <Grid Margin="10,20,10,20" Style="{StaticResource GridStyle}">
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="5*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -29,11 +29,13 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Grid.Column="0" Text="Ændre tilmelding" FontSize="50"/>
             <TextBlock Grid.Row="1" Grid.Column="0" Text="Ændre menu" FontSize="50"/>
             <TextBlock Grid.Row="2" Grid.Column="0" Text="Se kokke og hjælpere" FontSize="50"/>
             <TextBlock Grid.Row="3" Grid.Column="0" Text="Er du kok?" FontSize="50"/>
+            <TextBlock x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Text="Særarrangementets navn" FontSize="50"/>
             </Grid>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
@@ -53,6 +55,13 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="Uge 47" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
                 <TextBlock Grid.Row="1" Grid.Column="0" Text="Mandag"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Menu for Mandag" FontSize="40"/>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Tirsdag"/>
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Menu for tirsdag" FontSize="40"/>
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="Onsdag"/>
+                <TextBlock Grid.Row="6" Grid.Column="0" Text="Menu for onsdag" FontSize="40"/>
+                <TextBlock Grid.Row="7" Grid.Column="0" Text="Torsdag"/>
+                <TextBlock Grid.Row="8" Grid.Column="0" Text="Menu for torsdag" FontSize="40"/>
                 <TextBlock Grid.Row="0" Grid.Column="1" Text="Uge 48"/>
                 <TextBlock Grid.Row="1" Grid.Column="1" Text="Mandag"/>
                 
@@ -68,7 +77,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox Grid.Row="1" Grid.Column="0" Background="White" Width="50"/>
+                    <TextBox x:Name="MandagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50"/>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -77,7 +86,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="7-15 år"/>
                     </Grid>
-                    <TextBox Grid.Row="1" Grid.Column="1" Background="White" Width="50"/>
+                    <TextBox x:Name="MandagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50"/>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -86,7 +95,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="3-6 år"/>
                     </Grid>
-                    <TextBox Grid.Row="1" Grid.Column="2" Background="White" Width="50"/>
+                    <TextBox x:Name="MandagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50"/>
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -95,7 +104,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
                     </Grid>
-                    <TextBox Grid.Row="1" Grid.Column="3" Background="White" Width="50"/>
+                    <TextBox x:Name="Mandag02" Grid.Row="1" Grid.Column="3" Background="White" Width="50"/>
                 </Grid>
                 
                 <TextBlock Grid.Row="3" Grid.Column="1" Text="Tirsdag"/>
@@ -112,7 +121,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox Grid.Row="1" Grid.Column="0" Background="White" Width="50"/>
+                    <TextBox x:Name="TirsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50"/>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -121,7 +130,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="7-15 år"/>
                     </Grid>
-                    <TextBox Grid.Row="1" Grid.Column="1" Background="White" Width="50"/>
+                    <TextBox x:Name="TirsagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50"/>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -130,7 +139,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="3-6 år"/>
                     </Grid>
-                    <TextBox Grid.Row="1" Grid.Column="2" Background="White" Width="50"/>
+                    <TextBox x:Name="TirsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50"/>
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -139,7 +148,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
                     </Grid>
-                    <TextBox Grid.Row="1" Grid.Column="3" Background="White" Width="50"/>
+                    <TextBox x:Name="TirsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50"/>
                 </Grid>
                 
                 <TextBlock Grid.Row="5" Grid.Column="1" Text="Onsdag"/>
@@ -156,7 +165,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox Grid.Row="1" Grid.Column="0" Background="White" Width="50"/>
+                    <TextBox x:Name="OnsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50"/>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -165,7 +174,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="7-15 år"/>
                     </Grid>
-                    <TextBox Grid.Row="1" Grid.Column="1" Background="White" Width="50"/>
+                    <TextBox x:Name="OnsdagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50"/>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -174,7 +183,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="3-6 år"/>
                     </Grid>
-                    <TextBox Grid.Row="1" Grid.Column="2" Background="White" Width="50"/>
+                    <TextBox x:Name="OnsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50"/>
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -183,7 +192,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
                     </Grid>
-                    <TextBox Grid.Row="1" Grid.Column="3" Background="White" Width="50"/>
+                    <TextBox x:Name="OnsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50"/>
                 </Grid>
                 
                 <TextBlock Grid.Row="7" Grid.Column="1" Text="Torsdag"/>
@@ -200,7 +209,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox Grid.Row="1" Grid.Column="0" Background="White" Width="50"/>
+                    <TextBox x:Name="TorsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50"/>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -209,7 +218,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="7-15 år"/>
                     </Grid>
-                    <TextBox Grid.Row="1" Grid.Column="1" Background="White" Width="50"/>
+                    <TextBox x:Name="TorsdagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50"/>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -218,7 +227,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="3-6 år"/>
                     </Grid>
-                    <TextBox Grid.Row="1" Grid.Column="2" Background="White" Width="50"/>
+                    <TextBox x:Name="TorsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50"/>
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -227,7 +236,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
                     </Grid>
-                    <TextBox Grid.Row="1" Grid.Column="3" Background="White" Width="50"/>
+                    <TextBox x:Name="TorsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50"/>
                 </Grid>
             </Grid>
         </Grid>
