@@ -32,9 +32,11 @@ namespace kodning
             this.Frame.Navigate(typeof(kodning.View.Tobias), null);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Tilmelding1_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(kodning.View.Tilmelding), null);
+            this.Frame.Navigate(typeof(kodning.View.MadplanUge47), null);
         }
+
+
     }
 }
