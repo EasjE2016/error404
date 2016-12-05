@@ -1,0 +1,54 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kodning"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModel="using:kodning.ViewModel"
+    x:Class="kodning.MainPage1"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="155" Margin="10,10,0,0" VerticalAlignment="Top" Width="412" ItemsSource="{Binding MadplanListen}">
+            <ListView.DataContext>
+                <ViewModel:MadPlanViewModel/>
+            </ListView.DataContext>
+        </ListView>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="29,208,0,0" TextWrapping="Wrap" Text="{Binding NewMad.UgeNr, Mode=TwoWay}" VerticalAlignment="Top">
+            <TextBox.DataContext>
+                <ViewModel:MadPlanViewModel/>
+            </TextBox.DataContext>
+        </TextBox>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="121,208,0,0" TextWrapping="Wrap" Text="{Binding NewMad.UgeDag, Mode=TwoWay}" VerticalAlignment="Top">
+            <TextBox.DataContext>
+                <ViewModel:MadPlanViewModel/>
+            </TextBox.DataContext>
+        </TextBox>
+        <TextBox x:Name="textBox1_Copy" HorizontalAlignment="Left" Margin="215,208,0,0" TextWrapping="Wrap" Text="{Binding NewMad.Madplannen, Mode=TwoWay}" VerticalAlignment="Top">
+            <TextBox.DataContext>
+                <ViewModel:MadPlanViewModel/>
+            </TextBox.DataContext>
+        </TextBox>
+        <TextBox x:Name="textBox1_Copy1" HorizontalAlignment="Left" Margin="309,208,0,0" TextWrapping="Wrap" Text="{Binding NewMad.Pris, Mode=TwoWay}" VerticalAlignment="Top">
+            <TextBox.DataContext>
+                <ViewModel:MadPlanViewModel/>
+            </TextBox.DataContext>
+        </TextBox>
+        <Button x:Name="button" Content="{Binding SaveMadplanCommand}" HorizontalAlignment="Left" Margin="28,293,0,0" VerticalAlignment="Top">
+            <Button.DataContext>
+                <ViewModel:MadPlanViewModel/>
+            </Button.DataContext>
+        </Button>
+        <Button x:Name="button1" Content="{Binding RemoveMadplanCommand}" HorizontalAlignment="Left" Margin="28,352,0,0" VerticalAlignment="Top">
+            <Button.DataContext>
+                <ViewModel:MadPlanViewModel/>
+            </Button.DataContext>
+        </Button>
+        <Button x:Name="button2" Content="{Binding LoadMadplanCommand}" HorizontalAlignment="Left" Margin="29,417,0,0" VerticalAlignment="Top">
+            <Button.DataContext>
+                <ViewModel:MadPlanViewModel/>
+            </Button.DataContext>
+        </Button>
+
+    </Grid>
+</Page>

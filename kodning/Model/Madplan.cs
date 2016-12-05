@@ -9,7 +9,6 @@ namespace kodning
     class Madplan
     {
         public string Madplannen { get; set; }
-        public string Ingredienser { get; set; }
         public string UgeDag { get; set; }
         public int UgeNr { get; set; }
         public double Pris { get; set; }
@@ -19,7 +18,7 @@ namespace kodning
 
         public override string ToString()
         {
-            return "Uge: "+UgeNr + " Dag: "+ UgeDag + " Ret: " + Madplannen + " Ingredienser: " + Ingredienser + " pris " + Pris;
+            return "Uge: "+UgeNr + " Dag: "+ UgeDag + " Ret: " + Madplannen + " pris " + Pris;
         }
     }
 }
