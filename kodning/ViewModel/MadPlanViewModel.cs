@@ -14,6 +14,8 @@ namespace kodning.ViewModel
     class MadPlanViewModel : INotifyPropertyChanged
     {
 
+        public int NYtUgenr { get; set; }
+
 
         public Madplan SelectedMadplan
         {
@@ -27,7 +29,14 @@ namespace kodning.ViewModel
 
         public void AddNewMadplan()
         {
-            MadplanListen.Add(NewMad);
+            Madplan tempMadplan = new Madplan();
+            tempMadplan.UgeNr = NewMad.UgeNr;
+            tempMadplan.UgeDag = NewMad.UgeDag;
+            tempMadplan.Pris = NewMad.Pris;
+            tempMadplan.Madplannen = NewMad.Madplannen; 
+            
+
+            MadplanListen.Add(tempMadplan);
         }
 
         public void RemoveMadPlan()
@@ -67,13 +76,23 @@ namespace kodning.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
         public Madplan selectedMadplan { get; set; }
-        public MadplanListe MadplanListen { get; private set; }
-        public Madplan NewMad { get; private set; }
-        
+        //public MadplanListe MadplanListen { get; private set; }
+        public Madplan NewMad { get;  set; }
+
+        private MadplanListe _madplansliste;
+
+        public MadplanListe MadplanListen
+        {
+            get { return _madplansliste; }
+            set {
+                _madplansliste = value;
+                OnPropertyChanged(nameof(MadplanListen));
+            }
+        }
 
 
         // til JSON
-        
+
         private readonly string file = "JsonText.json";
 
         public async void GemDataTilDiskAsync()
