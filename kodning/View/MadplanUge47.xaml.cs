@@ -31,5 +31,9 @@ namespace kodning.View
         {
 
         }
+        private void KokkeSide(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(kodning.View.Kokke), null);
+        }
     }
 }
