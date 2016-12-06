@@ -37,6 +37,5 @@ namespace kodning
             this.Frame.Navigate(typeof(kodning.View.MadplanUge47), null);
         }
 
-
     }
 }

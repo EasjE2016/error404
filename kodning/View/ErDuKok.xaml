@@ -1,0 +1,74 @@
+﻿<Page
+    x:Class="kodning.View.ErDuKok"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kodning.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Margin="10,20,10,20" Style="{StaticResource GridStyle}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Ændre tilmelding" FontSize="50"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Ændre menu" FontSize="50"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Se kokke og hjælpere" FontSize="50"/>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Er du kok?" FontSize="50"/>
+                <TextBlock x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Text="Særarrangementets navn" FontSize="50"/>
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Uge 47" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Mandag"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Antal kuverter" FontSize="40"/>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Tirsdag"/>
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Antal kuverter" FontSize="40"/>
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="Onsdag"/>
+                <TextBlock Grid.Row="6" Grid.Column="0" Text="Antal kuverter" FontSize="40"/>
+                <TextBlock Grid.Row="7" Grid.Column="0" Text="Torsdag"/>
+                <TextBlock Grid.Row="8" Grid.Column="0" Text="Antal kuverter" FontSize="40"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="Uge 48"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="Mandag"/>
+                <TextBox x:Name="MandagPris" Grid.Row="2" Grid.Column="1" Background="White" Width="200"/>
+
+                <TextBox x:Name="TirsdagPris" Grid.Row="4" Grid.Column="1" Background="White" Width="200"/>
+                <TextBox x:Name="OnsdagPris" Grid.Row="6" Grid.Column="1" Background="White" Width="200"/>
+                <TextBox x:Name="TorsdagPris" Grid.Row="8" Grid.Column="1" Background="White" Width="200"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

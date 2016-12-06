@@ -20,25 +20,11 @@ namespace kodning.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MadplanUge47 : Page
+    public sealed partial class ErDuKok : Page
     {
-        public MadplanUge47()
+        public ErDuKok()
         {
             this.InitializeComponent();
-        }
-
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void KokkeSide(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(kodning.View.Kokke), null);
-        }
-
-        private void ErDuKokSide(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(kodning.View.ErDuKok), null);
         }
     }
 }
