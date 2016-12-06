@@ -39,7 +39,8 @@
             <TextBlock Grid.Row="2" Grid.Column="0" Text="Se kokke og hjælpere" FontSize="50"/>
                 <Button x:Name="SeKokke" Grid.Row="2" Grid.Column="0" Content="Se kokke og hjælpere" Click="KokkeSide"/>
             <TextBlock Grid.Row="3" Grid.Column="0" Text="Er du kok?" FontSize="50"/>
-            <TextBlock x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Text="Særarrangementets navn" FontSize="50"/>
+                <Button x:Name="ErDuKok" Grid.Row="3" Grid.Column="0" Content="Er du kok?" Click="ErDuKokSide"/>
+                <TextBlock x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Text="Særarrangementets navn" FontSize="50"/>
             </Grid>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
