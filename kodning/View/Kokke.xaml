@@ -1,0 +1,69 @@
+﻿<Page
+    x:Class="kodning.View.Kokke"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kodning.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Margin="10,20,10,20" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Ændre tilmelding" FontSize="50"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Ændre menu" FontSize="50"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Se kokke og hjælpere" FontSize="50"/>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Er du kok?" FontSize="50"/>
+                <TextBlock x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Text="Særarrangementets navn" FontSize="50"/>
+            </Grid>
+            
+
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Uge" FontSize="40"/>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="Mandag" FontSize="40"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="Tirsdag" FontSize="40"/>
+                <TextBlock Grid.Row="0" Grid.Column="3" Text="Onsdag" FontSize="40"/>
+                <TextBlock Grid.Row="0" Grid.Column="4" Text="Torsdag" FontSize="40"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Menu" FontSize="40"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Chefkok" FontSize="40"/>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Hjælpere" FontSize="40"/>
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Oprydning" FontSize="40"/>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Page>

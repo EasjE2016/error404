@@ -26,5 +26,17 @@ namespace kodning
         {
             this.InitializeComponent();
         }
+
+        private void button1_Click(System.Object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(kodning.View.Tobias), null);
+        }
+
+        private void Tilmelding1_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(kodning.View.MadplanUge47), null);
+        }
+
+
     }
 }

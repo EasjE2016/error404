@@ -102,6 +102,9 @@
     <Compile Include="Model\ArbejderListe.cs" />
     <Compile Include="Model\Madplan.cs" />
     <Compile Include="Model\MadplanListe.cs" />
+    <Compile Include="View\Kokke.xaml.cs">
+      <DependentUpon>Kokke.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MadplanUge47.xaml.cs">
       <DependentUpon>MadplanUge47.xaml</DependentUpon>
     </Compile>
@@ -114,6 +117,9 @@
     <Compile Include="ViewModel\MadPlanViewModel.cs" />
     <Compile Include="View\Tilmelding.xaml.cs">
       <DependentUpon>Tilmelding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tobias.xaml.cs">
+      <DependentUpon>Tobias.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -137,7 +143,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MadplanEdit.xaml">
+    <Page Include="View\Kokke.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MadplanEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -155,6 +165,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Tilmelding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tobias.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
