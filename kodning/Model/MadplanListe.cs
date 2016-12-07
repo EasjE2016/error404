@@ -28,10 +28,10 @@ namespace kodning
         }
         public void IndsætJson(string jsonText)
         {
-            List<Madplan> nyListe = JsonConvert.DeserializeObject<List<Madplan>>(jsonText);
+            List<Madplan> nyListeTobias = JsonConvert.DeserializeObject<List<Madplan>>(jsonText);
                 
 
-            foreach (var Madplan in nyListe)
+            foreach (var Madplan in nyListeTobias)
             {
                 this.Add(Madplan);
             }

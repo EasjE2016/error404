@@ -13,11 +13,6 @@ namespace kodning.ViewModel
 {
     class MadPlanViewModel : INotifyPropertyChanged
     {
-
-        public int NYtUgenr { get; set; }
-
-
-
         public void AddNewMadplan()
         {
             Madplan tempMadplan = new Madplan();
@@ -26,7 +21,6 @@ namespace kodning.ViewModel
             tempMadplan.Pris = NewMad.Pris;
             tempMadplan.Madplannen = NewMad.Madplannen; 
             
-
             MadplanListen.Add(tempMadplan);
         }
 
@@ -51,15 +45,15 @@ namespace kodning.ViewModel
 
         private readonly string Madplanfilnavn = "JsonText.json";
 
-        public async void HentdataFraDiskAsync()
-        {
-            this.MadplanListen.Clear();
+        //public async void HentdataFraDiskAsync()
+        //{
+        //    this.MadplanListen.Clear();
 
-            StorageFile Madplanfile = await localfolder.GetFileAsync(Madplanfilnavn);
-            string jsonText = await FileIO.ReadTextAsync(Madplanfile);
+        //    StorageFile Madplanfile = await localfolder.GetFileAsync(Madplanfilnavn);
+        //    string jsonText = await FileIO.ReadTextAsync(Madplanfile);
 
-            MadplanListen.IndsætJson(jsonText);
-        } 
+        //    MadplanListen.IndsætJson(jsonText);
+        //} 
 
         protected virtual void OnPropertyChanged(string propertyName)
         {
@@ -141,7 +135,7 @@ namespace kodning.ViewModel
             SelectedMadplan = new Madplan();
             AddMadPlanCommand = new RelayCommand.RelayCommand(AddNewMadplan);
             RemoveMadplanCommand = new RelayCommand.RelayCommand(RemoveMadPlan);
-            LoadMadplanCommand = new RelayCommand.RelayCommand(HentdataFraDiskAsync);
+            LoadMadplanCommand = new RelayCommand.RelayCommand(HentDataFraDiskAsync);
             SaveMadplanCommand = new RelayCommand.RelayCommand(GemDataTilDiskAsync);           
         }
     }
