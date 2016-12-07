@@ -76,6 +76,7 @@ namespace kodning.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
         public Madplan selectedMadplan { get; set; }
+        
         //public MadplanListe MadplanListen { get; private set; }
         public Madplan NewMad { get;  set; }
 

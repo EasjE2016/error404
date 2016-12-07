@@ -20,5 +20,7 @@ namespace kodning
         {
             return "Uge: "+UgeNr + " Dag: "+ UgeDag + " Ret: " + Madplannen + " pris " + Pris;
         }
+
+       
     }
 }
