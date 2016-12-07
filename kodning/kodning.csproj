@@ -95,6 +95,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Kuverter.cs" />
+    <Compile Include="Model\KuverterListe.cs" />
     <Compile Include="View\ErDuKok.xaml.cs">
       <DependentUpon>ErDuKok.xaml</DependentUpon>
     </Compile>
