@@ -26,11 +26,14 @@
         </TextBox>
         <Button x:Name="button" HorizontalAlignment="Left" Margin="28,293,0,0" VerticalAlignment="Top" Command="{Binding AddMadPlanCommand, Mode=TwoWay}" Content="Gem">
         </Button>
-        <Button x:Name="button1" Content="{Binding RemoveMadplanCommand}" HorizontalAlignment="Left" Margin="28,352,0,0" VerticalAlignment="Top">
+        <Button x:Name="button1" HorizontalAlignment="Left" Margin="28,352,0,0" VerticalAlignment="Top" Command="{Binding RemoveMadplanCommand, Mode=TwoWay}" Content="Slet">
         </Button>
         <Button x:Name="button2" Content="{Binding LoadMadplanCommand}" HorizontalAlignment="Left" Margin="29,417,0,0" VerticalAlignment="Top">
                     </Button>
+        
+        
         <ListView x:Name="listView1" HorizontalAlignment="Left" Height="173" Margin="79,500,0,0" VerticalAlignment="Top" Width="200"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="215,293,0,0" TextWrapping="Wrap" Text="{Binding SelectedMadplan, Mode=TwoWay}" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>
