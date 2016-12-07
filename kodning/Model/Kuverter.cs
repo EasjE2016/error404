@@ -15,22 +15,12 @@ namespace kodning.Model
         public int AntalTeen { get; set; }
         public int AntalBoern { get; set; }
         public int AntalBaby { get; set; }
-       
-        public void AddNewKuvert()
+        public string Ugedag { get; set; }
+
+        public override string ToString()
         {
-            Kuverter kuv = new Kuverter();
-            kuv.HusNr = NewKuvert.HusNr;
-            kuv.AntalVoksne = NewKuvert.AntalVoksne;
-            kuv.AntalTeen = NewKuvert.AntalTeen;
-            kuv.AntalBoern = NewKuvert.AntalBoern;
-            kuv.AntalBaby = NewKuvert.AntalBaby;
-
-            KuverterListe.Add(kuv);
-
+            return "hus nummer: " + HusNr + " Dag: " + Ugedag + " Antal Kuverter: ";// der skal tilføjes en metode til at beregne samlet antal kuverter for hustand
         }
-
-        //KuvertListe
-        public Kuverter NewKuvert { get; set; }
 
     }
 }
