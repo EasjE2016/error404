@@ -97,6 +97,7 @@
     </Compile>
     <Compile Include="Model\Kuverter.cs" />
     <Compile Include="Model\KuverterListe.cs" />
+    <Compile Include="Model\UgeKuverter.cs" />
     <Compile Include="ViewModel\KuvertViewModel.cs" />
     <Compile Include="View\ErDuKok.xaml.cs">
       <DependentUpon>ErDuKok.xaml</DependentUpon>
