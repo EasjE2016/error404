@@ -11,10 +11,10 @@ namespace kodning.Model
 
         
         public int HusNr { get; set; }
-        public int AntalVoksne { get; set; }
-        public int AntalTeen { get; set; }
-        public int AntalBoern { get; set; }
-        public int AntalBaby { get; set; }
+        public double AntalVoksne { get; set; }
+        public double AntalTeen { get; set; }
+        public double AntalBoern { get; set; }
+        public double AntalBaby { get; set; }
         public string Ugedag { get; set; }
 
         public override string ToString()

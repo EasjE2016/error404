@@ -19,18 +19,18 @@ namespace kodning.ViewModel
 
         //slut props
         //foreach loop der giver sum af kuverter
-        //public int GivAlleKuverter
-        //{
-        //    get
-        //    {
-        //        int KuverterForDag = 0;
-        //        foreach (var kuverter in _kuvertsliste)
-        //        {
-        //            KuverterForDag = +kuverter.AntalVoksne+kuverter.AntalTeen+kuverter.AntalBoern+kuverter.AntalBaby;
-        //        }
-        //        return KuverterForDag;
-        //    }
-        //}
+        public double GivAlleKuverter
+        {
+            get
+            {
+                double KuverterForDag = 0;
+                foreach (var kuverter in _kuvertsliste)
+                {
+                    KuverterForDag = +(kuverter.AntalVoksne * 1) + (kuverter.AntalTeen * 0.75) + (kuverter.AntalBoern * 0.5) + (kuverter.AntalBaby * 0.25);
+                }
+                return KuverterForDag;
+            }
+        }
 
 
         //slut foreach
