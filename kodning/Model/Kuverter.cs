@@ -9,7 +9,7 @@ namespace kodning.Model
     class Kuverter
     {
 
-        // Constructor
+        
         public int HusNr { get; set; }
         public int AntalVoksne { get; set; }
         public int AntalTeen { get; set; }

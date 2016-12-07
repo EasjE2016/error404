@@ -18,6 +18,25 @@ namespace kodning.ViewModel
 
 
         //slut props
+        //foreach loop der giver sum af kuverter
+        //public int GivAlleKuverter
+        //{
+        //    get
+        //    {
+        //        int KuverterForDag = 0;
+        //        foreach (var kuverter in _kuvertsliste)
+        //        {
+        //            KuverterForDag = +kuverter.AntalVoksne+kuverter.AntalTeen+kuverter.AntalBoern+kuverter.AntalBaby;
+        //        }
+        //        return KuverterForDag;
+        //    }
+        //}
+
+
+        //slut foreach
+
+
+
         //relaycommands
         // Her tilføjes knapper til at trykke "tilmeld"
 
