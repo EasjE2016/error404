@@ -13,7 +13,7 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" VerticalAlignment="Top" Width="412" ItemsSource="{Binding MadplanListen, Mode=TwoWay}">
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" VerticalAlignment="Top" Width="412" ItemsSource="{Binding MadplanListen, Mode=TwoWay}" SelectedItem="{Binding SelectedMadplan,Mode=TwoWay}">
         </ListView>
         
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="29,208,0,0" TextWrapping="Wrap" Text="{Binding NewMad.UgeNr, Mode=TwoWay}" VerticalAlignment="Top">
