@@ -24,7 +24,7 @@ namespace kodning.Model
         }
         public void IndsætJson(string jsonText)
         {
-            List<Madplan> nyListeLisa = JsonConvert.DeserializeObject<List<Madplan>>(jsonText);
+            List<Kuverter> nyListeLisa = JsonConvert.DeserializeObject<List<Kuverter>>(jsonText);
 
 
             foreach (var kuverter in nyListeLisa)

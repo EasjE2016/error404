@@ -1,10 +1,11 @@
 ﻿<Page
-    x:Class="kodning.View.MadplanUge47"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:kodning.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModel="using:kodning.ViewModel"
+    x:Class="kodning.View.MadplanUge47"
     mc:Ignorable="d">
 
     <Grid Margin="10,20,10,20" Style="{StaticResource GridStyle}">
@@ -15,8 +16,16 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="Bolig nr. " Margin="0,0,150,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="50"/>
-        <TextBox Grid.Row="0" Grid.Column="0" Text="" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="50" Margin="0,10,70,0" Background="White" Height="50"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Bolig nr. " Margin="0,0,150,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="50">
+            <TextBlock.DataContext>
+                <ViewModel:KuvertViewModel/>
+            </TextBlock.DataContext>
+        </TextBlock>
+        <TextBox x:Name="Husnr" Grid.Row="0" Grid.Column="0" Text="{Binding NewKuvert.HusNr, Mode=TwoWay}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="50" Margin="0,10,70,0" Background="White" Height="50">
+            <TextBox.DataContext>
+                <ViewModel:KuvertViewModel/>
+            </TextBox.DataContext>
+        </TextBox>
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -31,14 +40,14 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                
+
 
 
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="Ændre tilmelding" FontSize="50"/>
-            <TextBlock Grid.Row="1" Grid.Column="0" Text="Ændre menu" FontSize="50"/>
-            <TextBlock Grid.Row="2" Grid.Column="0" Text="Se kokke og hjælpere" FontSize="50"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Ændre menu" FontSize="50"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Se kokke og hjælpere" FontSize="50"/>
                 <Button x:Name="SeKokke" Grid.Row="2" Grid.Column="0" Content="Se kokke og hjælpere" Click="KokkeSide"/>
-            <TextBlock Grid.Row="3" Grid.Column="0" Text="Er du kok?" FontSize="50"/>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Er du kok?" FontSize="50"/>
                 <Button x:Name="ErDuKok" Grid.Row="3" Grid.Column="0" Content="Er du kok?" Click="ErDuKokSide"/>
                 <TextBlock x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Text="Særarrangementets navn" FontSize="50"/>
             </Grid>
@@ -67,9 +76,14 @@
                 <TextBlock Grid.Row="6" Grid.Column="0" Text="Menu for onsdag" FontSize="40"/>
                 <TextBlock Grid.Row="7" Grid.Column="0" Text="Torsdag"/>
                 <TextBlock Grid.Row="8" Grid.Column="0" Text="Menu for torsdag" FontSize="40"/>
-                <TextBlock Grid.Row="0" Grid.Column="1" Text="Uge 48"/>
-                <TextBlock Grid.Row="1" Grid.Column="1" Text="Mandag"/>
                 
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="Uge 48"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding NewKuvert.Ugedag, Mode=TwoWay}" FontSize="40" PlaceholderText="Mandag" IsReadOnly="True">
+                    <TextBox.DataContext>
+                        <ViewModel:KuvertViewModel/>
+                    </TextBox.DataContext>
+                </TextBox>
+
                 <Grid Grid.Row="2" Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -82,7 +96,11 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox x:Name="MandagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50"/>
+                    <TextBox x:Name="MandagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Text="{Binding NewKuvert.AntalVoksne, Mode=TwoWay}">
+                        <TextBox.DataContext>
+                            <ViewModel:KuvertViewModel/>
+                        </TextBox.DataContext>
+                    </TextBox>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -91,7 +109,11 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="7-15 år"/>
                     </Grid>
-                    <TextBox x:Name="MandagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50"/>
+                    <TextBox x:Name="MandagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding NewKuvert.AntalTeen, Mode=TwoWay}">
+                        <TextBox.DataContext>
+                            <ViewModel:KuvertViewModel/>
+                        </TextBox.DataContext>
+                    </TextBox>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -100,7 +122,11 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="3-6 år"/>
                     </Grid>
-                    <TextBox x:Name="MandagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50"/>
+                    <TextBox x:Name="MandagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding NewKuvert.AntalBoern, Mode=TwoWay}">
+                        <TextBox.DataContext>
+                            <ViewModel:KuvertViewModel/>
+                        </TextBox.DataContext>
+                    </TextBox>
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -109,11 +135,19 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
                     </Grid>
-                    <TextBox x:Name="Mandag02" Grid.Row="1" Grid.Column="3" Background="White" Width="50"/>
+                    <TextBox x:Name="Mandag02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding NewKuvert.AntalBaby, Mode=TwoWay}">
+                        <TextBox.DataContext>
+                            <ViewModel:KuvertViewModel/>
+                        </TextBox.DataContext>
+                    </TextBox>
                 </Grid>
-                
-                <TextBlock Grid.Row="3" Grid.Column="1" Text="Tirsdag"/>
-                
+
+                <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding NewKuvert.Ugedag, Mode=OneWay}" PlaceholderText="Tirsdag" IsReadOnly="True">
+                    <TextBox.DataContext>
+                        <ViewModel:KuvertViewModel/>
+                    </TextBox.DataContext>
+                </TextBox>
+
                 <Grid Grid.Row="4" Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -126,7 +160,11 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox x:Name="TirsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50"/>
+                    <TextBox x:Name="TirsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Text="{Binding NewKuvert.AntalVoksne, Mode=TwoWay}">
+                        <TextBox.DataContext>
+                            <ViewModel:KuvertViewModel/>
+                        </TextBox.DataContext>
+                    </TextBox>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -155,9 +193,9 @@
                     </Grid>
                     <TextBox x:Name="TirsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50"/>
                 </Grid>
-                
+
                 <TextBlock Grid.Row="5" Grid.Column="1" Text="Onsdag"/>
-                
+
                 <Grid Grid.Row="6" Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -199,9 +237,9 @@
                     </Grid>
                     <TextBox x:Name="OnsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50"/>
                 </Grid>
-                
+
                 <TextBlock Grid.Row="7" Grid.Column="1" Text="Torsdag"/>
-                
+
                 <Grid Grid.Row="8" Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -247,7 +285,7 @@
         </Grid>
 
         <Button Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Tilmeld" FontSize="50" Width="200" Height="100"  Margin="0,0,50,20"/>
-    
+
     </Grid>
-    
+
 </Page>
