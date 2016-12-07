@@ -17,15 +17,6 @@ namespace kodning.ViewModel
         public int NYtUgenr { get; set; }
 
 
-        public Madplan SelectedMadplan
-        {
-            get { return selectedMadplan; }
-            set
-            {
-                selectedMadplan = value;
-                OnPropertyChanged(nameof(SelectedMadplan));
-            }
-        }
 
         public void AddNewMadplan()
         {
@@ -42,6 +33,18 @@ namespace kodning.ViewModel
         public void RemoveMadPlan()
         {
             MadplanListen.Remove(SelectedMadplan);
+        }
+
+        private Madplan _selectedMadplan;
+
+        public Madplan SelectedMadplan
+        {
+            get { return _selectedMadplan; }
+            set
+            {
+                _selectedMadplan = value;
+                OnPropertyChanged(nameof(SelectedMadplan));
+            }
         }
 
         StorageFolder localfolder = null;
@@ -75,7 +78,7 @@ namespace kodning.ViewModel
         // Slut af Relays.
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public Madplan selectedMadplan { get; set; }
+        
         //public MadplanListe MadplanListen { get; private set; }
         public Madplan NewMad { get;  set; }
 
