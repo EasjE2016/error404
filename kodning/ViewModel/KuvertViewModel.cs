@@ -22,11 +22,28 @@ namespace kodning.ViewModel
         public int MandagTeens { get; set; }
         public int MandagBoern { get; set; }
         public int MandagBaby { get; set; }
+        #endregion
 
-        public UgeKuverter UgeKuverter { get; set; }
-
+        #region Tirsdagsprops
+        public int TirsdagVoksne { get; set; }
+        public int TirsdagTeens { get; set; }
+        public int TirsdagBoern { get; set; }
+        public int TirsdagBaby { get; set; }
+        #endregion
+        #region Onsdagsprops
+        public int OnsdagVoksne { get; set; }
+        public int OnsdagTeens { get; set; }
+        public int OnsdagBoern { get; set; }
+        public int OnsdagBaby { get; set; }
+        #endregion
+        #region Torsdagsprops
+        public int TorsdagVoksne { get; set; }
+        public int TorsdagTeens { get; set; }
+        public int TorsdagBoern { get; set; }
+        public int TorsdagBaby { get; set; }
         #endregion
         //slut props
+        public UgeKuverter UgeKuverter { get; set; }
         //foreach loop der giver sum af kuverter
         public double GivAlleKuverter
         {
@@ -85,8 +102,39 @@ namespace kodning.ViewModel
             MandagsKuvert.AntalBaby = MandagBaby;
             MandagsKuvert.Ugedag = "Mandag";
             UgeKuverter.KuvertListeMandag.Add(MandagsKuvert);
-            
-            
+
+            #region
+            Kuverter TirsdagsKuvert = new Kuverter();
+            TirsdagsKuvert.HusNr = Husnummer;
+            TirsdagsKuvert.AntalVoksne = TirsdagVoksne;
+            TirsdagsKuvert.AntalTeen = TirsdagTeens;
+            TirsdagsKuvert.AntalBoern = TirsdagBoern;
+            TirsdagsKuvert.AntalBaby = TirsdagBaby;
+            TirsdagsKuvert.Ugedag = "Tirsdag";
+            UgeKuverter.KuvertListeTirsdag.Add(TirsdagsKuvert);
+            #endregion
+
+            #region
+            Kuverter OnsdagsKuvert = new Kuverter();
+            OnsdagsKuvert.HusNr = Husnummer;
+            OnsdagsKuvert.AntalVoksne = OnsdagVoksne;
+            OnsdagsKuvert.AntalTeen = OnsdagTeens;
+            OnsdagsKuvert.AntalBoern = OnsdagBoern;
+            OnsdagsKuvert.AntalBaby = OnsdagBaby;
+            OnsdagsKuvert.Ugedag = "Onsdag";
+            UgeKuverter.KuvertListeOnsdag.Add(OnsdagsKuvert);
+            #endregion
+
+            #region 
+            Kuverter TorsdagsKuvert = new Kuverter();
+            TorsdagsKuvert.HusNr = Husnummer;
+            TorsdagsKuvert.AntalVoksne = TorsdagVoksne;
+            TorsdagsKuvert.AntalTeen = TorsdagTeens;
+            TorsdagsKuvert.AntalBoern = TorsdagBoern;
+            TorsdagsKuvert.AntalBaby = TorsdagBaby;
+            TorsdagsKuvert.Ugedag = "Torsdag";
+            UgeKuverter.KuvertListeTorsdag.Add(TorsdagsKuvert);
+            #endregion
 
             //KuvertListen.Add(MandagsKuvert);
 
