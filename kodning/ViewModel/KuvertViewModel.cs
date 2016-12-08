@@ -23,6 +23,8 @@ namespace kodning.ViewModel
         public int MandagBoern { get; set; }
         public int MandagBaby { get; set; }
 
+        public UgeKuverter UgeKuverter { get; set; }
+
         #endregion
         //slut props
         //foreach loop der giver sum af kuverter
@@ -75,21 +77,26 @@ namespace kodning.ViewModel
         //Metode til at tilføje ny Kuvert.
         public void AddNewKuvert()
         {
-            Kuverter tempKuvert = new Kuverter();
-            //tempKuvert.HusNr = NewKuvert.HusNr;
-            //tempKuvert.AntalVoksne = NewKuvert.AntalVoksne;
-            //tempKuvert.AntalTeen = NewKuvert.AntalTeen;
-            //tempKuvert.AntalBoern = NewKuvert.AntalBoern;
-            //tempKuvert.AntalBaby = NewKuvert.AntalBaby;
+            Kuverter MandagsKuvert = new Kuverter();
+            MandagsKuvert.HusNr = Husnummer;
+            MandagsKuvert.AntalVoksne = MandagVoksne;
+            MandagsKuvert.AntalTeen = MandagTeens;
+            MandagsKuvert.AntalBoern = MandagBoern;
+            MandagsKuvert.AntalBaby = MandagBaby;
+            MandagsKuvert.Ugedag = "Mandag";
+            UgeKuverter.KuvertListeMandag.Add(MandagsKuvert);
+            
+            
 
+            //KuvertListen.Add(MandagsKuvert);
 
-            KuvertListen.Add(tempKuvert);
         }
 
         //Konstruktor
         public KuvertViewModel()
         {
             KuvertListen = new KuverterListe();
+            UgeKuverter = new UgeKuverter();
         }
 
 

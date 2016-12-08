@@ -16,12 +16,12 @@ namespace kodning.Model
             KuvertListeOnsdag.GetJson();
             KuvertListeTorsdag.GetJson();
         }
-        KuverterListe KuvertListeMandag = new KuverterListe();
+        public KuverterListe KuvertListeMandag = new KuverterListe();
 
-        KuverterListe KuvertListeTirsdag = new KuverterListe();
+        public KuverterListe KuvertListeTirsdag = new KuverterListe();
 
-        KuverterListe KuvertListeOnsdag = new KuverterListe();
+        public KuverterListe KuvertListeOnsdag = new KuverterListe();
 
-        KuverterListe KuvertListeTorsdag = new KuverterListe();
+        public KuverterListe KuvertListeTorsdag = new KuverterListe();
     }
 }

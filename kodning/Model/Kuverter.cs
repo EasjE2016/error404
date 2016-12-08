@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace kodning.Model
 {
-    class Kuverter
+    public class Kuverter
     {
 
         
@@ -21,6 +21,9 @@ namespace kodning.Model
         {
             return "hus nummer: " + HusNr + " Dag: " + Ugedag + " Antal Kuverter: ";// der skal tilføjes en metode til at beregne samlet antal kuverter for hustand
         }
-
+        public double AntalKuverter()
+        {
+            return 0;
+        }
     }
 }
