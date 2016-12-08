@@ -6,14 +6,22 @@ using System.Threading.Tasks;
 
 namespace kodning.Model
 {
-    class UgeKuverter
+     public class UgeKuverter
     {
-        List<int> KuvertMandag = new List<int>();
 
-        List<int> KuvertTirsdag = new List<int>();
+        public UgeKuverter()
+        {
+            KuvertListeMandag.GetJson();
+            KuvertListeTirsdag.GetJson();
+            KuvertListeOnsdag.GetJson();
+            KuvertListeTorsdag.GetJson();
+        }
+        KuverterListe KuvertListeMandag = new KuverterListe();
 
-        List<int> KuvertOnsdag = new List<int>();
+        KuverterListe KuvertListeTirsdag = new KuverterListe();
 
-        List<int> KuvertTorsdag = new List<int>();
+        KuverterListe KuvertListeOnsdag = new KuverterListe();
+
+        KuverterListe KuvertListeTorsdag = new KuverterListe();
     }
 }
