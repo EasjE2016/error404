@@ -35,7 +35,7 @@ namespace kodning.ViewModel
                 double KuverterForDag = 0;
                 foreach (var kuverter in _kuvertsliste)
                 {
-                    KuverterForDag = +(kuverter.AntalVoksne * 1) + (kuverter.AntalTeen * 0.75) + (kuverter.AntalBoern * 0.5) + (kuverter.AntalBaby * 0.25);
+                    KuverterForDag = +(kuverter.AntalVoksne * 1) + (kuverter.AntalTeen * 0.5) + (kuverter.AntalBoern * 0.25) + (kuverter.AntalBaby * 0);
                 }
                 return KuverterForDag;
             }
