@@ -14,9 +14,16 @@ namespace kodning.ViewModel
     {
         //props
         private KuverterListe _kuvertsliste;
-        public Kuverter NewKuvert { get; set; }
+        // public Kuverter NewKuvert { get; set; }
 
+        public int Husnummer { get; set; }
+        #region mandags property
+        public int MandagVoksne { get; set; }
+        public int MandagTeens { get; set; }
+        public int MandagBoern { get; set; }
+        public int MandagBaby { get; set; }
 
+        #endregion
         //slut props
         //foreach loop der giver sum af kuverter
         public double GivAlleKuverter
@@ -69,11 +76,11 @@ namespace kodning.ViewModel
         public void AddNewKuvert()
         {
             Kuverter tempKuvert = new Kuverter();
-            tempKuvert.HusNr = NewKuvert.HusNr;
-            tempKuvert.AntalVoksne = NewKuvert.AntalVoksne;
-            tempKuvert.AntalTeen = NewKuvert.AntalTeen;
-            tempKuvert.AntalBoern = NewKuvert.AntalBoern;
-            tempKuvert.AntalBaby = NewKuvert.AntalBaby;
+            //tempKuvert.HusNr = NewKuvert.HusNr;
+            //tempKuvert.AntalVoksne = NewKuvert.AntalVoksne;
+            //tempKuvert.AntalTeen = NewKuvert.AntalTeen;
+            //tempKuvert.AntalBoern = NewKuvert.AntalBoern;
+            //tempKuvert.AntalBaby = NewKuvert.AntalBaby;
 
 
             KuvertListen.Add(tempKuvert);
@@ -84,6 +91,8 @@ namespace kodning.ViewModel
         {
             KuvertListen = new KuverterListe();
         }
+
+
         // til JSON
 
         private readonly string lisa = "JsonText.json";
