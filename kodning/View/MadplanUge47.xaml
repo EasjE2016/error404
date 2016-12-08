@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ViewModel="using:kodning.ViewModel"
+    xmlns:Model="using:kodning.Model"
     x:Class="kodning.View.MadplanUge47"
     mc:Ignorable="d">
     <Page.DataContext>
@@ -19,10 +20,8 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="Bolig nr. " Margin="0,0,150,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="50">
-        </TextBlock>
-        <TextBox x:Name="Husnr" Grid.Row="0" Grid.Column="0" Text="{Binding Husnummer, Mode=TwoWay}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" Margin="0,10,70,0" Background="White" Height="50">
-        </TextBox>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Bolig nr. " Margin="0,0,150,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="50"/>
+        <TextBox x:Name="Husnr" Grid.Row="0" Grid.Column="0" Text="{Binding Husnummer, Mode=TwoWay}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" Margin="0,10,70,0" Background="White" Height="50"/>
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -37,7 +36,7 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                
+
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="Ændre tilmelding" FontSize="50"/>
                 <TextBlock Grid.Row="1" Grid.Column="0" Text="Ændre menu" FontSize="50"/>
                 <TextBlock Grid.Row="2" Grid.Column="0" Text="Se kokke og hjælpere" FontSize="50"/>
@@ -254,8 +253,9 @@
                 </Grid>
             </Grid>
         </Grid>
+        <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="148" Width="400" ItemsSource="{Binding KuvertListen}"/>
 
-        <Button Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Tilmeld" FontSize="50" Width="200" Height="100"  Margin="0,0,50,20"/>
+        <Button Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Tilmeld" FontSize="50" Width="200" Height="100"  Margin="0,0,50,20"/>
 
     </Grid>
 
