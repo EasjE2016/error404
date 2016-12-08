@@ -37,9 +37,7 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-
-
-
+                
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="Ændre tilmelding" FontSize="50"/>
                 <TextBlock Grid.Row="1" Grid.Column="0" Text="Ændre menu" FontSize="50"/>
                 <TextBlock Grid.Row="2" Grid.Column="0" Text="Se kokke og hjælpere" FontSize="50"/>
@@ -77,9 +75,6 @@
                 <TextBlock Grid.Row="0" Grid.Column="1" Text="Uge 48"/>
                 <TextBlock Grid.Row="1" Grid.Column="1" Text="Mandag" FontSize="40"/>
 
-
-
-
                 <Grid Grid.Row="2" Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -103,7 +98,6 @@
                     </Grid>
                     <TextBox x:Name="MandagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding MandagTeens, Mode=TwoWay}"/>
 
-
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -114,7 +108,6 @@
                     </Grid>
                     <TextBox x:Name="MandagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding MandagBoern, Mode=TwoWay}"/>
 
-
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -124,7 +117,6 @@
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
                     </Grid>
                     <TextBox x:Name="Mandag02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding MandagBaby, Mode=TwoWay}"/>
-
 
                 </Grid>
 
@@ -142,7 +134,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox x:Name="TirsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50"/>
+                    <TextBox x:Name="TirsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Text="{Binding TirsdagVoksne, Mode=TwoWay}"/>
 
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
@@ -152,7 +144,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="7-15 år"/>
                     </Grid>
-                    <TextBox x:Name="TirsagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50"/>
+                    <TextBox x:Name="TirsagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding TirsdagTeens, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -161,7 +153,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="3-6 år"/>
                     </Grid>
-                    <TextBox x:Name="TirsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50"/>
+                    <TextBox x:Name="TirsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding TirsdagBoern, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -170,7 +162,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
                     </Grid>
-                    <TextBox x:Name="TirsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50"/>
+                    <TextBox x:Name="TirsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding TirsdagBaby, Mode=TwoWay}"/>
                 </Grid>
 
                 <TextBlock Grid.Row="5" Grid.Column="1" Text="Onsdag"/>
@@ -187,7 +179,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox x:Name="OnsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50"/>
+                    <TextBox x:Name="OnsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Text="{Binding OnsdagVoksne, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -196,7 +188,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="7-15 år"/>
                     </Grid>
-                    <TextBox x:Name="OnsdagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50"/>
+                    <TextBox x:Name="OnsdagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding OnsdagTeens, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -205,7 +197,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="3-6 år"/>
                     </Grid>
-                    <TextBox x:Name="OnsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50"/>
+                    <TextBox x:Name="OnsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding OnsdagBoern, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -214,7 +206,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
                     </Grid>
-                    <TextBox x:Name="OnsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50"/>
+                    <TextBox x:Name="OnsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding OnsdagBaby, Mode=TwoWay}"/>
                 </Grid>
 
                 <TextBlock Grid.Row="7" Grid.Column="1" Text="Torsdag"/>
@@ -231,7 +223,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox x:Name="TorsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50"/>
+                    <TextBox x:Name="TorsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Text="{Binding TorsdagVoksne, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -240,7 +232,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="7-15 år"/>
                     </Grid>
-                    <TextBox x:Name="TorsdagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50"/>
+                    <TextBox x:Name="TorsdagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding TorsdagTeens, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -249,7 +241,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="3-6 år"/>
                     </Grid>
-                    <TextBox x:Name="TorsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50"/>
+                    <TextBox x:Name="TorsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding TorsdagBoern, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -258,7 +250,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
                     </Grid>
-                    <TextBox x:Name="TorsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50"/>
+                    <TextBox x:Name="TorsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding TorsdagBaby, Mode=TwoWay}"/>
                 </Grid>
             </Grid>
         </Grid>

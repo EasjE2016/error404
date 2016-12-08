@@ -42,6 +42,7 @@ namespace kodning.ViewModel
         public int TorsdagBoern { get; set; }
         public int TorsdagBaby { get; set; }
         #endregion
+
         //slut props
         public UgeKuverter UgeKuverter { get; set; }
         //foreach loop der giver sum af kuverter

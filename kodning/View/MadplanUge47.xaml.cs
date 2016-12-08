@@ -40,5 +40,10 @@ namespace kodning.View
         {
             this.Frame.Navigate(typeof(kodning.View.ErDuKok), null);
         }
+
+        private void TirsdagVoksen_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
