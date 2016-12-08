@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using kodning.ViewModel;
 
 namespace kodning.Model
 {
@@ -19,11 +20,12 @@ namespace kodning.Model
 
         public override string ToString()
         {
-            return "hus nummer: " + HusNr + " Dag: " + Ugedag + " Antal Kuverter: ";// der skal tilføjes en metode til at beregne samlet antal kuverter for hustand
+            return "Antal kuverter: ";// der skal tilføjes en metode til at beregne samlet antal kuverter for hustand
         }
         public double AntalKuverter()
         {
             return 0;
         }
+
     }
 }

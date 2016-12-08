@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace kodning.RelayCommand
 {
-    class RelayCommand : ICommand
+    public class RelayCommand : ICommand
     {
         public event EventHandler CanExecuteChanged;
         private readonly Action execute;

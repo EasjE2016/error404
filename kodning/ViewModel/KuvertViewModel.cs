@@ -10,7 +10,7 @@ using Windows.UI.Popups;
 
 namespace kodning.ViewModel
 {
-    class KuvertViewModel : INotifyPropertyChanged
+    public class KuvertViewModel : INotifyPropertyChanged
     {
         //props
         private KuverterListe _kuvertsliste;
@@ -51,7 +51,7 @@ namespace kodning.ViewModel
             get
             {
                 double KuverterForDag = 0;
-                foreach (var kuverter in _kuvertsliste)
+                foreach (var kuverter in KuvertListenMandag)
                 {
                     KuverterForDag = +(kuverter.AntalVoksne * 1) + (kuverter.AntalTeen * 0.5) + (kuverter.AntalBoern * 0.25) + (kuverter.AntalBaby * 0);
                 }
@@ -66,7 +66,7 @@ namespace kodning.ViewModel
 
         //relaycommands
         // Her tilføjes knapper til at trykke "tilmeld"
-
+        public RelayCommand.RelayCommand TilmeldCommand { get; set; }
         //slut relaycommands
 
         //inotifyprop
@@ -80,15 +80,48 @@ namespace kodning.ViewModel
         }
         // inotifyprop slut
         
-        public KuverterListe KuvertListen
+        public KuverterListe KuvertListenMandag
         {
             get { return _kuvertsliste; }
             set
             {
                 _kuvertsliste = value;
-                OnPropertyChanged(nameof(KuvertListen));
+                OnPropertyChanged(nameof(KuvertListenMandag));
             }
         }
+        private KuverterListe _kuvertListenTirsdag;
+
+        public KuverterListe KuvertListenTirsdag
+        {
+            get { return _kuvertListenTirsdag; }
+            set {
+                _kuvertListenTirsdag = value;
+                OnPropertyChanged(nameof(KuvertListenTirsdag));
+            }
+        }
+        private KuverterListe _kuvertListenOnsdag;
+
+        public KuverterListe KuvertListenOnsdag
+        {
+            get { return _kuvertListenOnsdag; }
+            set {
+                _kuvertListenOnsdag = value;
+                OnPropertyChanged(nameof(KuvertListenOnsdag));
+            }
+        }
+        private KuverterListe _kuvertListenTorsdag;
+
+        public KuverterListe KuvertListenTorsdag
+        {
+            get { return _kuvertListenTorsdag; }
+            set {
+                _kuvertListenTorsdag = value;
+                OnPropertyChanged(nameof(KuvertListenTorsdag));
+                    }
+        }
+
+
+
 
         public string Kuvertfilnavn { get; private set; }
 
@@ -144,8 +177,12 @@ namespace kodning.ViewModel
         //Konstruktor
         public KuvertViewModel()
         {
-            KuvertListen = new KuverterListe();
+            KuvertListenMandag = new KuverterListe();
+            KuvertListenTirsdag = new KuverterListe();
+            KuvertListenOnsdag = new KuverterListe();
+            KuvertListenTorsdag = new KuverterListe();
             UgeKuverter = new UgeKuverter();
+            TilmeldCommand = new RelayCommand.RelayCommand(AddNewKuvert);
         }
 
 
@@ -155,7 +192,7 @@ namespace kodning.ViewModel
         StorageFolder localfolder = null;
         public async void GemDataTilDiskAsync()
         {
-            string jsonText = this.KuvertListen.GetJson();
+            string jsonText = this.KuvertListenMandag.GetJson();
             StorageFile lisa = await localfolder.CreateFileAsync(Kuvertfilnavn, CreationCollisionOption.ReplaceExisting);
             await FileIO.WriteTextAsync(lisa, jsonText);
         }
@@ -169,10 +206,10 @@ namespace kodning.ViewModel
 
                 string jsonText = await FileIO.ReadTextAsync(lisa);
 
-                this.KuvertListen.Clear();
+                this.KuvertListenMandag.Clear();
 
                 //metoden på medarbejderlisten
-                KuvertListen.IndsætJson(jsonText);
+                KuvertListenMandag.IndsætJson(jsonText);
 
                 // Try og catch for at fange en exception for at undgå grimme fejlmeddelser
             }
