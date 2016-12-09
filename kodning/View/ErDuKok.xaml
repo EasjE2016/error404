@@ -76,5 +76,6 @@
                 <TextBox x:Name="TorsdagPris" Grid.Row="8" Grid.Column="1" Background="White" Width="200"/>
             </Grid>
         </Grid>
+        <Button x:Name="button" Content="Gå til forside" HorizontalAlignment="Left" Margin="84,61,0,0" VerticalAlignment="Top" Height="64" Width="140" Click="button_Click"/>
     </Grid>
 </Page>

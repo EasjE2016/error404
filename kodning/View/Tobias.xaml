@@ -37,5 +37,6 @@
         <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="28,405,0,0" TextWrapping="Wrap" Text="Ret" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="28,560,0,0" TextWrapping="Wrap" Text="Indkøbers Hus nummer" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="29,662,0,0" TextWrapping="Wrap" Text="Pris for indkøb" VerticalAlignment="Top"/>
+        <Button x:Name="GåTilForside" Content="Gå til forside" HorizontalAlignment="Left" Margin="1529,76,0,0" VerticalAlignment="Top" Height="96" Width="229" Click="button_Click"/>
     </Grid>
 </Page>
