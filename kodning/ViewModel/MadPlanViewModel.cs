@@ -19,8 +19,9 @@ namespace kodning.ViewModel
             tempMadplan.UgeNr = NewMad.UgeNr;
             tempMadplan.UgeDag = NewMad.UgeDag;
             tempMadplan.Pris = NewMad.Pris;
-            tempMadplan.Madplannen = NewMad.Madplannen; 
-            
+            tempMadplan.Madplannen = NewMad.Madplannen;
+            tempMadplan.purchaser = NewMad.purchaser;
+
             MadplanListen.Add(tempMadplan);
         }
 
