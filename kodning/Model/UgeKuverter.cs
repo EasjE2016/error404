@@ -23,5 +23,7 @@ namespace kodning.Model
         public KuverterListe KuvertListeOnsdag { get; set; } = new KuverterListe();
 
         public KuverterListe KuvertListeTorsdag { get; set; } = new KuverterListe();
+
+
     }
 }

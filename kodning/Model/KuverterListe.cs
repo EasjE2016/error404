@@ -14,20 +14,8 @@ namespace kodning.Model
         {
             Kuverter KuvertInstance = new Kuverter();
             this.Add(new Kuverter() {HusNr = 2, AntalVoksne = 2, AntalTeen = 41, AntalBoern = 150, AntalBaby = 0 });
-
-
-
         }
 
-        public double AntalKuverterPaaListe()
-        {
-            double sum = 0;
-            foreach (Kuverter kuvert in this)
-            {
-            sum = sum + kuvert.AntalKuverter();
-            }
-            return sum;
-        }
         public string GetJson()
         {
             string json = JsonConvert.SerializeObject(this);
