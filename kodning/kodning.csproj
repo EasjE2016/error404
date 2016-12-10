@@ -122,7 +122,6 @@
     <Compile Include="Model\TilmeldListe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelayCommand\RelayCommand.cs" />
-    <Compile Include="ViewModel\AddTilmed.cs" />
     <Compile Include="ViewModel\ArbejderPlanViewModel.cs" />
     <Compile Include="ViewModel\MadPlanViewModel.cs" />
     <Compile Include="View\Tilmelding.xaml.cs">
