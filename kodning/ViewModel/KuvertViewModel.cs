@@ -14,11 +14,11 @@ namespace kodning.ViewModel
     {
         public UgeKuverter UgeKuverter { get; set; }
         public PrisBeregning PrisBeregning { get; set; }
-
+        public string Kuvertfilnavn { get; private set; }
+        public double PrisIalt { get; private set; }
 
         private KuverterListe _kuvertsliste;
 
-        public string Kuvertfilnavn { get; private set; }
 
 
         #region Props til Tilmeldning
@@ -149,7 +149,7 @@ namespace kodning.ViewModel
         
         #endregion
 
-public double PrisIalt { get; private set; }
+
 
         #region Metode til Tilføje Kuverter
         public void AddNewKuvert()
