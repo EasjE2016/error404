@@ -118,8 +118,6 @@
     <Compile Include="View\MadplanUge47.xaml.cs">
       <DependentUpon>MadplanUge47.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Tilmeld.cs" />
-    <Compile Include="Model\TilmeldListe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelayCommand\RelayCommand.cs" />
     <Compile Include="ViewModel\ArbejderPlanViewModel.cs" />
@@ -190,7 +188,9 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="InAkivKode\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
