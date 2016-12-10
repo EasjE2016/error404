@@ -31,5 +31,10 @@ namespace kodning.View
         {
             this.Frame.Navigate(typeof(Forside), null);
         }
+
+        private void SeKuvTir_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

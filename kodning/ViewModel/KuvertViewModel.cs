@@ -13,6 +13,7 @@ namespace kodning.ViewModel
     public class KuvertViewModel : INotifyPropertyChanged
     {
         public UgeKuverter UgeKuverter { get; set; }
+        public Kuverter NewKuvert { get; set; }
 
 
         private KuverterListe _kuvertsliste;
@@ -20,16 +21,8 @@ namespace kodning.ViewModel
         public string Kuvertfilnavn { get; private set; }
 
 
-        #region Props til Tilmeldning
-        public int Husnummer { get; set; }
-        public double MandagVoksne { get; set; }
-        public double MandagTeens { get; set; }
-        public double MandagBoern { get; set; }
-        public double MandagBaby { get; set; }
-        #endregion
-
-
         #region Foreach loop over samlet antal kuverter
+
         public double GivAlleKuverter
         {
             get
@@ -76,18 +69,15 @@ namespace kodning.ViewModel
         #endregion
 
 
-
-
-
         #region Metode til Tilføje Kuverter
         public void AddNewKuvert()
         {
             Kuverter MandagsKuvert = new Kuverter();
-            MandagsKuvert.HusNr = Husnummer;
-            MandagsKuvert.AntalVoksne = MandagVoksne;
-            MandagsKuvert.AntalTeen = MandagTeens;
-            MandagsKuvert.AntalBoern = MandagBoern;
-            MandagsKuvert.AntalBaby = MandagBaby;
+            MandagsKuvert.HusNr = NewKuvert.HusNr;
+            MandagsKuvert.AntalVoksne = NewKuvert.AntalVoksne;
+            MandagsKuvert.AntalTeen = NewKuvert.AntalTeen;
+            MandagsKuvert.AntalBoern = NewKuvert.AntalBoern;
+            MandagsKuvert.AntalBaby = NewKuvert.AntalBaby;
             MandagsKuvert.Ugedag = "Mandag";
             UgeKuverter.KuvertListeMandag.Add(MandagsKuvert);
         }
@@ -99,7 +89,9 @@ namespace kodning.ViewModel
             KuvertListenMandag = new KuverterListe();      
             UgeKuverter = new UgeKuverter();
             TilmeldCommand = new RelayCommand.RelayCommand(AddNewKuvert);
-            //UdregnAlleKuverterForDag = new RelayCommand.RelayCommand(GivAlleKuverter);
+            //UdregnAlleKuverterForDag = new RelayCommand.RelayCommand();
+            
+            
         }
         #endregion
 

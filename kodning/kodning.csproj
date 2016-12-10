@@ -115,16 +115,13 @@
     <Compile Include="View\Kokke.xaml.cs">
       <DependentUpon>Kokke.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\MadplanUge47.xaml.cs">
-      <DependentUpon>MadplanUge47.xaml</DependentUpon>
+    <Compile Include="View\Tilmeld.xaml.cs">
+      <DependentUpon>Tilmeld.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelayCommand\RelayCommand.cs" />
     <Compile Include="InAkivKode\ArbejderPlanViewModel.cs" />
     <Compile Include="ViewModel\MadPlanViewModel.cs" />
-    <Compile Include="View\Tilmelding.xaml.cs">
-      <DependentUpon>Tilmelding.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Tobias.xaml.cs">
       <DependentUpon>Tobias.xaml</DependentUpon>
     </Compile>
@@ -162,10 +159,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\MadplanEdit.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\AppStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -175,11 +168,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\MadplanUge47.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Tilmelding.xaml">
+    <Page Include="View\Tilmeld.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
