@@ -31,19 +31,10 @@ namespace kodning.View
         {
 
         }
-        private void KokkeSide(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(kodning.View.Kokke), null);
-        }
 
         private void ErDuKokSide(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(kodning.View.ErDuKok), null);
-        }
-
-        private void TirsdagVoksen_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
 
         private void GåTilForside_Click(object sender, RoutedEventArgs e)

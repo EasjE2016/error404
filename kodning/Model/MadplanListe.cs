@@ -15,7 +15,7 @@ namespace kodning
             Madplan MadplanInstance = new Madplan();
             MadplanInstance.Madplannen = "";
 
-            this.Add(new Madplan() { UgeDag="Mandag", Madplannen="Kylling og kartofler", UgeNr= 41, Pris= 150, purchaser=22 });
+            this.Add(new Madplan() { UgeDag = "Mandag", Madplannen = "Kylling og kartofler", UgeNr = 41, Pris = 150, purchaser = 22 });
             this.Add(new Madplan() { UgeDag = "Fredag",  Madplannen = "Pariser toast", UgeNr = 42, Pris = 110, purchaser = 32 });
             this.Add(new Madplan() { UgeDag = "Tirsdag", Madplannen = "Orve testikler", UgeNr = 43, Pris = 170, purchaser = 33 });
             

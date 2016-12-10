@@ -112,9 +112,6 @@
     <Compile Include="View\Kasser.xaml.cs">
       <DependentUpon>Kasser.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Kokke.xaml.cs">
-      <DependentUpon>Kokke.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Tilmeld.xaml.cs">
       <DependentUpon>Tilmeld.xaml</DependentUpon>
     </Compile>
@@ -152,10 +149,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Kasser.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Kokke.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
