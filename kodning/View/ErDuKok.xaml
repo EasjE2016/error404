@@ -56,12 +56,13 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="Uge 47" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <TextBlock Grid.Row="1" Grid.Column="0" Text="Mandag"/>
-                <ListView Grid.Row="2" Grid.Column="0" x:Name="KuvertMandag" ItemsSource="{Binding UgeKuverter.KuvertListeMandag}"/>
-               
+                <ListView Grid.Row="2" Grid.Column="0" x:Name="KuvertMandag" ItemsSource="{Binding UgeKuverter.KuvertListeMandag}" SelectionChanged="KuvertMandag_SelectionChanged"/>
+
 
 
                 <TextBlock Grid.Row="3" Grid.Column="0" Text="Tirsdag"/>
-                <TextBlock Grid.Row="4" Grid.Column="0" Text="Antal kuverter" FontSize="40"/>
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Antal kuverter: " x:Name="KuvertTirTxt" FontSize="40"/>
+                <Button Grid.Row="4" Grid.Column="0" x:Name="SeKuvTir"  Width="200" Height="35" HorizontalAlignment="Right" VerticalAlignment="Center" Content="Se kuverter tirsdag" Margin="0,19,10,28" Click="SeKuvTir_Click"/>
                 <TextBlock Grid.Row="5" Grid.Column="0" Text="Onsdag"/>
                 <TextBlock Grid.Row="6" Grid.Column="0" Text="Antal kuverter" FontSize="40"/>
                 <TextBlock Grid.Row="7" Grid.Column="0" Text="Torsdag"/>

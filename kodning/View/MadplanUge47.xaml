@@ -255,7 +255,7 @@
         </Grid>
         <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="148" Width="400" ItemsSource="{Binding UgeKuverter.KuvertListeMandag}"/>
 
-        <Button Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Tilmeld" FontSize="50" Width="200" Height="100"  Margin="0,0,50,20" Command="{Binding TilmeldCommand}"/>
+        <Button x:Name="TilmeldKnap" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Tilmeld" FontSize="50" Width="200" Height="100"  Margin="0,0,50,20" Command="{Binding TilmeldCommand}"/>
 
     </Grid>
 

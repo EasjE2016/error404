@@ -15,37 +15,22 @@ namespace kodning.ViewModel
         //props
         private KuverterListe _kuvertsliste;
         // public Kuverter NewKuvert { get; set; }
-
+       
         public int Husnummer { get; set; }
         #region mandags property
-        public int MandagVoksne { get; set; }
-        public int MandagTeens { get; set; }
-        public int MandagBoern { get; set; }
-        public int MandagBaby { get; set; }
+        public double MandagVoksne { get; set; }
+        public double MandagTeens { get; set; }
+        public double MandagBoern { get; set; }
+        public double MandagBaby { get; set; }
         #endregion
 
-        #region Tirsdagsprops
-        public int TirsdagVoksne { get; set; }
-        public int TirsdagTeens { get; set; }
-        public int TirsdagBoern { get; set; }
-        public int TirsdagBaby { get; set; }
-        #endregion
-        #region Onsdagsprops
-        public int OnsdagVoksne { get; set; }
-        public int OnsdagTeens { get; set; }
-        public int OnsdagBoern { get; set; }
-        public int OnsdagBaby { get; set; }
-        #endregion
-        #region Torsdagsprops
-        public int TorsdagVoksne { get; set; }
-        public int TorsdagTeens { get; set; }
-        public int TorsdagBoern { get; set; }
-        public int TorsdagBaby { get; set; }
-        #endregion
+
 
         //slut props
         public UgeKuverter UgeKuverter { get; set; }
         //foreach loop der giver sum af kuverter
+  
+
         public double GivAlleKuverter
         {
             get
@@ -58,7 +43,7 @@ namespace kodning.ViewModel
                 return KuverterForDag;
             }
         }
-
+    
 
         //slut foreach
 
@@ -67,6 +52,7 @@ namespace kodning.ViewModel
         //relaycommands
         // Her tilføjes knapper til at trykke "tilmeld"
         public RelayCommand.RelayCommand TilmeldCommand { get; set; }
+        public RelayCommand.RelayCommand UdregnAlleKuverterForDag { get; set; }
         //slut relaycommands
 
         //inotifyprop
@@ -89,37 +75,7 @@ namespace kodning.ViewModel
                 OnPropertyChanged(nameof(KuvertListenMandag));
             }
         }
-        private KuverterListe _kuvertListenTirsdag;
-
-        public KuverterListe KuvertListenTirsdag
-        {
-            get { return _kuvertListenTirsdag; }
-            set {
-                _kuvertListenTirsdag = value;
-                OnPropertyChanged(nameof(KuvertListenTirsdag));
-            }
-        }
-        private KuverterListe _kuvertListenOnsdag;
-
-        public KuverterListe KuvertListenOnsdag
-        {
-            get { return _kuvertListenOnsdag; }
-            set {
-                _kuvertListenOnsdag = value;
-                OnPropertyChanged(nameof(KuvertListenOnsdag));
-            }
-        }
-        private KuverterListe _kuvertListenTorsdag;
-
-        public KuverterListe KuvertListenTorsdag
-        {
-            get { return _kuvertListenTorsdag; }
-            set {
-                _kuvertListenTorsdag = value;
-                OnPropertyChanged(nameof(KuvertListenTorsdag));
-                    }
-        }
-
+        
 
 
 
@@ -137,38 +93,7 @@ namespace kodning.ViewModel
             MandagsKuvert.Ugedag = "Mandag";
             UgeKuverter.KuvertListeMandag.Add(MandagsKuvert);
 
-            #region
-            Kuverter TirsdagsKuvert = new Kuverter();
-            TirsdagsKuvert.HusNr = Husnummer;
-            TirsdagsKuvert.AntalVoksne = TirsdagVoksne;
-            TirsdagsKuvert.AntalTeen = TirsdagTeens;
-            TirsdagsKuvert.AntalBoern = TirsdagBoern;
-            TirsdagsKuvert.AntalBaby = TirsdagBaby;
-            TirsdagsKuvert.Ugedag = "Tirsdag";
-            UgeKuverter.KuvertListeTirsdag.Add(TirsdagsKuvert);
-            #endregion
-
-            #region
-            Kuverter OnsdagsKuvert = new Kuverter();
-            OnsdagsKuvert.HusNr = Husnummer;
-            OnsdagsKuvert.AntalVoksne = OnsdagVoksne;
-            OnsdagsKuvert.AntalTeen = OnsdagTeens;
-            OnsdagsKuvert.AntalBoern = OnsdagBoern;
-            OnsdagsKuvert.AntalBaby = OnsdagBaby;
-            OnsdagsKuvert.Ugedag = "Onsdag";
-            UgeKuverter.KuvertListeOnsdag.Add(OnsdagsKuvert);
-            #endregion
-
-            #region 
-            Kuverter TorsdagsKuvert = new Kuverter();
-            TorsdagsKuvert.HusNr = Husnummer;
-            TorsdagsKuvert.AntalVoksne = TorsdagVoksne;
-            TorsdagsKuvert.AntalTeen = TorsdagTeens;
-            TorsdagsKuvert.AntalBoern = TorsdagBoern;
-            TorsdagsKuvert.AntalBaby = TorsdagBaby;
-            TorsdagsKuvert.Ugedag = "Torsdag";
-            UgeKuverter.KuvertListeTorsdag.Add(TorsdagsKuvert);
-            #endregion
+           
 
             //KuvertListen.Add(MandagsKuvert);
 
@@ -177,12 +102,12 @@ namespace kodning.ViewModel
         //Konstruktor
         public KuvertViewModel()
         {
-            KuvertListenMandag = new KuverterListe();
-            KuvertListenTirsdag = new KuverterListe();
-            KuvertListenOnsdag = new KuverterListe();
-            KuvertListenTorsdag = new KuverterListe();
+            KuvertListenMandag = new KuverterListe();      
             UgeKuverter = new UgeKuverter();
             TilmeldCommand = new RelayCommand.RelayCommand(AddNewKuvert);
+            //UdregnAlleKuverterForDag = new RelayCommand.RelayCommand(GivAlleKuverter);
+            
+            
         }
 
 
