@@ -16,6 +16,7 @@ namespace kodning.Model
             this.Add(new Kuverter() {HusNr = 2, AntalVoksne = 2, AntalTeen = 41, AntalBoern = 150, AntalBaby = 0 });
         }
 
+        #region Json
         public string GetJson()
         {
             string json = JsonConvert.SerializeObject(this);
@@ -28,8 +29,9 @@ namespace kodning.Model
 
             foreach (var kuverter in nyListeLisa)
             {
-                //this.Add(kuverter);
+                this.Add(kuverter);
             }
         }
+        #endregion
     }
 }

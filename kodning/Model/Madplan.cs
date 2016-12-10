@@ -8,11 +8,11 @@ namespace kodning
 {
     class Madplan
     {
+
         public string Madplannen { get; set; }
         public string UgeDag { get; set; }
         public int UgeNr { get; set; }
         public double Pris { get; set; }
-        
         public int purchaser { get; set; }
 
 

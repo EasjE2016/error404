@@ -19,6 +19,8 @@ namespace kodning.Model
 
             Add(Nr1);
         }
+
+        #region Json
         public string GetJson()
         {
             string json = JsonConvert.SerializeObject(this);
@@ -34,5 +36,6 @@ namespace kodning.Model
                 this.Add(Arbejdere);
             }
         }
+        #endregion
     }
 }

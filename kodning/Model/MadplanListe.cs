@@ -21,6 +21,7 @@ namespace kodning
             
 
         }
+        #region Json
         public string GetJson()
         {
             string json = JsonConvert.SerializeObject(this);
@@ -36,5 +37,6 @@ namespace kodning
                 this.Add(Madplan);
             }
         }
+        #endregion
     }
 }
