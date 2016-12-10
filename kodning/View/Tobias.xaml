@@ -13,23 +13,30 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" VerticalAlignment="Top" Width="412" ItemsSource="{Binding MadplanListen, Mode=TwoWay}" SelectedItem="{Binding SelectedMadplan,Mode=TwoWay}">
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" VerticalAlignment="Top" Width="1422" ItemsSource="{Binding MadplanListen, Mode=TwoWay}" SelectedItem="{Binding SelectedMadplan,Mode=TwoWay}">
         </ListView>
-        
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="29,208,0,0" TextWrapping="Wrap" Text="{Binding NewMad.UgeNr, Mode=TwoWay}" VerticalAlignment="Top">
+
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="28,246,0,0" TextWrapping="Wrap" Text="{Binding NewMad.UgeNr, Mode=TwoWay}" VerticalAlignment="Top" Width="183">
         </TextBox>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="121,208,0,0" TextWrapping="Wrap" Text="{Binding NewMad.UgeDag, Mode=TwoWay}" VerticalAlignment="Top">
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="29,325,0,0" TextWrapping="Wrap" Text="{Binding NewMad.UgeDag, Mode=TwoWay}" VerticalAlignment="Top" Width="182">
         </TextBox>
-        <TextBox x:Name="textBox1_Copy" HorizontalAlignment="Left" Margin="215,208,0,0" TextWrapping="Wrap" Text="{Binding NewMad.Madplannen, Mode=TwoWay}" VerticalAlignment="Top">
+        <TextBox x:Name="textBox1_Copy" HorizontalAlignment="Left" Margin="28,585,0,0" TextWrapping="Wrap" Text="{Binding NewMad.purchaser, Mode=TwoWay}" VerticalAlignment="Top" Width="183">
         </TextBox>
-        <TextBox x:Name="textBox1_Copy1" HorizontalAlignment="Left" Margin="309,208,0,0" TextWrapping="Wrap" Text="{Binding NewMad.Pris, Mode=TwoWay}" VerticalAlignment="Top">
+        <TextBox x:Name="textBox1_Copy1" HorizontalAlignment="Left" Margin="29,687,0,0" TextWrapping="Wrap" Text="{Binding NewMad.Pris, Mode=TwoWay}" VerticalAlignment="Top" Width="182">
         </TextBox>
-        <Button x:Name="button" HorizontalAlignment="Left" Margin="309,293,0,0" VerticalAlignment="Top" Command="{Binding AddMadPlanCommand, Mode=TwoWay}" Content="Tilføj">
+        <Button x:Name="button" HorizontalAlignment="Left" Margin="300,754,0,0" VerticalAlignment="Top" Command="{Binding AddMadPlanCommand, Mode=TwoWay}" Content="Tilføj">
         </Button>
-        <Button x:Name="button1" HorizontalAlignment="Left" Margin="121,293,0,0" VerticalAlignment="Top" Command="{Binding RemoveMadplanCommand, Mode=TwoWay}" Content="Slet">
+        <Button x:Name="button1" HorizontalAlignment="Left" Margin="120,754,0,0" VerticalAlignment="Top" Command="{Binding RemoveMadplanCommand, Mode=TwoWay}" Content="Slet">
         </Button>
-        <Button x:Name="button2" Content="Hent" HorizontalAlignment="Left" Margin="215,293,0,0" VerticalAlignment="Top" Command="{Binding LoadMadplanCommand, Mode=TwoWay}">
+        <Button x:Name="button2" Content="Hent" HorizontalAlignment="Left" Margin="210,754,0,0" VerticalAlignment="Top" Command="{Binding LoadMadplanCommand, Mode=TwoWay}">
         </Button>
-        <Button x:Name="button3" Content="Gem" HorizontalAlignment="Left" Margin="42,293,0,0" Command="{Binding SaveMadplanCommand, Mode=TwoWay}" VerticalAlignment="Top"/>
+        <Button x:Name="button3" Content="Gem" HorizontalAlignment="Left" Margin="41,754,0,0" Command="{Binding SaveMadplanCommand, Mode=TwoWay}" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="29,430,0,0" TextWrapping="Wrap" Text="{Binding NewMad.Madplannen, Mode=TwoWay}" VerticalAlignment="Top" Width="1038" Height="89"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="28,221,0,0" TextWrapping="Wrap" Text="Uge nummer" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="28,300,0,0" TextWrapping="Wrap" Text="Uge dag" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="28,405,0,0" TextWrapping="Wrap" Text="Ret" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="28,560,0,0" TextWrapping="Wrap" Text="Indkøbers Hus nummer" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="29,662,0,0" TextWrapping="Wrap" Text="Pris for indkøb" VerticalAlignment="Top"/>
+        <Button x:Name="GåTilForside" Content="Gå til forside" HorizontalAlignment="Left" Margin="1529,76,0,0" VerticalAlignment="Top" Height="96" Width="229" Click="button_Click"/>
     </Grid>
 </Page>

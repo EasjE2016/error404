@@ -1,5 +1,4 @@
-﻿using kodning.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,11 +22,14 @@ namespace kodning.View
     /// </summary>
     public sealed partial class ErDuKok : Page
     {
- 
         public ErDuKok()
         {
             this.InitializeComponent();
         }
 
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Forside), null);
+        }
     }
 }
