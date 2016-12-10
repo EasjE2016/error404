@@ -34,7 +34,7 @@ namespace kodning
 
         private void Tilmelding1_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(kodning.View.MadplanUge47), null);
+            this.Frame.Navigate(typeof(kodning.View.Tilmeld), null);
         }
 
     }

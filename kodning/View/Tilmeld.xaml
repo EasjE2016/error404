@@ -6,7 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ViewModel="using:kodning.ViewModel"
     xmlns:Model="using:kodning.Model"
-    x:Class="kodning.View.MadplanUge47"
+    x:Class="kodning.View.Tilmeld"
     mc:Ignorable="d">
     <Page.DataContext>
         <ViewModel:KuvertViewModel/>
