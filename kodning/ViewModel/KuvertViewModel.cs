@@ -12,12 +12,16 @@ namespace kodning.ViewModel
 {
     public class KuvertViewModel : INotifyPropertyChanged
     {
-        //props
+        public UgeKuverter UgeKuverter { get; set; }
+
+
         private KuverterListe _kuvertsliste;
-        // public Kuverter NewKuvert { get; set; }
-       
+
+        public string Kuvertfilnavn { get; private set; }
+
+
+        #region Props til Tilmeldning
         public int Husnummer { get; set; }
-        #region mandags property
         public double MandagVoksne { get; set; }
         public double MandagTeens { get; set; }
         public double MandagBoern { get; set; }
@@ -25,12 +29,7 @@ namespace kodning.ViewModel
         #endregion
 
 
-
-        //slut props
-        public UgeKuverter UgeKuverter { get; set; }
-        //foreach loop der giver sum af kuverter
-  
-
+        #region Foreach loop over samlet antal kuverter
         public double GivAlleKuverter
         {
             get
@@ -43,19 +42,16 @@ namespace kodning.ViewModel
                 return KuverterForDag;
             }
         }
-    
-
-        //slut foreach
+        #endregion
 
 
-
-        //relaycommands
-        // Her tilføjes knapper til at trykke "tilmeld"
+        #region RelayCommands
         public RelayCommand.RelayCommand TilmeldCommand { get; set; }
         public RelayCommand.RelayCommand UdregnAlleKuverterForDag { get; set; }
-        //slut relaycommands
+        #endregion
 
-        //inotifyprop
+
+        #region Metode til at fortælle hvorvidt der er sket en ændring propertychange
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
         {
@@ -64,8 +60,10 @@ namespace kodning.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-        // inotifyprop slut
-        
+        #endregion
+
+
+        #region onpropchange til KuvertListenMandag
         public KuverterListe KuvertListenMandag
         {
             get { return _kuvertsliste; }
@@ -75,13 +73,13 @@ namespace kodning.ViewModel
                 OnPropertyChanged(nameof(KuvertListenMandag));
             }
         }
-        
+        #endregion
 
 
 
-        public string Kuvertfilnavn { get; private set; }
 
-        //Metode til at tilføje ny Kuvert.
+
+        #region Metode til Tilføje Kuverter
         public void AddNewKuvert()
         {
             Kuverter MandagsKuvert = new Kuverter();
@@ -92,26 +90,20 @@ namespace kodning.ViewModel
             MandagsKuvert.AntalBaby = MandagBaby;
             MandagsKuvert.Ugedag = "Mandag";
             UgeKuverter.KuvertListeMandag.Add(MandagsKuvert);
-
-           
-
-            //KuvertListen.Add(MandagsKuvert);
-
         }
+        #endregion
 
-        //Konstruktor
+        #region Konstruktør
         public KuvertViewModel()
         {
             KuvertListenMandag = new KuverterListe();      
             UgeKuverter = new UgeKuverter();
             TilmeldCommand = new RelayCommand.RelayCommand(AddNewKuvert);
             //UdregnAlleKuverterForDag = new RelayCommand.RelayCommand(GivAlleKuverter);
-            
-            
         }
+        #endregion
 
-
-        // til JSON
+        #region Json
 
         private readonly string lisa = "JsonText.json";
         StorageFolder localfolder = null;
@@ -146,6 +138,6 @@ namespace kodning.ViewModel
                 //throw;
             }
         }
-        // Slut JSON
+        #endregion
     }
 }
