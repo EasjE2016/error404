@@ -19,7 +19,7 @@ namespace kodning.Model
 
         public override string ToString()
         {
-            return "Antal kuverter: ";// der skal tilføjes en metode til at beregne samlet antal kuverter for hustand
+            return "Antal kuverter: ";
         }
     }
 }

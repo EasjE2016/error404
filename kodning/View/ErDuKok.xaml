@@ -56,8 +56,8 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="Uge 47" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <TextBlock Grid.Row="1" Grid.Column="0" Text="Mandag"/>
-                <Button Grid.Row="2" Grid.Column="0" x:Name="UdregnKuvMan" Content="Udregn Kuverter Mandag"/>
-                <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Antal kuv" FontSize="20"/>
+                <Button Grid.Row="2" Grid.Column="0" x:Name="UdregnKuvMan" Content="Udregn Kuverter Mandag" Command="{Binding BeregnKuvMandag}"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" Text="{Binding GivAlleKuverterMandag, Mode=OneWay}" />
                 <TextBox Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="White" FontSize="20"/>
                 <TextBlock Grid.Row="3" Grid.Column="0" Text="Tirsdag"/>
                 <Button Grid.Row="4" Grid.Column="0" x:Name="UdregnKuvTir" Content="Udregn Kuverter Tirsdag"/>

@@ -16,6 +16,7 @@ namespace kodning.ViewModel
         public PrisBeregning PrisBeregning { get; set; }
         public string Kuvertfilnavn { get; private set; }
         public double PrisIalt { get; private set; }
+        public double MandagTotalKuvert { get; private set; }
 
         private KuverterListe _kuvertsliste;
 
@@ -84,6 +85,10 @@ namespace kodning.ViewModel
             PrisIalt = +(GivAlleKuverterMandag + GivAlleKuverterTirsdag + GivAlleKuverterOnsdag + GivAlleKuverterTorsdag)/PrisIalt;
             
         }
+        public void BeregnKuvertMandag()
+        {
+            MandagTotalKuvert = GivAlleKuverterMandag;
+        }
 
 
 
@@ -93,6 +98,7 @@ namespace kodning.ViewModel
         #region RelayCommands
         public RelayCommand.RelayCommand TilmeldCommand { get; set; }
         public RelayCommand.RelayCommand UdregnAlleKuverterForDag { get; set; }
+        public RelayCommand.RelayCommand BeregnKuvMandag { get; set; }
         #endregion
 
 
@@ -146,7 +152,9 @@ namespace kodning.ViewModel
             }
         }
 
-        
+
+
+
         #endregion
 
 
@@ -175,6 +183,7 @@ namespace kodning.ViewModel
             UgeKuverter = new UgeKuverter();
             TilmeldCommand = new RelayCommand.RelayCommand(AddNewKuvert);
             UdregnAlleKuverterForDag = new RelayCommand.RelayCommand(BeregnPrisIAlt);
+            BeregnKuvMandag = new RelayCommand.RelayCommand(BeregnKuvertMandag);
         }
         #endregion
 
