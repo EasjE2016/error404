@@ -13,6 +13,7 @@ namespace kodning.ViewModel
 {
     class MadPlanViewModel : INotifyPropertyChanged
     {
+        #region Metoder til tilføjelse og select
         public void AddNewMadplan()
         {
             Madplan tempMadplan = new Madplan();
@@ -41,20 +42,11 @@ namespace kodning.ViewModel
                 OnPropertyChanged(nameof(SelectedMadplan));
             }
         }
+        #endregion
 
-        StorageFolder localfolder = null;
 
-        private readonly string Madplanfilnavn = "JsonText.json";
-
-        //public async void HentdataFraDiskAsync()
-        //{
-        //    this.MadplanListen.Clear();
-
-        //    StorageFile Madplanfile = await localfolder.GetFileAsync(Madplanfilnavn);
-        //    string jsonText = await FileIO.ReadTextAsync(Madplanfile);
-
-        //    MadplanListen.IndsætJson(jsonText);
-        //} 
+        #region Metode til at fortælle hvorvidt der er sket en ændring propertychange
+        public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)
         {
@@ -63,18 +55,18 @@ namespace kodning.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+        #endregion
 
-        //Herunder er RelayCommands.
+
+        #region RelayCommands
         public RelayCommand.RelayCommand AddMadPlanCommand { get; set; }
         public RelayCommand.RelayCommand RemoveMadplanCommand { get; set; }
         public RelayCommand.RelayCommand LoadMadplanCommand { get; set; }
         public RelayCommand.RelayCommand SaveMadplanCommand { get; set; }
+        #endregion
 
-        // Slut af Relays.
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        
-        //public MadplanListe MadplanListen { get; private set; }
+        #region Props til NewMad og onpropchange til madplanListen
         public Madplan NewMad { get;  set; }
 
         private MadplanListe _madplansliste;
@@ -88,10 +80,16 @@ namespace kodning.ViewModel
             }
         }
 
+        #endregion
 
-        // til JSON
 
-        private readonly string file = "JsonText.json";
+        #region Json - Til at gemme/hente
+
+
+        StorageFolder localfolder = null;
+
+        private readonly string Madplanfilnavn = "JsonText.json";
+
 
         public async void GemDataTilDiskAsync()
         {
@@ -111,7 +109,7 @@ namespace kodning.ViewModel
 
                 this.MadplanListen.Clear();
 
-                //metoden på medarbejderlisten
+                //metoden på MadplanListe
                 MadplanListen.IndsætJson(jsonText);
 
                 // Try og catch for at fange en exception for at undgå grimme fejlmeddelser
@@ -124,9 +122,10 @@ namespace kodning.ViewModel
                 //throw;
             }
         }
-        // Slut JSON
+        #endregion
 
-        //konstruktor
+
+        #region Konstruktør
 
         public MadPlanViewModel()
         {
@@ -139,5 +138,6 @@ namespace kodning.ViewModel
             LoadMadplanCommand = new RelayCommand.RelayCommand(HentDataFraDiskAsync);
             SaveMadplanCommand = new RelayCommand.RelayCommand(GemDataTilDiskAsync);           
         }
+        #endregion
     }
 }
