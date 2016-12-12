@@ -14,6 +14,7 @@ namespace kodning.Model
         public double Kok4Udlæg { get; set; }
         public int KuvertIAlt { get; private set; }
         public double PrisiAlt { get; private set; }
+        public double PrisIalt { get; set; }
 
         public double PrisIAlt { get
             {

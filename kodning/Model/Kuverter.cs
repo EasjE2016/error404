@@ -16,12 +16,11 @@ namespace kodning.Model
         public double Teens { get; set; }
         public double Boern { get; set; }
         public double Baby { get; set; }
-        public double PrisIalt { get; set; }
         public double MandagTotalKuvert { get; set; }
 
         public override string ToString()
         {
-            return "Antal kuverter: ";
+            return "Husnummer " + Husnummer + " tilmeldt";
         }
     }
 }

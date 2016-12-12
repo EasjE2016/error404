@@ -13,7 +13,7 @@ namespace kodning.Model
         public KuverterListe()
         {
             Kuverter KuvertInstance = new Kuverter();
-            this.Add(new Kuverter() {Husnummer = 2, Voksne = 2, Teens = 41, Boern = 150, Baby = 0 });
+            
         }
 
         #region Json

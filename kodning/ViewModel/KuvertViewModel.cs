@@ -20,12 +20,6 @@ namespace kodning.ViewModel
         private KuverterListe _kuvertsliste;
 
 
-
-        #region Props til Tilmeldning
-
-        #endregion
-
-
         #region Foreach loop over samlet antal kuverter
         public double GivAlleKuverterMandag
         {
@@ -77,7 +71,7 @@ namespace kodning.ViewModel
         }
         public void BeregnPrisIAlt()
         {
-            Kuverter.PrisIalt = +(GivAlleKuverterMandag + GivAlleKuverterTirsdag + GivAlleKuverterOnsdag + GivAlleKuverterTorsdag)/Kuverter.PrisIalt;
+            PrisBeregning.PrisIalt = +(GivAlleKuverterMandag + GivAlleKuverterTirsdag + GivAlleKuverterOnsdag + GivAlleKuverterTorsdag)/PrisBeregning.PrisIalt;
             
         }
         public void BeregnKuvertMandag()
@@ -171,6 +165,7 @@ namespace kodning.ViewModel
         #region Konstruktør
         public KuvertViewModel()
         {
+            PrisBeregning = new PrisBeregning();
             Kuverter = new Kuverter();
             KuvertListenMandag = new KuverterListe();
             KuvertListenTirsdag = new KuverterListe();
