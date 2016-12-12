@@ -8,26 +8,21 @@ using System.ComponentModel;
 using Windows.Storage;
 using Windows.UI.Popups;
 
+
 namespace kodning.ViewModel
 {
     public class KuvertViewModel : INotifyPropertyChanged
     {
+        public Kuverter Kuverter { get; set; }
         public UgeKuverter UgeKuverter { get; set; }
         public PrisBeregning PrisBeregning { get; set; }
         public string Kuvertfilnavn { get; private set; }
-        public double PrisIalt { get; private set; }
-        public double MandagTotalKuvert { get; private set; }
-
         private KuverterListe _kuvertsliste;
 
 
 
         #region Props til Tilmeldning
-        public int Husnummer { get; set; }
-        public double MandagVoksne { get; set; }
-        public double MandagTeens { get; set; }
-        public double MandagBoern { get; set; }
-        public double MandagBaby { get; set; }
+
         #endregion
 
 
@@ -39,7 +34,7 @@ namespace kodning.ViewModel
                 double KuverterForMandag = 0;
                 foreach (var kuverter in KuvertListenMandag)
                 {
-                    KuverterForMandag = +(kuverter.AntalVoksne * 1) + (kuverter.AntalTeen * 0.5) + (kuverter.AntalBoern * 0.25) + (kuverter.AntalBaby * 0);
+                    KuverterForMandag = +(kuverter.Voksne * 1) + (kuverter.Teens * 0.5) + (kuverter.Boern * 0.25) + (kuverter.Baby * 0);
                 }
                 return KuverterForMandag;
             }
@@ -51,7 +46,7 @@ namespace kodning.ViewModel
                 double KuverterForTirsdag = 0;
                 foreach (var kuverter in KuvertListenTirsdag)
                 {
-                    KuverterForTirsdag = +(kuverter.AntalVoksne * 1) + (kuverter.AntalTeen * 0.5) + (kuverter.AntalBoern * 0.25) + (kuverter.AntalBaby * 0);
+                    KuverterForTirsdag = +(kuverter.Voksne * 1) + (kuverter.Teens * 0.5) + (kuverter.Boern * 0.25) + (kuverter.Baby * 0);
                 }
                 return KuverterForTirsdag;
             }
@@ -63,7 +58,7 @@ namespace kodning.ViewModel
                 double KuverterForOnsdag = 0;
                 foreach (var kuverter in KuvertListenOnsdag)
                 {
-                    KuverterForOnsdag = +(kuverter.AntalVoksne * 1) + (kuverter.AntalTeen * 0.5) + (kuverter.AntalBoern * 0.25) + (kuverter.AntalBaby * 0);
+                    KuverterForOnsdag = +(kuverter.Voksne * 1) + (kuverter.Teens * 0.5) + (kuverter.Boern * 0.25) + (kuverter.Baby * 0);
                 }
                 return KuverterForOnsdag;
             }
@@ -75,19 +70,19 @@ namespace kodning.ViewModel
                 double KuverterForTorsdag = 0;
                 foreach (var kuverter in KuvertListenTorsdag)
                 {
-                    KuverterForTorsdag = +(kuverter.AntalVoksne * 1) + (kuverter.AntalTeen * 0.5) + (kuverter.AntalBoern * 0.25) + (kuverter.AntalBaby * 0);
+                    KuverterForTorsdag = +(kuverter.Voksne * 1) + (kuverter.Teens * 0.5) + (kuverter.Boern * 0.25) + (kuverter.Baby * 0);
                 }
                 return KuverterForTorsdag;
             }
         }
         public void BeregnPrisIAlt()
         {
-            PrisIalt = +(GivAlleKuverterMandag + GivAlleKuverterTirsdag + GivAlleKuverterOnsdag + GivAlleKuverterTorsdag)/PrisIalt;
+            Kuverter.PrisIalt = +(GivAlleKuverterMandag + GivAlleKuverterTirsdag + GivAlleKuverterOnsdag + GivAlleKuverterTorsdag)/Kuverter.PrisIalt;
             
         }
         public void BeregnKuvertMandag()
         {
-            MandagTotalKuvert = GivAlleKuverterMandag;
+            Kuverter.MandagTotalKuvert = GivAlleKuverterMandag;
         }
 
 
@@ -162,20 +157,21 @@ namespace kodning.ViewModel
         #region Metode til Tilføje Kuverter
         public void AddNewKuvert()
         {
-            Kuverter MandagsKuvert = new Kuverter();
-            MandagsKuvert.HusNr = Husnummer;
-            MandagsKuvert.AntalVoksne = MandagVoksne;
-            MandagsKuvert.AntalTeen = MandagTeens;
-            MandagsKuvert.AntalBoern = MandagBoern;
-            MandagsKuvert.AntalBaby = MandagBaby;
-            MandagsKuvert.Ugedag = "Mandag";
-            UgeKuverter.KuvertListeMandag.Add(MandagsKuvert);
+            Kuverter Kuvert = new Kuverter();
+            Kuvert.Husnummer = Kuverter.Husnummer;
+            Kuvert.Voksne = Kuverter.Voksne;
+            Kuvert.Teens = Kuverter.Teens;
+            Kuvert.Boern = Kuverter.Boern;
+            Kuvert.Baby = Kuverter.Baby;
+            Kuvert.Ugedag = "";
+            UgeKuverter.KuvertListeMandag.Add(Kuvert);
         }
         #endregion
 
         #region Konstruktør
         public KuvertViewModel()
         {
+            Kuverter = new Kuverter();
             KuvertListenMandag = new KuverterListe();
             KuvertListenTirsdag = new KuverterListe();
             KuvertListenOnsdag = new KuverterListe();

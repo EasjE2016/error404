@@ -9,13 +9,15 @@ namespace kodning.Model
 {
     public class Kuverter
     {
-        public int HusNr { get; set; }
-        public double AntalVoksne { get; set; }
-        public double AntalTeen { get; set; }
-        public double AntalBoern { get; set; }
-        public double AntalBaby { get; set; }
-        public string Ugedag { get; set; }
 
+        public string Ugedag { get; set; }
+        public int Husnummer { get; set; }
+        public double Voksne { get; set; }
+        public double Teens { get; set; }
+        public double Boern { get; set; }
+        public double Baby { get; set; }
+        public double PrisIalt { get; set; }
+        public double MandagTotalKuvert { get; set; }
 
         public override string ToString()
         {
