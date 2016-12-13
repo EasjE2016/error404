@@ -19,9 +19,7 @@ namespace kodning.ViewModel
             Madplan tempMadplan = new Madplan();
             tempMadplan.UgeNr = NewMad.UgeNr;
             tempMadplan.UgeDag = NewMad.UgeDag;
-            tempMadplan.Pris = NewMad.Pris;
             tempMadplan.Madplannen = NewMad.Madplannen;
-            tempMadplan.purchaser = NewMad.purchaser;
 
             MadplanListen.Add(tempMadplan);
         }
@@ -68,6 +66,7 @@ namespace kodning.ViewModel
 
         #region Props til NewMad og onpropchange til madplanListen
         public Madplan NewMad { get;  set; }
+        public PrisBeregning NewPris { get; set; }
 
         private MadplanListe _madplansliste;
 
@@ -129,6 +128,7 @@ namespace kodning.ViewModel
 
         public MadPlanViewModel()
         {
+            NewPris = new PrisBeregning();
             MadplanListen = new MadplanListe();
             localfolder = ApplicationData.Current.LocalFolder;
             NewMad = new Madplan();
