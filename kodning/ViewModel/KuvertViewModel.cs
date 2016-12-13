@@ -75,7 +75,7 @@ namespace kodning.ViewModel
             
         }
         public void BeregnKuvertMandag()
-        {
+                    {
             PrisBeregning.MandagTotalKuvert = GivAlleKuverterMandag;
         }
 
