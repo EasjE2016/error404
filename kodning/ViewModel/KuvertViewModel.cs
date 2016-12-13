@@ -71,7 +71,7 @@ namespace kodning.ViewModel
         }
         public void BeregnPrisIAlt()
         {
-            PrisBeregning.PrisIalt = +(GivAlleKuverterMandag + GivAlleKuverterTirsdag + GivAlleKuverterOnsdag + GivAlleKuverterTorsdag)/PrisBeregning.PrisIalt;
+            PrisBeregning.PrisIalt = +(GivAlleKuverterMandag + GivAlleKuverterTirsdag + GivAlleKuverterOnsdag + GivAlleKuverterTorsdag)/PrisBeregning.PrisIAlt;
             
         }
         public void BeregnKuvertMandag()

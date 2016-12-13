@@ -13,15 +13,15 @@ namespace kodning.Model
         public double Kok3Udlæg { get; set; }
         public double Kok4Udlæg { get; set; }
         public int KuvertIAlt { get; private set; }
-        public double PrisiAlt { get; private set; }
+        public double UdlægIAlt { get; private set; }
         public double PrisIalt { get; set; }
         public double MandagTotalKuvert { get; set; }
 
         public double PrisIAlt { get
             {
-                PrisiAlt = 0;                
-                PrisiAlt = +Kok1Udlæg + Kok2Udlæg + Kok3Udlæg + Kok4Udlæg;
-                return PrisiAlt;
+                UdlægIAlt = 0;                
+                UdlægIAlt = +Kok1Udlæg + Kok2Udlæg + Kok3Udlæg + Kok4Udlæg;
+                return UdlægIAlt;
             }
         }
 
