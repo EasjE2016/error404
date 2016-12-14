@@ -7,6 +7,7 @@ using kodning.Model;
 using System.ComponentModel;
 using Windows.Storage;
 using Windows.UI.Popups;
+using kodning.RelayCommand;
 
 
 namespace kodning.ViewModel
@@ -14,70 +15,59 @@ namespace kodning.ViewModel
     public class KuvertViewModel : INotifyPropertyChanged
     {
         public Kuverter Kuverter { get; set; }
-        public UgeKuverter UgeKuverter { get; set; }
+        //public UgeKuverter UgeKuverter { get; set; }
         public PrisBeregning PrisBeregning { get; set; }
         public string Kuvertfilnavn { get; private set; }
         private KuverterListe _kuvertsliste;
+        public KuvertCatalogSingleton Instance { get; set; }
 
 
         #region Foreach loop over samlet antal kuverter
+
         public double GivAlleKuverterMandag
         {
             get
             {
-                double KuverterForMandag = 0;
-                foreach (var kuverter in KuvertListenMandag)
-                {
-                    KuverterForMandag = +(kuverter.Voksne * 1) + (kuverter.Teens * 0.5) + (kuverter.Boern * 0.25) + (kuverter.Baby * 0);
-                }
-                return KuverterForMandag;
+                return Instance.ReturKuvert(Instance.MandagListe);
             }
         }
         public double GivAlleKuverterTirsdag
         {
             get
             {
-                double KuverterForTirsdag = 0;
-                foreach (var kuverter in KuvertListenTirsdag)
-                {
-                    KuverterForTirsdag = +(kuverter.Voksne * 1) + (kuverter.Teens * 0.5) + (kuverter.Boern * 0.25) + (kuverter.Baby * 0);
-                }
-                return KuverterForTirsdag;
+                return Instance.ReturKuvertTirsdag(Instance.TirsdagListe);
             }
         }
         public double GivAlleKuverterOnsdag
         {
             get
             {
-                double KuverterForOnsdag = 0;
-                foreach (var kuverter in KuvertListenOnsdag)
-                {
-                    KuverterForOnsdag = +(kuverter.Voksne * 1) + (kuverter.Teens * 0.5) + (kuverter.Boern * 0.25) + (kuverter.Baby * 0);
-                }
-                return KuverterForOnsdag;
+                return Instance.ReturKuvertOnsdag(Instance.OnsdagListe);
             }
         }
         public double GivAlleKuverterTorsdag
         {
             get
             {
-                double KuverterForTorsdag = 0;
-                foreach (var kuverter in KuvertListenTorsdag)
-                {
-                    KuverterForTorsdag = +(kuverter.Voksne * 1) + (kuverter.Teens * 0.5) + (kuverter.Boern * 0.25) + (kuverter.Baby * 0);
-                }
-                return KuverterForTorsdag;
+                return Instance.ReturKuvertTorsdag(Instance.TorsdagListe);
             }
         }
-        public void BeregnPrisIAlt()
-        {
-            PrisBeregning.PrisIalt = +(GivAlleKuverterMandag + GivAlleKuverterTirsdag + GivAlleKuverterOnsdag + GivAlleKuverterTorsdag)/PrisBeregning.PrisIAlt;
-            
-        }
-        public void BeregnKuvertMandag()
-        {
-            PrisBeregning.MandagTotalKuvert = GivAlleKuverterMandag;
-        }
+        // Dette SKAL ordnes. 
+       
+        //public double VisPrisPerKuvert
+        //{
+        //    get
+        //    {
+        //        double PrisenEr = 0;
+        //        PrisenEr = +(GivAlleKuverterMandag + GivAlleKuverterTirsdag + GivAlleKuverterOnsdag + GivAlleKuverterTorsdag) / PrisBeregning.UdlægIAlt;
+        //        return PrisenEr;
+        //    }
+        //}
+        //public void PrisPerKuvert()
+        //{
+        //    PrisBeregning Pris = new PrisBeregning();
+        //    Pris.TotalKuvert = VisPrisPerKuvert;
+        //}
 
 
 
@@ -86,8 +76,12 @@ namespace kodning.ViewModel
 
         #region RelayCommands
         public RelayCommand.RelayCommand TilmeldCommand { get; set; }
-        public RelayCommand.RelayCommand UdregnAlleKuverterForDag { get; set; }
+        public RelayCommand.RelayCommand KuvertPerDagCommand { get; set; }
         public RelayCommand.RelayCommand BeregnKuvMandag { get; set; }
+        public RelayCommand.RelayCommand TilMeldTirsdagCommand { get; set; }
+        public RelayCommand.RelayCommand TilMeldOnsdagCommand { get; set; }
+        public RelayCommand.RelayCommand TilMeldTorsdagCommand { get; set; }
+        public RelayCommand.RelayCommand AccepterUdlægCommand { get; set; }
         #endregion
 
 
@@ -104,15 +98,17 @@ namespace kodning.ViewModel
 
 
         #region onpropchange til KuvertLister
-        public KuverterListe KuvertListenMandag
-        {
-            get { return _kuvertsliste; }
-            set
-            {
-                _kuvertsliste = value;
-                OnPropertyChanged(nameof(KuvertListenMandag));
-            }
-        }
+        //public KuverterListe KuvertListenMandag
+        //{
+        //    get { return _kuvertsliste; }
+        //    set
+        //    {
+        //        _kuvertsliste = value;
+        //        OnPropertyChanged(nameof(KuvertListenMandag));
+        //        //OnPropertyChanged(nameof(GivAlleKuverterMandag));S
+        //    }
+        //}
+
         public KuverterListe KuvertListenTirsdag
         {
             get { return _kuvertsliste; }
@@ -144,12 +140,23 @@ namespace kodning.ViewModel
 
 
 
+
         #endregion
 
 
 
         #region Metode til Tilføje Kuverter
-        public void AddNewKuvert()
+        public void AccepterUdlæg()
+        {
+            PrisBeregning Udlæg = new PrisBeregning();
+            Udlæg.Kok1Udlæg = PrisBeregning.Kok1Udlæg;
+            Udlæg.Kok2Udlæg = PrisBeregning.Kok2Udlæg;
+            Udlæg.Kok3Udlæg = PrisBeregning.Kok3Udlæg;
+            Udlæg.Kok4Udlæg = PrisBeregning.Kok4Udlæg;
+            Udlæg.UdlægIAlt = PrisBeregning.UdlægIAlt;
+        }
+
+        public void AddNewKuvertMandag()
         {
             Kuverter Kuvert = new Kuverter();
             Kuvert.Husnummer = Kuverter.Husnummer;
@@ -158,36 +165,76 @@ namespace kodning.ViewModel
             Kuvert.Boern = Kuverter.Boern;
             Kuvert.Baby = Kuverter.Baby;
             Kuvert.Ugedag = "";
-            UgeKuverter.KuvertListeMandag.Add(Kuvert);
+            
+            //referer til singleton
+            Instance.MandagListe.Add(Kuvert);
+
+        }
+        public void AddNewKuvertTirsdag()
+        {
+            Kuverter TirsdagKuvert = new Kuverter();
+            TirsdagKuvert.Husnummer = Kuverter.Husnummer;
+            TirsdagKuvert.TirsdagVoksne = Kuverter.TirsdagVoksne;
+            TirsdagKuvert.TirsdagTeens = Kuverter.TirsdagTeens;
+            TirsdagKuvert.TirsdagBoern = Kuverter.TirsdagBoern;
+            TirsdagKuvert.TirsdagBaby = Kuverter.TirsdagBaby;
+            //referer til singleton
+            Instance.TirsdagListe.Add(TirsdagKuvert);
+
+        }
+        public void AddNewKuvertOnsdag()
+        {
+            Kuverter OnsdagKuvert = new Kuverter();
+            OnsdagKuvert.Husnummer = Kuverter.Husnummer;
+            OnsdagKuvert.OnsdagVoksne = Kuverter.OnsdagVoksne;
+            OnsdagKuvert.OnsdagTeens = Kuverter.OnsdagTeens;
+            OnsdagKuvert.OnsdagBoern = Kuverter.OnsdagBoern;
+            OnsdagKuvert.OndagsBaby = Kuverter.OndagsBaby;
+            //referer til singleton
+            Instance.OnsdagListe.Add(OnsdagKuvert);
+
+        }
+        public void AddNewKuvertTorsdag()
+        {
+            Kuverter TorsdagKuvert = new Kuverter();
+            TorsdagKuvert.Husnummer = Kuverter.Husnummer;
+            TorsdagKuvert.TorsdagVoksne = Kuverter.TorsdagVoksne;
+            TorsdagKuvert.TorsdagTeens = Kuverter.TorsdagTeens;
+            TorsdagKuvert.TorsdagBoern = Kuverter.TorsdagBoern;
+            TorsdagKuvert.TorsdagBaby = Kuverter.TorsdagBaby;
+            //referer til singleton
+            Instance.TorsdagListe.Add(TorsdagKuvert);
+
         }
         #endregion
 
         #region Konstruktør
         public KuvertViewModel()
         {
+            Instance = KuvertCatalogSingleton.Instance;
             PrisBeregning = new PrisBeregning();
             Kuverter = new Kuverter();
-            KuvertListenMandag = new KuverterListe();
-            KuvertListenTirsdag = new KuverterListe();
-            KuvertListenOnsdag = new KuverterListe();
-            KuvertListenTorsdag = new KuverterListe();
-            UgeKuverter = new UgeKuverter();
-            TilmeldCommand = new RelayCommand.RelayCommand(AddNewKuvert);
-            UdregnAlleKuverterForDag = new RelayCommand.RelayCommand(BeregnPrisIAlt);
-            BeregnKuvMandag = new RelayCommand.RelayCommand(BeregnKuvertMandag);
+            TilmeldCommand = new RelayCommand.RelayCommand(AddNewKuvertMandag);
+            TilMeldTirsdagCommand = new RelayCommand.RelayCommand(AddNewKuvertTirsdag);
+            TilMeldOnsdagCommand = new RelayCommand.RelayCommand(AddNewKuvertOnsdag);
+            TilMeldTorsdagCommand = new RelayCommand.RelayCommand(AddNewKuvertTorsdag);
+            AccepterUdlægCommand = new RelayCommand.RelayCommand(AccepterUdlæg);
+            //KuvertPerDagCommand = new RelayCommand.RelayCommand(PrisPerKuvert);
+
         }
         #endregion
 
         #region Json
 
-        private readonly string lisa = "JsonText.json";
         StorageFolder localfolder = null;
         public async void GemDataTilDiskAsync()
         {
-            string jsonText = this.KuvertListenMandag.GetJson();
+            string jsonText = Instance.MandagListe.GetJson();
+
             StorageFile lisa = await localfolder.CreateFileAsync(Kuvertfilnavn, CreationCollisionOption.ReplaceExisting);
             await FileIO.WriteTextAsync(lisa, jsonText);
         }
+
 
         public async void HentDataFraDiskAsync()
         {
@@ -198,11 +245,13 @@ namespace kodning.ViewModel
 
                 string jsonText = await FileIO.ReadTextAsync(lisa);
 
-                this.KuvertListenMandag.Clear();
+                Instance.MandagListe.Clear();
+                //this.KuvertListenMandag.Clear();
 
                 //metoden på medarbejderlisten
-                KuvertListenMandag.IndsætJson(jsonText);
-
+                //KuvertListenMandag.IndsætJson(jsonText);
+                Instance.MandagListe.IndsætJson(jsonText);
+                
                 // Try og catch for at fange en exception for at undgå grimme fejlmeddelser
             }
             catch (Exception)
