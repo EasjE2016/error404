@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="e709006d-e36d-47f4-9f48-2e8a1840d8d9" name="TrueKlasseDiagram" linkedPackageId="b561f4c3-5f4e-440a-8670-daa51246742e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="34f9426b-0b1b-415f-ad87-eb76c3e26830">
-      <profileInstance Id="fc65469a-19c2-4433-8db4-1045930f9ca4" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="8ef736e7-798e-4f96-ae6e-d0236979c17e">
-      <profileInstance Id="cb1f3ca8-f059-42b2-8eef-a341a9ad4d83" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="cf847643-5523-40e6-b67c-9aa4d6943811" name="viewmodel">
@@ -245,18 +231,33 @@
               <ownedAttributesInternal>
                 <property Id="815f72dc-4e2b-489f-ba2b-7d5c663de3ff" name="MandagKokUdlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="fb59c7f2-5df4-49d3-8d73-0dc6262c9c62" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
                 </property>
                 <property Id="55779b30-9d12-4999-aa24-900f2a6aae5e" name="TirsdagKokUdlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="7d6f95fa-f306-48b7-99fc-9632e848df31" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
                 </property>
                 <property Id="ae44013d-4e18-4caa-b144-92abbab809dd" name="OnsdagKokUdlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="0d79c927-e4c1-4c20-a23e-eb383faa6f10" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
                 </property>
                 <property Id="1b0a1ee4-ce82-4a92-a025-b65b5fe32ec3" name="TorsdagKokUdlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="0b1eab6c-09af-49df-bf89-74a3259a94cb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
                 </property>
                 <property Id="b1a5203d-fb03-4cfe-b1c8-ab8eedc94e6a" name="KuvertTotal" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="e937d81a-3186-466a-886f-92382e67fc40" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
@@ -272,12 +273,21 @@
               <ownedAttributesInternal>
                 <property Id="a4fe2c09-430a-4248-af11-55b689dba482" name="Ret" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="aea9e335-d0fb-4cae-bc5c-d36012777170" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e5320ac9-1b6c-4157-866a-b7d00bceec41" LastKnownName="string" />
+                  </type_NamedElement>
                 </property>
                 <property Id="f882ead4-ebda-4c74-9cc8-5389905c7281" name="UgeDag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="acad6f29-3637-4c7b-964c-6096bd8166f5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e5320ac9-1b6c-4157-866a-b7d00bceec41" LastKnownName="string" />
+                  </type_NamedElement>
                 </property>
                 <property Id="d1e20518-cec0-4407-93aa-debff494ba2b" name="UgeNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="c1b5508f-32c3-4b62-8802-8336aa9d7a5e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="09b85933-3986-4f2c-ab41-67a2b1a3fc98" LastKnownName="int" />
+                  </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
@@ -293,27 +303,117 @@
               <ownedAttributesInternal>
                 <property Id="6feec3a4-fce5-491c-8f0a-d5e1829d4eb6" name="UgeDag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="13a86110-1e76-4829-a51e-ac76d0354490" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e5320ac9-1b6c-4157-866a-b7d00bceec41" LastKnownName="string" />
+                  </type_NamedElement>
                 </property>
                 <property Id="c38dc4aa-fb56-40ce-a8b7-f7d8108ce411" name="UgeNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="1177bd83-2fb8-4f65-a65f-fa0fb345c4a7" />
-                </property>
-                <property Id="c2ca9620-57a9-413c-91b8-cc640654ba4c" name="AntalVoksne" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="45466da4-5f4e-4dfd-afa7-b449babd318d" />
-                </property>
-                <property Id="0514259b-1721-48a6-8c9d-1766cdcd0014" name="AntalUnge" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="907398e6-fb5d-4ef3-889c-1f4ded58808a" />
-                </property>
-                <property Id="0be787dd-dd65-437b-817d-c420b668687d" name="AntalBoern" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="5434bc60-bae3-4544-bbc7-34d66d7b3fb4" />
-                </property>
-                <property Id="214120cc-56c2-4db5-9c52-59865b9c71fb" name="AntalBaby" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="440bc155-0d73-4ff7-a0e8-635edbad2263" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="09b85933-3986-4f2c-ab41-67a2b1a3fc98" LastKnownName="int" />
                   </type_NamedElement>
                 </property>
-                <property Id="581f7e5b-8d4d-4286-8ed3-4c551f16497c" name="Ugedag+Alderx4" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="3ece3334-97fe-4721-9cbf-bac99edf243f" />
+                <property Id="c2ca9620-57a9-413c-91b8-cc640654ba4c" name="AntalVoksne" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="45466da4-5f4e-4dfd-afa7-b449babd318d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2bbd9515-0c90-4623-b1c1-c3415f57c631" LastKnownName="double" />
+                  </type_NamedElement>
+                </property>
+                <property Id="0514259b-1721-48a6-8c9d-1766cdcd0014" name="AntalUnge" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="907398e6-fb5d-4ef3-889c-1f4ded58808a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f12c2c3f-02a1-4ff8-b694-4f0634eb458b" LastKnownName="double" />
+                  </type_NamedElement>
+                </property>
+                <property Id="0be787dd-dd65-437b-817d-c420b668687d" name="AntalBoern" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5434bc60-bae3-4544-bbc7-34d66d7b3fb4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a0379acf-2ebb-47fd-94fb-94741eaa8a7f" LastKnownName="double" />
+                  </type_NamedElement>
+                </property>
+                <property Id="214120cc-56c2-4db5-9c52-59865b9c71fb" name="AntalBaby" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="440bc155-0d73-4ff7-a0e8-635edbad2263" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
+                </property>
+                <property Id="0a5cb75c-4ae0-4315-a79f-1e2e7a604ab1" name="Husnr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a94ce314-9ca0-434a-9915-8b2f1dbd926f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="09b85933-3986-4f2c-ab41-67a2b1a3fc98" LastKnownName="int" />
+                  </type_NamedElement>
+                </property>
+                <property Id="980c5d9c-8272-46a5-a970-b537c0de67fc" name="TirsdagVoksne" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="76e58091-6a02-44d3-aeeb-f10009ed00e5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
+                </property>
+                <property Id="8fecd431-cb21-4ee2-8b5b-2fcc37b1fd09" name="TirsdagUnge" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8db05a6f-9c5f-46a7-9e78-cadd1ce62291" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
+                </property>
+                <property Id="8619fd4b-eac3-4bbd-b17c-ad136c66dbf4" name="TirsdagBoern" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6c0a84bd-2932-4c7e-b881-fc0b2af2c246" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
+                </property>
+                <property Id="2866b803-9ff2-47b6-990e-ac3344336317" name="TirsdagBaby" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="dddeb501-bb9d-4629-aa28-f60b3a1d30f7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
+                </property>
+                <property Id="88d11544-cd87-4074-b43a-64a6a06912d6" name="OnsdagVoksne" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4227eab4-8b41-405a-952b-80f9e21fb471" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
+                </property>
+                <property Id="ef19ce0f-dee4-448a-afb7-6ebd45448372" name="OnsdagUnge" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="15777b64-960d-4a87-ad23-077c565bfa50" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
+                </property>
+                <property Id="71215f1c-9e44-4336-bcc7-1260293578b4" name="OnsdagBoern" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="14344239-8183-47a4-b5b4-2053fa3ecc4e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
+                </property>
+                <property Id="eaed39cd-a491-434c-9cac-11202f2bc5cb" name="OnsdagBaby" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e1736295-bc94-40a7-9130-34e91a9105ee" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
+                </property>
+                <property Id="f9b46047-53ec-41bf-b1a3-80ebd61bea83" name="TorsdagVoksne" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="71e19fbe-f662-4106-a25d-8173be985d1d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
+                </property>
+                <property Id="bec0a26f-f20c-4898-abef-626cb427f473" name="TorsdagUnge" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="04ff54cc-ccf1-4e82-bfa3-6749af864562" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
+                </property>
+                <property Id="650244ac-1628-46f6-8c10-72872f5d3c09" name="TorsdagBoern" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8fb0c61b-3670-4cfb-ac42-f20b877da365" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
+                </property>
+                <property Id="44179b00-f286-4c5b-a41c-5dbae7e89190" name="TorsdagBaby" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="577b229c-9e45-4305-8183-d5858140e646" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" LastKnownName="double" />
+                  </type_NamedElement>
                 </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
@@ -417,8 +517,47 @@
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <referencedType Id="e5320ac9-1b6c-4157-866a-b7d00bceec41" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="7a376c12-2b1e-4376-990c-3f1d257f62e2" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="03e0f987-73f5-4b66-80eb-9d921ed7a232" name="double" isAbstract="false" isLeaf="false" cachedFullName="double">
+        <elementDefinition Id="b0044137-852d-4da2-bbc8-aaba4f676654" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a0379acf-2ebb-47fd-94fb-94741eaa8a7f" name="double" isAbstract="false" isLeaf="false" cachedFullName="double">
+        <elementDefinition Id="b0044137-852d-4da2-bbc8-aaba4f676654" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f12c2c3f-02a1-4ff8-b694-4f0634eb458b" name="double" isAbstract="false" isLeaf="false" cachedFullName="double">
+        <elementDefinition Id="b0044137-852d-4da2-bbc8-aaba4f676654" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2bbd9515-0c90-4623-b1c1-c3415f57c631" name="double" isAbstract="false" isLeaf="false" cachedFullName="double">
+        <elementDefinition Id="b0044137-852d-4da2-bbc8-aaba4f676654" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="b561f4c3-5f4e-440a-8670-daa51246742e" name="Klassediagram">
     <elementDefinition Id="e409fe34-fd16-4ebe-b416-e2bd3a4062fe" />
+    <profileInstances>
+      <packageHasProfileInstances Id="34f9426b-0b1b-415f-ad87-eb76c3e26830">
+        <profileInstance Id="fc65469a-19c2-4433-8db4-1045930f9ca4" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="8ef736e7-798e-4f96-ae6e-d0236979c17e">
+        <profileInstance Id="cb1f3ca8-f059-42b2-8eef-a341a9ad4d83" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
