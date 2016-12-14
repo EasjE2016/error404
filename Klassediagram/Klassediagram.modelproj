@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Sekvensdiagram.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="TrueKlasseDiagram.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="TrueKlasseDiagram.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>TrueKlasseDiagram.classdiagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="Klassediagram.classdiagram">
       <SubType>Content</SubType>
