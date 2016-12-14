@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="e709006d-e36d-47f4-9f48-2e8a1840d8d9" name="TrueKlasseDiagram" linkedPackageId="b561f4c3-5f4e-440a-8670-daa51246742e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="34f9426b-0b1b-415f-ad87-eb76c3e26830">
+      <profileInstance Id="fc65469a-19c2-4433-8db4-1045930f9ca4" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="8ef736e7-798e-4f96-ae6e-d0236979c17e">
+      <profileInstance Id="cb1f3ca8-f059-42b2-8eef-a341a9ad4d83" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="19717158-b6c0-4a0c-948e-7d05b672ab2d" name="Madplan" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a98a29c3-713d-4fc7-b1ed-e78a542fb6f7" />
+        <ownedAttributesInternal>
+          <property Id="a4fe2c09-430a-4248-af11-55b689dba482" name="Ret" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="aea9e335-d0fb-4cae-bc5c-d36012777170" />
+          </property>
+          <property Id="f882ead4-ebda-4c74-9cc8-5389905c7281" name="UgeDag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="acad6f29-3637-4c7b-964c-6096bd8166f5" />
+          </property>
+          <property Id="d1e20518-cec0-4407-93aa-debff494ba2b" name="UgeNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c1b5508f-32c3-4b62-8802-8336aa9d7a5e" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="ccb931db-4878-462e-b379-4e91c857a4c1" name="ListString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="72b8a4ef-d1da-4526-b022-7b192c43b9a9" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b14b49dc-a2e4-452c-a734-de87899dbb0b" name="Kuverter" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8e1e7106-4469-4134-a9c7-aa877b8bfef4" />
+        <ownedAttributesInternal>
+          <property Id="6feec3a4-fce5-491c-8f0a-d5e1829d4eb6" name="UgeDag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="13a86110-1e76-4829-a51e-ac76d0354490" />
+          </property>
+          <property Id="c38dc4aa-fb56-40ce-a8b7-f7d8108ce411" name="UgeNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1177bd83-2fb8-4f65-a65f-fa0fb345c4a7" />
+          </property>
+          <property Id="c2ca9620-57a9-413c-91b8-cc640654ba4c" name="AntalVoksne" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="45466da4-5f4e-4dfd-afa7-b449babd318d" />
+          </property>
+          <property Id="0514259b-1721-48a6-8c9d-1766cdcd0014" name="AntalUnge" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="907398e6-fb5d-4ef3-889c-1f4ded58808a" />
+          </property>
+          <property Id="0be787dd-dd65-437b-817d-c420b668687d" name="AntalBoern" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5434bc60-bae3-4544-bbc7-34d66d7b3fb4" />
+          </property>
+          <property Id="214120cc-56c2-4db5-9c52-59865b9c71fb" name="AntalBaby" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="440bc155-0d73-4ff7-a0e8-635edbad2263" />
+          </property>
+          <property Id="581f7e5b-8d4d-4286-8ed3-4c551f16497c" name="Ugedag+Alderx4" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3ece3334-97fe-4721-9cbf-bac99edf243f" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="f8e1172e-793a-43c8-8ba8-5c8c79baba0c" name="ListString" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c60ad943-4519-4f39-9b70-a6f3f24c400c" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5b012d68-e2c0-4603-b901-d158bcf0f04f" name="MadplanListe" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e6e71e7b-e389-4f8d-a5e1-02c39f9cb569" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d8437fbc-1e5e-4364-b885-3c3aec1ba3ee" name="MadplanViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="200ebfaf-233b-4387-b7e6-db4eeac85c75" />
+        <ownedAttributesInternal>
+          <property Id="7cd76c70-486a-433b-8646-e8a8962159a9" name="AddMadplan" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d6351651-b807-477f-8d66-af95b16ec9bc" />
+          </property>
+          <property Id="8971958b-e88a-4218-a376-519f7bcdf09a" name="RemoveMadplan" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="eba3d4f1-8b55-4522-b549-fb39f25a1e35" />
+          </property>
+          <property Id="d2a2daeb-8a91-4191-9e8b-c438793e6dfb" name="LoadMadplan" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2088b90a-e61c-4f76-9beb-e3dc3b35c5e3" />
+          </property>
+          <property Id="4fb4ffed-47a2-4220-8fa7-b617cd875da7" name="SaveMadplan" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2ab975aa-894e-4986-a910-6a20cbc0b6ea" />
+          </property>
+          <property Id="25c14d92-2cd5-401d-a5b5-c69fb534d2ed" name="SelectMadplan" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="31be7233-093d-44df-8ee3-4bd4df68cd9d" />
+          </property>
+          <property Id="2312f091-5ed6-44f4-8d26-d1791531111b" name="Pris" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c723c64b-7483-4310-b3f0-0f88b0d3a027" />
+          </property>
+          <property Id="d1947922-17ff-4ea8-b66e-08860376b11a" name="MadplanListe" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fe1c4c83-9890-4dcf-8365-b582be890bc4" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="1ec89d04-622e-4f37-b7a5-baa27ce32f3c" name="AddNewMadplan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9d347805-a33d-4cf0-aedd-5a200f2b8e9c" />
+          </operation>
+          <operation Id="07e70308-e8a5-43d4-a310-f559ebf718be" name="RemoveMadplan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c5e26b01-28cc-40d9-8a9b-c8197619dd2c" />
+          </operation>
+          <operation Id="613c0ba0-9a78-4916-91a6-ea5a3d14f25a" name="SelectedMadplan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4d6dc505-7391-4eb3-8761-60ad7fc10271" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ef781ccd-0c53-4ddc-8f8a-5910f44ca5a5" name="KurvertViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0c76dab2-0f39-4f29-92d5-189065af5c35" />
+        <ownedAttributesInternal>
+          <property Id="688f62ae-0f61-4c8f-b81e-855155a4182f" name="Pris" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6bb0da94-b410-4c5b-95af-4c65b9e1a00e" />
+          </property>
+          <property Id="3dd33bff-4d2c-495d-97c8-74a2f9b486ba" name="TilmeldCommand" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2f537fa8-c159-411d-b482-2a28075a916f" />
+          </property>
+          <property Id="2a62bbf6-b065-4bf2-8850-b8a7f8262cb9" name="TilmeldMandagCommand" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5ac90dab-ea32-4dac-bcd6-797fdd4cde4e" />
+          </property>
+          <property Id="ef241d15-f875-4ccc-8400-562bb64cf13f" name="TilmeldTirsdagCommand" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3fb17dbb-b1af-4e0c-b0d5-eb22cce9234d" />
+          </property>
+          <property Id="26a4bd91-a7a4-4198-aaa8-f2fb01f3cb9b" name="TilmeldOnsdagCommand" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="72e65730-e0e2-4c96-ac5f-11c37eb85c89" />
+          </property>
+          <property Id="adf9f400-22bf-46e6-8105-0929ebcfe6be" name="TilmeldFredagCommand" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1dc89e6a-e543-4fb6-8948-88d597312d1f" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="1fd90d17-079f-40a7-a019-6cda82cc6d96" name="AddNewKuvertMandag" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b83007b6-6edd-45a4-9fa7-c12a142efdce" />
+          </operation>
+          <operation Id="be6de0c3-2241-4a71-8556-bd5d82029f5a" name="AddNewKuvertTirsdag" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0a78cc5f-5f5a-4d17-ba25-8ffa0098a130" />
+          </operation>
+          <operation Id="c68f19b4-d419-470f-b241-ffed91d3336d" name="AddNewKuvertOnsdag" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c2d480f3-e04d-4b88-85ca-1cbebf2740a0" />
+          </operation>
+          <operation Id="1e494899-8a4e-4f9b-92bb-f7b5d10b3299" name="AddNewKuvertTorsdag" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7679d0ac-f59b-4278-9d74-151febe273b5" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e2f691f5-0706-46a3-84df-bc95cba9ebac" name="KuvertListe" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1f76e968-eb1d-44dd-8ec4-1f59b7526220" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1554fef7-777b-4676-946f-a57809eaa2a4" name="Prisberegning" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5b49810c-9440-442e-91a4-b04ddd66b50b" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="09e0a58f-7a0b-46f8-953d-fcec4c090d15" name="PrisBeregning" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0ce444b6-7e31-415e-a0b5-d6b13275b02b" />
+        <ownedAttributesInternal>
+          <property Id="815f72dc-4e2b-489f-ba2b-7d5c663de3ff" name="MandagKokUdlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fb59c7f2-5df4-49d3-8d73-0dc6262c9c62" />
+          </property>
+          <property Id="55779b30-9d12-4999-aa24-900f2a6aae5e" name="TirsdagKokUdlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7d6f95fa-f306-48b7-99fc-9632e848df31" />
+          </property>
+          <property Id="ae44013d-4e18-4caa-b144-92abbab809dd" name="OnsdagKokUdlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0d79c927-e4c1-4c20-a23e-eb383faa6f10" />
+          </property>
+          <property Id="1b0a1ee4-ce82-4a92-a025-b65b5fe32ec3" name="TorsdagKokUdlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0b1eab6c-09af-49df-bf89-74a3259a94cb" />
+          </property>
+          <property Id="b1a5203d-fb03-4cfe-b1c8-ab8eedc94e6a" name="KuvertTotal" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e937d81a-3186-466a-886f-92382e67fc40" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="5214c17a-bb40-4737-8e11-84d3cc1b60a4" name="TotalPrisUdregn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ff5df2bf-05ab-4fca-9cb1-089e52cb2f26" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="b561f4c3-5f4e-440a-8670-daa51246742e" name="Klassediagram">
+    <elementDefinition Id="e409fe34-fd16-4ebe-b416-e2bd3a4062fe" />
+  </package>
+</logicalClassDesignerModel>
