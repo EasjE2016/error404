@@ -85,7 +85,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox x:Name="MandagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Text="{Binding MandagVoksne, Mode=TwoWay}" Margin="47,0"/>
+                    <TextBox x:Name="MandagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Margin="47,0" Text="{Binding MandagVoksne, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>

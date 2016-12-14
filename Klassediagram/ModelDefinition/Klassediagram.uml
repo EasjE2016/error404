@@ -92,17 +92,6 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="04b3ba18-5d30-486c-83ec-ccb31c856405"
-            name="Ugedag"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
             Id="9f1a6167-85df-4b03-aa7a-462551d4c80d"
             name="Antal voksne"
             isLeaf="false"
@@ -138,6 +127,17 @@
           <property
             Id="2c97a850-5271-4eeb-811b-69992d147060"
             name="Antal baby"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="ef1184e6-36e2-4601-aa11-f7b557b708a3"
+            name="Antal kuverter"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -225,17 +225,6 @@
         </targetEnds>
         <ownedAttributesInternal>
           <property
-            Id="479578e7-9777-4a67-b814-073ce3c46883"
-            name="Pris"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
             Id="c8b3bb7c-4d01-48a8-bd4d-f6e2d1efc53e"
             name="Uge nr."
             isLeaf="false"
@@ -260,17 +249,6 @@
           <property
             Id="1a1ed2fd-f504-4b7f-8a8d-045d802c06e8"
             name="Ret"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="94dd49c3-bc89-4666-b21a-032f2c657da7"
-            name="Indkøber (hus nr.)"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -315,6 +293,152 @@
           <property
             Id="925b9fdb-cb50-4e5e-8cb5-45c7ebd0bce8"
             name="Hus nr."
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9356f4fc-fc7e-4ae0-9e57-b725a9a3585d"
+        LastKnownName="Package1"
+        LastKnownLocation="Package_1239.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="918b432e-5bad-4a1d-9299-a55c333a5ea7"
+        name="PrisBeregning"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="b64f0614-7f52-4b2c-8969-9885c6aacbcb"
+            isDerived="false"
+            sourceEndRoleName="PrisBeregning"
+            targetEndRoleName="Madplan"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ed6fd964-12b1-4d30-b495-130a83600a24"
+              LastKnownName="Madplan"
+              LastKnownLocation="Klassediagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="94a458d4-8e21-48aa-9eed-979bd90ed18a"
+                  name="PrisBeregning"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="58dd8229-2feb-4718-a4fe-c699615d230f"
+                  name="Madplan"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="f38bcd35-39ed-4c15-af4c-597d353f3148"
+            name="Kok1Udlæg"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="7eba597c-4a62-479c-9752-94d7227c54cc"
+            name="Kok2Udlæg"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9a863aa5-93f2-4b60-8264-915c6d45a11a"
+            name="Kok3Udlæg"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b2927f39-a40c-4766-b2d2-fdd914066f27"
+            name="Kok4Udlæg"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="51124214-6ba2-4837-b6a9-d3127f663175"
+            name="KuvertIAlt"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="94875ec4-b513-4222-ac0a-399413f7b0e9"
+            name="PrisIAlt"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="3e223f2b-4d6a-4aac-b1bd-8c86af5b1368"
+            name="UdlægIAlt"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b84f8ae6-cc44-4630-917c-5e49dad0ff6a"
+            name="MandagTotalKuvert"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
