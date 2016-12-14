@@ -36,7 +36,6 @@ namespace kodning.Model
             return kuverterForDagen;
         }
 
-
         public double ReturKuvertTirsdag(KuverterListe Tirsdaglisten)
         {
             double kuverterForTirsdag = 0;
@@ -46,10 +45,6 @@ namespace kodning.Model
             }
             return kuverterForTirsdag;
         }
-
-
-
-
 
         public double ReturKuvertOnsdag(KuverterListe Onsdaglisten)
         {

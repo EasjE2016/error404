@@ -14,6 +14,10 @@
 
     <Grid Margin="10,20,10,20" Style="{StaticResource GridStyle}">
 
+       <!--Sitet er delt i tre rækker. 
+        Række 1 indeholder overskrift og husnummer
+        Række 2 indeholder selve indholdet
+        Række 3 indeholder en bekræftelse på tilmeldingen samt en tilbageknap-->
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="5*"/>
@@ -21,8 +25,11 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Bolig nr. " Margin="0,0,150,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="50"/>
-        <TextBox x:Name="Husnr" Grid.Row="0" Grid.Column="0" Text="{Binding Kuverter.Husnummer, Mode=TwoWay}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" Margin="0,10,70,0" Background="White" Height="50"/>
+        <TextBox x:Name="Husnr" Grid.Row="0" Grid.Column="0" Text="{Binding Kuverter.Husnummer, Mode=TwoWay}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="30" Margin="0,10,70,0" Background="White" Height="50"/>
 
+        <!--Række 2 er inddelt i 2 kolonner
+        Kolonne 1 indeholder en menu
+        Kolonne 2 indeholder tilmeldingsdelen-->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -44,10 +51,15 @@
                 <Button x:Name="ErDuKok" Grid.Row="3" Grid.Column="0" Content="Er du kok?" Click="ErDuKokSide"/>
                 <TextBlock x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Text="Særarrangementets navn" FontSize="50"/>
             </Grid>
+            
+            <!--Tilmeldingsdelen er delt i 3 kolonner
+            Kolonne 1 indeholder ugedagene
+            Kolonne 2 indeholder textbokse til antal tilmeldte
+            Kolonne 3 indeholder knap til tilmelding-->
             <Grid Grid.Column="2">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition />
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
@@ -57,14 +69,15 @@
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width ="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Row="0" Grid.Column="0" Text="Uge 47" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
-                <TextBlock Grid.Row="1" Grid.Column="0" Text="Mandag" FontSize="50"/>
-                <TextBlock Grid.Row="2" Grid.Column="0" Text="Tirsdag" FontSize="50"/>
-                <TextBlock Grid.Row="3" Grid.Column="0" Text="Onsdag" FontSize="50"/>
-                <TextBlock Grid.Row="4" Grid.Column="0" Text="Torsdag" FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-                <TextBlock Grid.Row="0" Grid.Column="1" Text="Uge 48"/>
+                <!--Ugedagene-->
+                <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource Ugenr}" Text="Uge 47"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource Dagnavn}" Text="Mandag"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource Dagnavn}" Text="Tirsdag"/>
+                <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource Dagnavn}" Text="Onsdag"/>
+                <TextBlock Grid.Row="4" Grid.Column="0" Style="{StaticResource Dagnavn}" Text="Torsdag"/>
 
+                <!--Tilmelding til mandag-->
                 <Grid Grid.Row="1" Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -76,41 +89,38 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox x:Name="MandagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Text="{Binding Kuverter.Voksne, Mode=TwoWay}"/>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TilmeldType}" Text="Voksne"/>
+                    <TextBox x:Name="MandagVoksen" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.Voksne, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
-                        <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="7-15 år"/>
+                        <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
+                        <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="7-15 år"/>
                     </Grid>
-                    <TextBox x:Name="MandagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding Kuverter.Teens, Mode=TwoWay}"/>
-
+                    <TextBox x:Name="MandagBarn715" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.Teens, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
-                        <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="3-6 år"/>
+                        <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
+                        <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="3-6 år"/>
                     </Grid>
-                    <TextBox x:Name="MandagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding Kuverter.Boern, Mode=TwoWay}"/>
-
+                    <TextBox x:Name="MandagBarn36" Grid.Row="1" Grid.Column="2" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.Boern, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
-                        <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
+                        <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
+                        <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="0-2 år"/>
                     </Grid>
-                    <TextBox x:Name="Mandag02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding Kuverter.Baby, Mode=TwoWay}"/>
-
+                    <TextBox x:Name="Mandag02" Grid.Row="1" Grid.Column="3" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.Baby, Mode=TwoWay}"/>
                 </Grid>
 
-
+<!--Tilmelding til tirsdag-->
                 <Grid Grid.Row="2" Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -122,39 +132,38 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox x:Name="TirsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Text="{Binding Kuverter.TirsdagVoksne, Mode=TwoWay}"/>
-
+                    <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TilmeldType}" Text="Voksne"/>
+                    <TextBox x:Name="TirsdagVoksen" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.TirsdagVoksne, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
-                        <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="7-15 år"/>
+                        <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
+                        <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="7-15 år"/>
                     </Grid>
-                    <TextBox x:Name="TirsagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding Kuverter.TirsdagTeens, Mode=TwoWay}"/>
+                    <TextBox x:Name="TirsagBarn715" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.TirsdagTeens, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
-                        <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="3-6 år"/>
+                        <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
+                        <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="3-6 år"/>
                     </Grid>
-                    <TextBox x:Name="TirsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding Kuverter.TirsdagBoern, Mode=TwoWay}"/>
+                    <TextBox x:Name="TirsdagBarn36" Grid.Row="1" Grid.Column="2" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.TirsdagBoern, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
-                        <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
+                        <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
+                        <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="0-2 år"/>
                     </Grid>
-                    <TextBox x:Name="TirsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding Kuverter.TirsdagBaby, Mode=TwoWay}"/>
+                    <TextBox x:Name="TirsdagBarn02" Grid.Row="1" Grid.Column="3" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.TirsdagBaby, Mode=TwoWay}"/>
                 </Grid>
 
-
+<!--Tilmelding til onsdag-->
                 <Grid Grid.Row="3" Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -166,37 +175,38 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox x:Name="OnsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Text="{Binding Kuverter.OnsdagVoksne, Mode=TwoWay}"/>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TilmeldType}" Text="Voksne"/>
+                    <TextBox x:Name="OnsdagVoksen" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.OnsdagVoksne, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
-                        <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="7-15 år"/>
+                        <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
+                        <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="7-15 år"/>
                     </Grid>
-                    <TextBox x:Name="OnsdagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding Kuverter.OnsdagTeens, Mode=TwoWay}"/>
+                    <TextBox x:Name="OnsdagBarn715" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.OnsdagTeens, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
-                        <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="3-6 år"/>
+                        <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
+                        <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="3-6 år"/>
                     </Grid>
-                    <TextBox x:Name="OnsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding Kuverter.OnsdagBoern, Mode=TwoWay}"/>
+                    <TextBox x:Name="OnsdagBarn36" Grid.Row="1" Grid.Column="2" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.OnsdagBoern, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
-                        <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
+                        <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
+                        <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="0-2 år"/>
                     </Grid>
-                    <TextBox x:Name="OnsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding Kuverter.OndagsBaby, Mode=TwoWay}"/>
+                    <TextBox x:Name="OnsdagBarn02" Grid.Row="1" Grid.Column="3" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.OndagsBaby, Mode=TwoWay}"/>
                 </Grid>
 
+                <!--Tilmelding til torsdag-->
                 <Grid Grid.Row="4" Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -208,46 +218,57 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox x:Name="TorsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Height="50" Text="{Binding Kuverter.TorsdagVoksne, Mode=TwoWay}"/>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TilmeldType}" Text="Voksne"/>
+                    <TextBox x:Name="TorsdagVoksen" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.TorsdagVoksne, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
-                        <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="7-15 år"/>
+                        <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
+                        <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="7-15 år"/>
                     </Grid>
-                    <TextBox x:Name="TorsdagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding Kuverter.TorsdagTeens, Mode=TwoWay}"/>
+                    <TextBox x:Name="TorsdagBarn715" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.TorsdagTeens, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
-                        <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="3-6 år"/>
+                        <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
+                        <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="3-6 år"/>
                     </Grid>
-                    <TextBox x:Name="TorsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding Kuverter.TorsdagBoern, Mode=TwoWay}"/>
+                    <TextBox x:Name="TorsdagBarn36" Grid.Row="1" Grid.Column="2" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.TorsdagBoern, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
-                        <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
+                        <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
+                        <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="0-2 år"/>
                     </Grid>
-                    <TextBox x:Name="TorsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding Kuverter.TorsdagBaby, Mode=TwoWay}"/>
+                    <TextBox x:Name="TorsdagBarn02" Grid.Row="1" Grid.Column="3" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.TorsdagBaby, Mode=TwoWay}"/>
                 </Grid>
-                <Button Grid.Row="1" Grid.Column="2" Content="Tilmeld" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35" Width="100" FontSize="20" Command="{Binding TilmeldCommand}"/>
-                <Button Grid.Row="2" Grid.Column="2" Content="Tilmeld" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35" Width="100" FontSize="20" Command="{Binding TilMeldTirsdagCommand}"/>
-                <Button Grid.Row="3" Grid.Column="2" Content="Tilmeld" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35" Width="100" FontSize="20" Command="{Binding TilMeldOnsdagCommand}"/>
-                <Button Grid.Row="4" Grid.Column="2" Content="Tilmeld" HorizontalAlignment="Center" VerticalAlignment="Center" Height="35" Width="100" FontSize="20" Command="{Binding TilMeldTorsdagCommand}"/>
+                <Button Grid.Row="1" Grid.Column="2" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilmeldCommand}"/>
+                <Button Grid.Row="2" Grid.Column="2" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilMeldTirsdagCommand}"/>
+                <Button Grid.Row="3" Grid.Column="2" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilMeldOnsdagCommand}"/>
+                <Button Grid.Row="4" Grid.Column="2" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilMeldTorsdagCommand}"/>
             </Grid>
         </Grid>
-        <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center" Height="148" ItemsSource="{Binding Instance.MandagListe}"/>
 
-        <Button x:Name="GåTilForside" Content="Gå til forside" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Height="79" Width="214" Click="GåTilForside_Click"/>
+        <!--Række 3 er delt ind i 3 kolonner
+        Kolonne 1 indeholder tilbageknap
+        Kolonne 2 indeholder en tilmeldingsbekræftelse der strækker sig ind i kolonne 3-->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ToFrontPage" Content="Gå til forside" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,0" Height="65" Width="250" FontSize="30" FontWeight="Bold" Click="GåTilForside_Click"/>
+        <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center" ItemsSource="{Binding Instance.MandagListe}"/>
 
+        
+</Grid>
     </Grid>
 
 </Page>

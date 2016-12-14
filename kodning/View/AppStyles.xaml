@@ -4,40 +4,59 @@
     xmlns:local="using:kodning">
 
     <Style x:Key="GridStyle" TargetType="Grid">
-        <Setter Property="Background" Value="AntiqueWhite"/>
+        <Setter Property="Background" Value="Azure"/>
     </Style>
     
     <Style x:Key="SkriftStyle" TargetType="TextBlock">
         <Setter Property="FontFamily" Value="calibri"/>
     </Style>
-    
-    <Style x:Key="OverskriftStyle" TargetType="TextBlock" BasedOn="{StaticResource SkriftStyle}">
+
+    <Style x:Key="TilmeldType" TargetType="TextBlock">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="FontSize" Value="90"/>
+        <Setter Property="FontSize" Value="40"/>
     </Style>
 
-    <Style x:Key="Overskrift2" TargetType="TextBlock" BasedOn="{StaticResource SkriftStyle}">
+    <Style x:Key="TilmeldToLinjerTop" TargetType="TextBlock">
         <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="FontSize" Value="30"/>
     </Style>
 
-    <Style x:Key="UgedageStyle" TargetType="TextBlock" BasedOn="{StaticResource SkriftStyle}">
-        <Setter Property="HorizontalAlignment" Value="Left"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="FontSize" Value="20"/>
-    </Style>
-
-    <Style x:Key="TilmeldingStyle" TargetType="TextBlock" BasedOn="{StaticResource SkriftStyle}">
+    <Style x:Key="TilmeldToLinjerButtom" TargetType="TextBlock">
         <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="FontSize" Value="30"/>
     </Style>
 
-    <Style x:Key="ComboBoxStyle" TargetType="ComboBox" BasedOn="{StaticResource SkriftStyle}">
+    <Style x:Key="TilmeldTextBox" TargetType="TextBox">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="FontSize" Value="30"/>
+    </Style>
+
+    <Style x:Key="Dagnavn" TargetType="TextBlock">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="70"/>
     </Style>
 
+    <Style x:Key="TilmeldKnap" TargetType="Button">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Height" Value="55"/>
+        <Setter Property="Width" Value="130"/>
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+    </Style>
+
+    <Style x:Key="Ugenr" TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="100"/>
+    </Style>
+        
 </ResourceDictionary>
