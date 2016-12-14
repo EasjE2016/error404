@@ -65,7 +65,7 @@
                 <TextBlock Grid.Row="0" Grid.Column="1" Text="Uge 48"/>
 
                 <TextBlock Grid.Row="1" Grid.Column="1" Text="Mandag"/>
-                <TextBox x:Name="MandagPris" Grid.Row="2" Grid.Column="1" Background="White" Width="200" Text="{Binding PrisBeregning.Kok2Udlæg, Mode=TwoWay}"/>
+                <TextBox x:Name="MandagPris" Grid.Row="2" Grid.Column="1" Background="White" Width="200" Text="{Binding PrisBeregning.Kok1Udlæg, Mode=TwoWay}"/>
 
                 <TextBox x:Name="TirsdagPris" Grid.Row="4" Grid.Column="1" Background="White" Width="200" Text="{Binding PrisBeregning.Kok2Udlæg, Mode=TwoWay}"/>
                 <TextBox x:Name="OnsdagPris" Grid.Row="6" Grid.Column="1" Background="White" Width="200" Text="{Binding PrisBeregning.Kok3Udlæg, Mode=TwoWay}"/>
@@ -79,6 +79,6 @@
         </Grid>
         <Button x:Name="button" Content="Gå tilbage" HorizontalAlignment="Left" Margin="84,61,0,0" VerticalAlignment="Top" Height="64" Width="140" Click="button_Click"/>
         <Button x:Name="button1" Content="Beregn Kuvert Pris" HorizontalAlignment="Left" Margin="1094,38,0,0" Grid.Row="2" VerticalAlignment="Top" Command="{Binding KuvertPerDagCommand, Mode=TwoWay}"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="1480,38,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="226" Text="{Binding PrisBeregning.TotalKuvert}"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="1480,38,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="226" Text="{Binding Instance.Instance.Pris.Pris}"/>
     </Grid>
 </Page>

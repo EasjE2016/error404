@@ -53,22 +53,22 @@ namespace kodning.ViewModel
             }
         }
         // Dette SKAL ordnes. 
-       
-        //public double VisPrisPerKuvert
-        //{
-        //    get
-        //    {
-        //        double PrisenEr = 0;
-        //        PrisenEr = +(GivAlleKuverterMandag + GivAlleKuverterTirsdag + GivAlleKuverterOnsdag + GivAlleKuverterTorsdag) / PrisBeregning.UdlægIAlt;
-        //        return PrisenEr;
-        //    }
-        //}
-        //public void PrisPerKuvert()
-        //{
-        //    PrisBeregning Pris = new PrisBeregning();
-        //    Pris.TotalKuvert = VisPrisPerKuvert;
-        //}
 
+       public double PrisPerKuvertTest
+        {
+            set
+            {
+                PrisBeregning.Pris = +(PrisBeregning.Kok1Udlæg+ PrisBeregning.Kok2Udlæg+PrisBeregning.Kok3Udlæg+ PrisBeregning.Kok4Udlæg)/ +(Instance.kuverterForDagen + Instance.kuverterForTirsdag + Instance.kuverterForOnsdag + Instance.kuverterForTorsdag);
+            }
+            get
+            { return PrisBeregning.Pris; }
+        }
+        
+        public void prisErTest()
+        {
+            
+            PrisPerKuvertTest = PrisPerKuvertTest;
+        }
 
 
         #endregion
@@ -136,6 +136,8 @@ namespace kodning.ViewModel
                 OnPropertyChanged(nameof(KuvertListenTorsdag));
             }
         }
+
+
 
 
 
@@ -219,7 +221,7 @@ namespace kodning.ViewModel
             TilMeldOnsdagCommand = new RelayCommand.RelayCommand(AddNewKuvertOnsdag);
             TilMeldTorsdagCommand = new RelayCommand.RelayCommand(AddNewKuvertTorsdag);
             AccepterUdlægCommand = new RelayCommand.RelayCommand(AccepterUdlæg);
-            //KuvertPerDagCommand = new RelayCommand.RelayCommand(PrisPerKuvert);
+            KuvertPerDagCommand = new RelayCommand.RelayCommand(prisErTest);
 
         }
         #endregion
