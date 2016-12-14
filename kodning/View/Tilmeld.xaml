@@ -21,7 +21,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Bolig nr. " Margin="0,0,150,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="50"/>
-        <TextBox x:Name="Husnr" Grid.Row="0" Grid.Column="0" Text="{Binding Husnummer, Mode=TwoWay}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" Margin="0,10,70,0" Background="White" Height="50"/>
+        <TextBox x:Name="Husnr" Grid.Row="0" Grid.Column="0" Text="{Binding Kuverter.Husnummer, Mode=TwoWay}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" Margin="0,10,70,0" Background="White" Height="50"/>
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -44,7 +44,7 @@
                 <Button x:Name="ErDuKok" Grid.Row="3" Grid.Column="0" Content="Er du kok?" Click="ErDuKokSide"/>
                 <TextBlock x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Text="Særarrangementets navn" FontSize="50"/>
             </Grid>
-            <Grid Grid.Column="1">
+            <Grid Grid.ColumnSpan="2" Margin="501,0,132,0">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
@@ -85,7 +85,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox x:Name="MandagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Margin="47,0" Text="{Binding MandagVoksne, Mode=TwoWay}"/>
+                    <TextBox x:Name="MandagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Margin="47,0" Text="{Binding Kuverter.Voksne, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -94,7 +94,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="7-15 år"/>
                     </Grid>
-                    <TextBox x:Name="MandagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding MandagTeens, Mode=TwoWay}"/>
+                    <TextBox x:Name="MandagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding Kuverter.Teens, Mode=TwoWay}"/>
 
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
@@ -104,7 +104,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="3-6 år"/>
                     </Grid>
-                    <TextBox x:Name="MandagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding MandagBoern, Mode=TwoWay}"/>
+                    <TextBox x:Name="MandagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding Kuverter.Boern, Mode=TwoWay}"/>
 
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
@@ -114,7 +114,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
                     </Grid>
-                    <TextBox x:Name="Mandag02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding MandagBaby, Mode=TwoWay}"/>
+                    <TextBox x:Name="Mandag02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding Kuverter.Baby, Mode=TwoWay}"/>
 
                 </Grid>
 
@@ -132,7 +132,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox x:Name="TirsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Text="{Binding TirsdagVoksne, Mode=TwoWay}"/>
+                    <TextBox x:Name="TirsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Text="{Binding Kuverter.TirsdagVoksne, Mode=TwoWay}"/>
 
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
@@ -142,7 +142,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="7-15 år"/>
                     </Grid>
-                    <TextBox x:Name="TirsagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding TirsdagTeens, Mode=TwoWay}"/>
+                    <TextBox x:Name="TirsagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding Kuverter.TirsdagTeens, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -151,7 +151,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="3-6 år"/>
                     </Grid>
-                    <TextBox x:Name="TirsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding TirsdagBoern, Mode=TwoWay}"/>
+                    <TextBox x:Name="TirsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding Kuverter.TirsdagBoern, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -160,7 +160,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
                     </Grid>
-                    <TextBox x:Name="TirsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding TirsdagBaby, Mode=TwoWay}"/>
+                    <TextBox x:Name="TirsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding Kuverter.TirsdagBaby, Mode=TwoWay}"/>
                 </Grid>
 
                 <TextBlock Grid.Row="5" Grid.Column="1" Text="Onsdag"/>
@@ -177,7 +177,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox x:Name="OnsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Text="{Binding OnsdagVoksne, Mode=TwoWay}"/>
+                    <TextBox x:Name="OnsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Text="{Binding Kuverter.OnsdagVoksne, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -186,7 +186,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="7-15 år"/>
                     </Grid>
-                    <TextBox x:Name="OnsdagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding OnsdagTeens, Mode=TwoWay}"/>
+                    <TextBox x:Name="OnsdagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding Kuverter.OnsdagTeens, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -195,7 +195,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="3-6 år"/>
                     </Grid>
-                    <TextBox x:Name="OnsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding OnsdagBoern, Mode=TwoWay}"/>
+                    <TextBox x:Name="OnsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding Kuverter.OnsdagBoern, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -204,7 +204,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
                     </Grid>
-                    <TextBox x:Name="OnsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding OnsdagBaby, Mode=TwoWay}"/>
+                    <TextBox x:Name="OnsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding Kuverter.OndagsBaby, Mode=TwoWay}"/>
                 </Grid>
 
                 <TextBlock Grid.Row="7" Grid.Column="1" Text="Torsdag"/>
@@ -221,7 +221,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Text="Voksne" FontSize="30"/>
-                    <TextBox x:Name="TorsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Text="{Binding TorsdagVoksne, Mode=TwoWay}"/>
+                    <TextBox x:Name="TorsdagVoksen" Grid.Row="1" Grid.Column="0" Background="White" Width="50" Text="{Binding Kuverter.TorsdagVoksne, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -230,7 +230,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="7-15 år"/>
                     </Grid>
-                    <TextBox x:Name="TorsdagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding TorsdagTeens, Mode=TwoWay}"/>
+                    <TextBox x:Name="TorsdagBarn715" Grid.Row="1" Grid.Column="1" Background="White" Width="50" Text="{Binding Kuverter.TorsdagTeens, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -239,7 +239,7 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="3-6 år"/>
                     </Grid>
-                    <TextBox x:Name="TorsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding TorsdagBoern, Mode=TwoWay}"/>
+                    <TextBox x:Name="TorsdagBarn36" Grid.Row="1" Grid.Column="2" Background="White" Width="50" Text="{Binding Kuverter.TorsdagBoern, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -248,14 +248,17 @@
                         <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Børn"/>
                         <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="0-2 år"/>
                     </Grid>
-                    <TextBox x:Name="TorsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding TorsdagBaby, Mode=TwoWay}"/>
+                    <TextBox x:Name="TorsdagBarn02" Grid.Row="1" Grid.Column="3" Background="White" Width="50" Text="{Binding Kuverter.TorsdagBaby, Mode=TwoWay}"/>
                 </Grid>
             </Grid>
         </Grid>
-        <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="148" Width="400" ItemsSource="{Binding UgeKuverter.KuvertListeMandag}"/>
+        <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="148" Width="400" ItemsSource="{Binding Instance.MandagListe}"/>
 
-        <Button Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Tilmeld" FontSize="50" Width="200" Height="100"  Margin="0,0,50,20" Command="{Binding TilmeldCommand}"/>
+        <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Tilmeld" FontSize="20" Width="109" Height="38"  Margin="0,0,25,498" Command="{Binding TilmeldCommand}"/>
         <Button x:Name="GåTilForside" Content="Gå til forside" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Height="79" Width="214" Click="GåTilForside_Click"/>
+        <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="20" Width="109" Height="38"  Margin="0,0,25,333" Command="{Binding TilMeldTirsdagCommand}" Content="Tilmeld"/>
+        <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Tilmeld" FontSize="20" Width="109" Height="38"  Margin="0,0,25,10" Command="{Binding TilMeldTorsdagCommand}"/>
+        <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="20" Width="109" Height="38"  Margin="0,0,25,166" Command="{Binding TilMeldOnsdagCommand}" Content="Tilmeld"/>
 
     </Grid>
 

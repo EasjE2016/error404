@@ -29,7 +29,7 @@ namespace kodning.View
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Forside), null);
+            this.Frame.Navigate(typeof(Tilmeld), null);
         }
 
         private void SeKuvTir_Click(object sender, RoutedEventArgs e)

@@ -24,5 +24,7 @@ namespace kodning.RelayCommand
         {
             this.execute = execute;
         }
+
+
     }
 }
