@@ -24,7 +24,7 @@
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="844cb6a2-3120-4bb2-a5db-a96c0fc09c82" name="Madplan" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="844cb6a2-3120-4bb2-a5db-a96c0fc09c82" name="Madplan" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="2fbca849-7b20-473f-a8bc-13cfa099c595" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -83,7 +83,7 @@
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="d121b67a-a3a2-4f3b-8fdc-eb4bf135bbe9" name="Madplan" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="d121b67a-a3a2-4f3b-8fdc-eb4bf135bbe9" name="Madplan" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="58dd8229-2feb-4718-a4fe-c699615d230f" />
                 </memberEnd>
               </associationHasOwnedEnds>
