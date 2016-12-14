@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using kodning.Model;
+using Newtonsoft.Json;
 
 namespace kodning.Model
 {
@@ -17,16 +18,18 @@ namespace kodning.Model
         public double UdlægIAlt { get; set; }
         public double PrisIalt { get; set; }
         public double TotalKuvert { get; set; }
+        public double Pris { get; set; }
 
 
-        public double PrisIAlt { get
+        public double PrisIAlt
+        {
+            get
             {
-                
+
                 UdlægIAlt = Kok1Udlæg + Kok2Udlæg + Kok3Udlæg + Kok4Udlæg;
                 return UdlægIAlt;
             }
         }
-
 
 
     }
