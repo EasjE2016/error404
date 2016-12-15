@@ -44,12 +44,11 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Grid.Row="0" Grid.Column="0" Text="Ændre tilmelding" FontSize="50"/>
-                <TextBlock Grid.Row="1" Grid.Column="0" Text="Ændre menu" FontSize="50"/>
-                <TextBlock Grid.Row="2" Grid.Column="0" Text="Se kokke og hjælpere" FontSize="50"/>
-                <TextBlock Grid.Row="3" Grid.Column="0" Text="Er du kok?" FontSize="50"/>
-                <Button x:Name="ErDuKok" Grid.Row="3" Grid.Column="0" Content="Er du kok?" Click="ErDuKokSide"/>
-                <TextBlock x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Text="Særarrangementets navn" FontSize="50"/>
+                <Button x:Name="ChangeTilmelding" Grid.Row="0" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre tilmelding"/>
+                <Button x:Name="ChangeMenu" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu"/>
+                <Button x:Name="HvemErKok" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvem er kok?"/>
+                <Button x:Name="ErDuKok" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
+                <Button x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement"/>
             </Grid>
             
             <!--Tilmeldingsdelen er delt i 3 kolonner

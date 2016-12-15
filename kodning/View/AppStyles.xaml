@@ -58,5 +58,12 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="FontSize" Value="100"/>
     </Style>
+
+    <Style x:Key="MenuKnap" TargetType="Button">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="FontSize" Value="50"/>
+    </Style>
         
 </ResourceDictionary>

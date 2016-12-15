@@ -21,8 +21,8 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Style="{StaticResource OverskriftStyle}" Text="Velkommen"/>
-            <TextBlock Grid.Row="1" Style="{StaticResource OverskriftStyle}" Text="til fællesspisning i Boligvænget"/>
+            <TextBlock Grid.Row="0" Text="Velkommen"/>
+            <TextBlock Grid.Row="1" Text="til fællesspisning i Boligvænget"/>
         </Grid>
 
         <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="150" Text="Billeder"/>
