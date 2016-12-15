@@ -27,10 +27,6 @@ namespace kodning.View
             this.InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Forside), null);
-        }
 
         private void GåTilForside_Click(object sender, RoutedEventArgs e)
         {
@@ -40,6 +36,11 @@ namespace kodning.View
         private void ErDuKokSide(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(ErDuKok), null);
+        }
+
+        private void ChangeMenu3_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ChangeMenu), null);
         }
     }
 }
