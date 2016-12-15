@@ -29,7 +29,7 @@ namespace kodning
 
         private void button1_Click(System.Object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(kodning.View.Tobias), null);
+            this.Frame.Navigate(typeof(kodning.View.ChangeMenu), null);
         }
 
         private void Tilmelding1_Click(object sender, RoutedEventArgs e)
