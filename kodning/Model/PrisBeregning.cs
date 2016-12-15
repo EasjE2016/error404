@@ -8,8 +8,10 @@ using Newtonsoft.Json;
 
 namespace kodning.Model
 {
-    public class PrisBeregning
+    public class PrisBeregning : NotifyPropNotifications
     {
+        public double _Pris;
+
         public double Kok1Udlæg { get; set; }
         public double Kok2Udlæg { get; set; }
         public double Kok3Udlæg { get; set; }
@@ -18,7 +20,20 @@ namespace kodning.Model
         public double UdlægIAlt { get; set; }
         public double PrisIalt { get; set; }
         public double TotalKuvert { get; set; }
-        public double Pris { get; set; }
+        //public double Pris { get; set; }
+
+        public double Pris
+        {
+            get
+            {
+                return _Pris;
+            }
+            set
+            {
+                _Pris = value;
+                OnPropertyChanged(nameof(Pris));
+            }
+        }
 
 
         public double PrisIAlt

@@ -12,7 +12,7 @@ using kodning.RelayCommand;
 
 namespace kodning.ViewModel
 {
-    public class KuvertViewModel : INotifyPropertyChanged
+    public class KuvertViewModel : NotifyPropNotifications
     {
         public Kuverter Kuverter { get; set; }
         //public UgeKuverter UgeKuverter { get; set; }
@@ -52,6 +52,7 @@ namespace kodning.ViewModel
                 return Instance.ReturKuvertTorsdag(Instance.TorsdagListe);
             }
         }
+
         // Dette SKAL ordnes. 
 
        public double PrisPerKuvertTest
@@ -68,6 +69,7 @@ namespace kodning.ViewModel
         {
             
             PrisPerKuvertTest = PrisPerKuvertTest;
+            
         }
 
 
@@ -96,7 +98,18 @@ namespace kodning.ViewModel
         }
         #endregion
 
-
+        //public PrisBeregning Pris
+        //{
+        //    get
+        //    {
+        //        return _Pris;
+        //    }
+        //    set
+        //    {
+        //        _Pris = value;
+        //        OnPropertyChanged(nameof(Pris));
+        //    }
+        //}
         #region onpropchange til KuvertLister
         //public KuverterListe KuvertListenMandag
         //{

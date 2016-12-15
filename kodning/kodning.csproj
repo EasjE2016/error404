@@ -98,6 +98,7 @@
     <Compile Include="Model\KuvertCatalogSingleton.cs" />
     <Compile Include="Model\Kuverter.cs" />
     <Compile Include="Model\KuverterListe.cs" />
+    <Compile Include="Model\NotifyProp.cs" />
     <Compile Include="Model\PrisBeregning.cs" />
     <Compile Include="Model\UgeKuverter.cs" />
     <Compile Include="ViewModel\KuvertViewModel.cs" />
