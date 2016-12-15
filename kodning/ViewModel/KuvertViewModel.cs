@@ -77,6 +77,8 @@ namespace kodning.ViewModel
 
 
         #region RelayCommands
+
+        public RelayCommand.RelayCommand TilmeldAlleCommand { get; set; }
         public RelayCommand.RelayCommand TilmeldCommand { get; set; }
         public RelayCommand.RelayCommand KuvertPerDagCommand { get; set; }
         public RelayCommand.RelayCommand BeregnKuvMandag { get; set; }
@@ -221,6 +223,93 @@ namespace kodning.ViewModel
             Instance.TorsdagListe.Add(TorsdagKuvert);
 
         }
+
+        public void AddAlleDage()
+        {
+            if (Kuverter.Voksne == 0 && Kuverter.Teens == 0 && Kuverter.Boern == 0 && Kuverter.Baby == 0)
+            {
+                throw new NullReferenceException();        
+            }
+
+            else if (Kuverter.Voksne > 0 || Kuverter.Teens > 0 || Kuverter.Boern > 0 || Kuverter.Baby > 0)
+            {
+                Kuverter Kuvert = new Kuverter();
+                Kuvert.Husnummer = Kuverter.Husnummer;
+                Kuvert.Voksne = Kuverter.Voksne;
+                Kuvert.Teens = Kuverter.Teens;
+                Kuvert.Boern = Kuverter.Boern;
+                Kuvert.Baby = Kuverter.Baby;
+                Kuvert.Ugedag = "";
+
+                //referer til singleton
+                Instance.MandagListe.Add(Kuvert);
+
+            }
+
+            if (Kuverter.TirsdagVoksne == 0 && Kuverter.TirsdagTeens == 0 && Kuverter.TirsdagBaby == 0 && Kuverter.TirsdagBaby == 0)
+            {
+                throw new NullReferenceException();
+            }
+
+            else if (Kuverter.TirsdagVoksne > 0 || Kuverter.TirsdagTeens > 0 || Kuverter.TirsdagBaby > 0 || Kuverter.TirsdagBaby > 0)
+            {
+                Kuverter TirsdagKuvert = new Kuverter();
+                TirsdagKuvert.Husnummer = Kuverter.Husnummer;
+                TirsdagKuvert.Voksne = Kuverter.Voksne;
+                TirsdagKuvert.Teens = Kuverter.Teens;
+                TirsdagKuvert.Boern = Kuverter.Boern;
+                TirsdagKuvert.Baby = Kuverter.Baby;
+                TirsdagKuvert.Ugedag = "";
+
+                //referer til singleton
+                Instance.MandagListe.Add(TirsdagKuvert);
+
+            }
+
+
+
+            if (Kuverter.OnsdagVoksne == 0 && Kuverter.OnsdagTeens == 0 && Kuverter.OnsdagBoern == 0 && Kuverter.OndagsBaby == 0)
+            {
+              
+            }
+
+            else if (Kuverter.OnsdagVoksne > 0 || Kuverter.OnsdagTeens > 0 || Kuverter.OnsdagBoern > 0 || Kuverter.OndagsBaby > 0)
+            {
+                Kuverter OnsdagKuvert = new Kuverter();
+                OnsdagKuvert.Husnummer = Kuverter.Husnummer;
+                OnsdagKuvert.Voksne = Kuverter.Voksne;
+                OnsdagKuvert.Teens = Kuverter.Teens;
+                OnsdagKuvert.Boern = Kuverter.Boern;
+                OnsdagKuvert.Baby = Kuverter.Baby;
+                OnsdagKuvert.Ugedag = "";
+
+                //referer til singleton
+                Instance.MandagListe.Add(OnsdagKuvert);
+
+            }
+
+            if (Kuverter.TorsdagVoksne == 0 && Kuverter.TorsdagTeens == 0 && Kuverter.TorsdagBoern == 0 && Kuverter.TorsdagBaby == 0)
+            {
+                
+            }
+
+            else if (Kuverter.TorsdagVoksne > 0 || Kuverter.TorsdagTeens > 0 || Kuverter.TorsdagBoern > 0 || Kuverter.TorsdagBaby > 0)
+            {
+                Kuverter TorsdagKuvert = new Kuverter();
+                TorsdagKuvert.Husnummer = Kuverter.Husnummer;
+                TorsdagKuvert.Voksne = Kuverter.Voksne;
+                TorsdagKuvert.Teens = Kuverter.Teens;
+                TorsdagKuvert.Boern = Kuverter.Boern;
+                TorsdagKuvert.Baby = Kuverter.Baby;
+                TorsdagKuvert.Ugedag = "";
+
+                //referer til singleton
+                Instance.MandagListe.Add(TorsdagKuvert);
+
+            }
+
+        }
+
         #endregion
 
         #region Konstruktør
@@ -229,6 +318,7 @@ namespace kodning.ViewModel
             Instance = KuvertCatalogSingleton.Instance;
             PrisBeregning = new PrisBeregning();
             Kuverter = new Kuverter();
+            TilmeldAlleCommand = new RelayCommand.RelayCommand(AddAlleDage);
             TilmeldCommand = new RelayCommand.RelayCommand(AddNewKuvertMandag);
             TilMeldTirsdagCommand = new RelayCommand.RelayCommand(AddNewKuvertTirsdag);
             TilMeldOnsdagCommand = new RelayCommand.RelayCommand(AddNewKuvertOnsdag);

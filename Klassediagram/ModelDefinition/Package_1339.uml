@@ -128,7 +128,7 @@
     <packageHasNamedElement>
       <class
         Id="e070c545-9e6d-43a4-be93-aa125594c669"
-        name="Tobias"
+        name="ChangeMenu"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -136,7 +136,7 @@
           <association
             Id="3715c228-496c-4a47-9858-607489ad0725"
             isDerived="false"
-            sourceEndRoleName="Tobias"
+            sourceEndRoleName="ChangeMenu"
             targetEndRoleName="MadplanViewModel"
             isLeaf="false"
             isAbstract="false">
@@ -148,7 +148,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="97d1bacc-387a-4a6d-ba92-adc636cdc657"
-                  name="Tobias"
+                  name="ChangeMenu"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"

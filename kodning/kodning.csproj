@@ -122,8 +122,8 @@
     <Compile Include="RelayCommand\RelayCommand.cs" />
     <Compile Include="InAkivKode\ArbejderPlanViewModel.cs" />
     <Compile Include="ViewModel\MadPlanViewModel.cs" />
-    <Compile Include="View\Tobias.xaml.cs">
-      <DependentUpon>Tobias.xaml</DependentUpon>
+    <Compile Include="View\ChangeMenu.xaml.cs">
+      <DependentUpon>ChangeMenu.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -168,7 +168,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Tobias.xaml">
+    <Page Include="View\ChangeMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

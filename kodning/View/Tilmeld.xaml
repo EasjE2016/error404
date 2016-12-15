@@ -24,8 +24,10 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="Bolig nr. " Margin="0,0,150,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="50"/>
-        <TextBox x:Name="Husnr" Grid.Row="0" Grid.Column="0" Text="{Binding Kuverter.Husnummer, Mode=TwoWay}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="30" Margin="0,10,70,0" Background="White" Height="50"/>
+        <Button x:Name="ToFrontPage" Content="Gå til forside" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,0" Height="65" Width="250" FontSize="30" FontWeight="Bold" Click="GåTilForside_Click"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource OverskriftStyle}" Text="Fællesspisning i Boligvænget"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Bolig nr. " Margin="0,11,150,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="50"/>
+        <TextBox x:Name="Husnr" Grid.Row="0" Grid.Column="0" Text="{Binding Kuverter.Husnummer, Mode=TwoWay}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="30" Margin="0,22,70,0" Background="White" Height="50"/>
 
         <!--Række 2 er inddelt i 2 kolonner
         Kolonne 1 indeholder en menu
@@ -33,22 +35,28 @@
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
 
+                <!--Denne knap virker ikke!-->
                 <Button x:Name="ChangeTilmelding" Grid.Row="0" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre tilmelding"/>
-                <Button x:Name="ChangeMenu" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu"/>
+                <!--Denne knap virker!-->
+                <Button x:Name="ChangeMenu" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenuClick"/>
+                <!--Denne knap vikrer ikke!-->
                 <Button x:Name="HvemErKok" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvem er kok?"/>
+                <!--Denne knap virker!-->
                 <Button x:Name="ErDuKok" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
-                <Button x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement"/>
+                <!--Denne knap virker ikke!-->
+                <Button x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement" />
             </Grid>
             
             <!--Tilmeldingsdelen er delt i 3 kolonner
@@ -65,8 +73,8 @@
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width ="*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width ="2*"/>
                 </Grid.ColumnDefinitions>
 
                 <!--Ugedagene-->
@@ -139,7 +147,7 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
-                        <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="7-15 år"/>
+                        <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="7-15 år" Margin="12,0,12,-16" VerticalAlignment="Stretch"/>
                     </Grid>
                     <TextBox x:Name="TirsagBarn715" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.TirsdagTeens, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="2">
@@ -255,19 +263,19 @@
         </Grid>
 
         <!--Række 3 er delt ind i 3 kolonner
-        Kolonne 1 indeholder tilbageknap
-        Kolonne 2 indeholder en tilmeldingsbekræftelse der strækker sig ind i kolonne 3-->
+        Kolonne 1 er tom
+        Kolonne indeholder en tilmeldingsbekræftelse der strækker sig ind i kolonne 3-->
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="ToFrontPage" Content="Gå til forside" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,0" Height="65" Width="250" FontSize="30" FontWeight="Bold" Click="GåTilForside_Click"/>
-        <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center" ItemsSource="{Binding Instance.MandagListe}"/>
+            
+        <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" ItemsSource="{Binding Instance.MandagListe}" Background="Black"/>
+            <Button x:Name="button" Content="Tilmeld Alle" Grid.Column="2" HorizontalAlignment="Left" Margin="433,42,0,0" VerticalAlignment="Top" Height="65" Width="117" Style="{StaticResource TilmeldKnap}" Command="{Binding TilmeldAlleCommand}" />
 
-        
-</Grid>
+        </Grid>
     </Grid>
 
 </Page>

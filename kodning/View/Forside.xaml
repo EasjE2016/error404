@@ -21,8 +21,8 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Text="Velkommen"/>
-            <TextBlock Grid.Row="1" Text="til fællesspisning i Boligvænget"/>
+            <TextBlock Grid.Row="0" Style="{StaticResource OverskriftStyleTop}" Text="Velkommen"/>
+            <TextBlock Grid.Row="1" Style="{StaticResource OverskriftStyleBottom}" Text="til fællesspisning i Boligvænget"/>
         </Grid>
 
         <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="150" Text="Billeder"/>
@@ -30,13 +30,5 @@
            
             <Button x:Name="Tilmeld1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Tilmeld" FontSize="50" Width="200" Height="100"  Click="Tilmelding1_Click"/>
             
-            <Button x:Name="button" Grid.Row="2" HorizontalAlignment="Left" Margin="152,94,0,0" VerticalAlignment="Top">
-                <Button x:Name="Madplan" Content="Lav madplan" FontSize="50" Width="304" Height="100" Click="button1_Click"/>
-            
-            </Button>
-       
-
-
-
     </Grid>
 </Page>

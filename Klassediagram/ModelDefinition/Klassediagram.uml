@@ -858,6 +858,11 @@
                 LastKnownLocation="Klassediagram.uml" />
             </topLevelOccurrences>
           </lifeline>
+          <lifeline
+            Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+            name="R2 : System"
+            isActor="false"
+            lifelineDisplayName="R2 : System" />
         </lifelines>
         <messages>
           <message
