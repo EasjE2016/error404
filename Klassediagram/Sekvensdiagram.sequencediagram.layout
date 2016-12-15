@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Sekvensdiagram">
+<sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 8.5" name="Sekvensdiagram">
   <SequenceDesignerModelMoniker Id="7cc919a9-af07-4fec-b1dd-ffb8ff109c21" />
   <nestedChildShapes>
     <lifelineShape Id="845dae57-a29e-4a6b-a833-a240dadc1a9a" absoluteBounds="5.9333333969116211, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
@@ -30,11 +30,11 @@
         <lifelineHoverShape Id="da172f3f-13e2-4c05-b6f9-d232d0cfcb6f" absoluteBounds="8.7583332061767578, 1, 0, 7">
           <lifelineMoniker Id="3e96850d-32a4-4271-8587-734326ff3e0c" LastKnownName="System" />
         </lifelineHoverShape>
-        <umlExecutionSpecificationShape Id="6d7db9a8-d373-4912-b321-220f0fe91954" absoluteBounds="8.7583332061767578, 3.1416666666666662, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">
-          <behaviorExecutionSpecificationMoniker Id="d65529e4-d5c3-43a7-897f-3ca2ae0b49b1" LastKnownName="BehaviorExecutionSpecification3" />
-        </umlExecutionSpecificationShape>
         <umlExecutionSpecificationShape Id="e5670790-fd1b-40d5-976b-39c07809a736" absoluteBounds="8.7583332061767578, 1.4416666666666667, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">
           <behaviorExecutionSpecificationMoniker Id="ad8de390-efde-471c-9ecc-cfa91dceb670" LastKnownName="BehaviorExecutionSpecification2" />
+        </umlExecutionSpecificationShape>
+        <umlExecutionSpecificationShape Id="6d7db9a8-d373-4912-b321-220f0fe91954" absoluteBounds="8.7583332061767578, 3.1416666666666662, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">
+          <behaviorExecutionSpecificationMoniker Id="d65529e4-d5c3-43a7-897f-3ca2ae0b49b1" LastKnownName="BehaviorExecutionSpecification3" />
         </umlExecutionSpecificationShape>
       </relativeChildShapes>
     </lifelineShape>
@@ -66,5 +66,17 @@
         <umlExecutionSpecificationShapeMoniker Id="b85368e1-7c69-4d62-95b8-55547109a8b2" />
       </nodes>
     </asyncMessageConnector>
+    <lifelineShape Id="3aa4859b-f5ba-4f08-ba58-6e6371995202" absoluteBounds="10.916666348775227, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
+      <lifelineMoniker Id="831877a2-228d-4996-a532-3cea142b139e" LastKnownName="R2 : System" />
+      <relativeChildShapes>
+        <umlLifelineHeadShape Id="cfe17d7e-b2c4-49c7-a043-c0dcd7bc8059" absoluteBounds="10.491666348775226, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="831877a2-228d-4996-a532-3cea142b139e" LastKnownName="R2 : System" />
+          <relativeChildShapes />
+        </umlLifelineHeadShape>
+        <lifelineHoverShape Id="c28a9d42-cc8a-4bef-a8fa-94013f22fc80" absoluteBounds="10.916666348775227, 1, 0, 7">
+          <lifelineMoniker Id="831877a2-228d-4996-a532-3cea142b139e" LastKnownName="R2 : System" />
+        </lifelineHoverShape>
+      </relativeChildShapes>
+    </lifelineShape>
   </nestedChildShapes>
 </sequenceDesignerDiagram>

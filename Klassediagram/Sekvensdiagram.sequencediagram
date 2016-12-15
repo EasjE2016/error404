@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="7cc919a9-af07-4fec-b1dd-ffb8ff109c21" name="Sekvensdiagram" linkedPackageId="ff0b9437-10fa-401f-a808-dcbebe56a3ae" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="a9544f05-92f8-436f-80ed-dadc565d0c22">
-      <profileInstance Id="b3a6457f-2558-4df1-bfef-a675450eca47" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="24a8ae40-360c-4c14-8688-47c449ad0cac">
-      <profileInstance Id="1357348e-6958-409d-9317-4328b8ad970c" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="033d6424-e4c6-4e76-a84c-7a0ff1855844" name="Sekvensdiagram" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -239,6 +225,9 @@
               <messageOccurrenceSpecificationMoniker Id="923bc447-706c-440f-956c-7dd514703f26" LastKnownName="MessageOccurrenceSpecification15" />
             </topLevelOccurrences>
           </lifeline>
+          <lifeline Id="831877a2-228d-4996-a532-3cea142b139e" name="R2 : System" isActor="false" lifelineDisplayName="R2 : System">
+            <elementDefinition Id="e1c69a36-8dae-455c-bf53-6107b1fadb32" />
+          </lifeline>
         </lifelines>
         <messages>
           <message Id="7c566b59-47c4-439d-99d2-a16ca05c2f0e" name="AddNewMadplan(UgeNr, UgeDag, Ret)" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="false">
@@ -323,5 +312,19 @@
   </packagedElements>
   <package Id="ff0b9437-10fa-401f-a808-dcbebe56a3ae" name="Klassediagram">
     <elementDefinition Id="e409fe34-fd16-4ebe-b416-e2bd3a4062fe" />
+    <profileInstances>
+      <packageHasProfileInstances Id="a9544f05-92f8-436f-80ed-dadc565d0c22">
+        <profileInstance Id="b3a6457f-2558-4df1-bfef-a675450eca47" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="24a8ae40-360c-4c14-8688-47c449ad0cac">
+        <profileInstance Id="1357348e-6958-409d-9317-4328b8ad970c" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </SequenceDesignerModel>
