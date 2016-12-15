@@ -272,7 +272,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             
-        <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" ItemsSource="{Binding Instance.MandagListe}" Background="Black"/>
+        <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" ItemsSource="{Binding Instance.MandagListe}" Background="Black" Header="Dette er mandagsliste"/>
             <Button x:Name="button" Content="Tilmeld Alle" Grid.Column="2" HorizontalAlignment="Left" Margin="433,42,0,0" VerticalAlignment="Top" Height="65" Width="117" Style="{StaticResource TilmeldKnap}" Command="{Binding TilmeldAlleCommand}" />
 
         </Grid>
