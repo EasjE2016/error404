@@ -457,316 +457,528 @@
         isReentrant="false">
         <fragments>
           <behaviorExecutionSpecification
-            Id="8d9e7268-9c29-4816-bd60-8870ab3652e6"
-            name="BehaviorExecutionSpecification2">
+            Id="c3afdeb9-4b67-498e-8524-8789d54dfcc6"
+            name="BehaviorExecutionSpecification1">
             <coveredLifelines>
               <lifelineMoniker
                 Id="b197cf07-e884-4ec0-b386-85d71557a42c"
-                LastKnownName="System"
+                LastKnownName=": KuvertViewModel"
                 LastKnownLocation="Klassediagram.uml" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
-                Id="3a9c12e3-6e40-4026-a274-978d5adc3bda"
+                Id="9e1ef425-02f4-4581-828f-1a430f66d9a7"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="Klassediagram.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="e4d464f5-e35a-47da-bd32-bd8357188c5b"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="Klassediagram.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="14baca42-a9e4-41c8-9316-3fd46beb1962"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="Klassediagram.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="924edb7f-520f-4bc5-8fc3-714a660ece3a"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="Klassediagram.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f09913ba-83c4-4146-bf33-1f6d196d8dd6"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="Klassediagram.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="54d1026c-d8f8-4e67-804f-a6b4f97dbf04"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="Klassediagram.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="e4d464f5-e35a-47da-bd32-bd8357188c5b"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="cf30f18e-089b-4ccc-8a85-8f0ae9ac3be8"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Klassediagram.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b197cf07-e884-4ec0-b386-85d71557a42c"
+                LastKnownName=": KuvertViewModel"
+                LastKnownLocation="Klassediagram.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9866f971-0d0c-4f63-a976-95f6776d6db3"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="eb69c0b3-aa85-47ad-891b-04dfa7b8a843"
+                LastKnownName="Kok"
+                LastKnownLocation="Klassediagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="14baca42-a9e4-41c8-9316-3fd46beb1962"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="b197cf07-e884-4ec0-b386-85d71557a42c"
+                LastKnownName=": KuvertViewModel"
+                LastKnownLocation="Klassediagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="0c101958-faa3-4332-9e66-e97be8d07f50"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+                LastKnownName=": PrisBeregning"
+                LastKnownLocation="Klassediagram.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="88686879-ca9a-461b-81a1-55accf912991"
                 LastKnownName="ExecutionOccurrenceSpecification4"
                 LastKnownLocation="Klassediagram.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
-                Id="7bf3e913-6da9-41b9-a8bd-85bc63df5163"
+                Id="774be0c9-060c-47b1-8859-15e21c193aa0"
                 LastKnownName="ExecutionOccurrenceSpecification3"
                 LastKnownLocation="Klassediagram.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
-                Id="ea15a668-cf70-41f7-baf8-32a8973adb27"
+                Id="dc14bac0-b566-47b9-b2a6-69cc0c2ca0a9"
                 LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="Klassediagram.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="0f1540a4-0128-4a8c-a36e-666f13a733b5"
+                LastKnownName="OperandOccurrenceSpecification1"
+                LastKnownLocation="Klassediagram.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ca575ee6-f619-4352-9c68-35b1db68382d"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="Klassediagram.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="a30edf79-b2a8-47e6-a536-976e30e67c3f"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="Klassediagram.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="8f681ea0-b916-4166-9fd2-77accce5be56"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="Klassediagram.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8c186721-e1f2-4ea2-83d5-8f40901918c3"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="Klassediagram.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f4ea9904-35ca-4849-af3f-a76ba3ed4500"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="Klassediagram.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="4610346e-68b8-41e8-ae44-3d40f3678398"
+                LastKnownName="OperandOccurrenceSpecification2"
+                LastKnownLocation="Klassediagram.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="2b2a6d57-3236-4ced-aac0-8ec33b604644"
+                LastKnownName="MessageOccurrenceSpecification7"
                 LastKnownLocation="Klassediagram.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="7bf3e913-6da9-41b9-a8bd-85bc63df5163"
+            Id="774be0c9-060c-47b1-8859-15e21c193aa0"
             name="ExecutionOccurrenceSpecification3">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="e5adde48-d1cb-42b9-a56a-0d2add3739da"
+                  Id="4b9f3fa6-88db-4b68-b6f7-da3adf375176"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="Klassediagram.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
-                Id="b197cf07-e884-4ec0-b386-85d71557a42c"
-                LastKnownName="System"
+                Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+                LastKnownName=": PrisBeregning"
                 LastKnownLocation="Klassediagram.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="3cfa5eca-3971-407e-9c4b-c46e4c0c695e"
+            Id="924edb7f-520f-4bc5-8fc3-714a660ece3a"
             name="MessageOccurrenceSpecification5">
             <covered>
               <lifelineMoniker
-                Id="eb69c0b3-aa85-47ad-891b-04dfa7b8a843"
-                LastKnownName="Kok"
+                Id="b197cf07-e884-4ec0-b386-85d71557a42c"
+                LastKnownName=": KuvertViewModel"
                 LastKnownLocation="Klassediagram.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="ea15a668-cf70-41f7-baf8-32a8973adb27"
+            Id="dc14bac0-b566-47b9-b2a6-69cc0c2ca0a9"
             name="MessageOccurrenceSpecification6">
             <covered>
               <lifelineMoniker
-                Id="b197cf07-e884-4ec0-b386-85d71557a42c"
-                LastKnownName="System"
+                Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+                LastKnownName=": PrisBeregning"
                 LastKnownLocation="Klassediagram.uml" />
             </covered>
           </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="3a9c12e3-6e40-4026-a274-978d5adc3bda"
-            name="ExecutionOccurrenceSpecification4">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="9c8c4b03-1bda-434f-88f5-6888379b7d38"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="Klassediagram.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="b197cf07-e884-4ec0-b386-85d71557a42c"
-                LastKnownName="System"
-                LastKnownLocation="Klassediagram.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="11aa5fa8-145e-4d47-9afb-eb169e236e9a"
-            name="BehaviorExecutionSpecification5">
+          <combinedFragment
+            Id="60867135-a90c-4045-a83f-533fbb2946b7"
+            name="CombinedFragment1"
+            interactionOperator="Loop">
             <coveredLifelines>
               <lifelineMoniker
-                Id="eb69c0b3-aa85-47ad-891b-04dfa7b8a843"
-                LastKnownName="Kok"
+                Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+                LastKnownName=": PrisBeregning"
+                LastKnownLocation="Klassediagram.uml" />
+              <lifelineMoniker
+                Id="ea79ebe3-2be9-4078-80fd-2182551099f1"
+                LastKnownName=": KuvertCatalogSingleton"
                 LastKnownLocation="Klassediagram.uml" />
             </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="3840e172-25e6-4603-af52-b75ee292545e"
-                LastKnownName="ExecutionOccurrenceSpecification10"
-                LastKnownLocation="Klassediagram.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="e92b1893-5aed-48b0-b6bd-37559eda9197"
-                LastKnownName="ExecutionOccurrenceSpecification9"
-                LastKnownLocation="Klassediagram.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="16212425-87ba-4fd8-a22f-46e62c330238"
-                LastKnownName="MessageOccurrenceSpecification14"
-                LastKnownLocation="Klassediagram.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="e92b1893-5aed-48b0-b6bd-37559eda9197"
-            name="ExecutionOccurrenceSpecification9">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="73c4f38b-e831-474c-9051-7f56ca30a9e5"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="Klassediagram.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
+            <operands>
+              <interactionOperand
+                Id="f65f82ce-a6fa-426e-8577-ad6f8b14f8ed"
+                name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+                    LastKnownName=": PrisBeregning"
+                    LastKnownLocation="Klassediagram.uml" />
+                  <lifelineMoniker
+                    Id="ea79ebe3-2be9-4078-80fd-2182551099f1"
+                    LastKnownName=": KuvertCatalogSingleton"
+                    LastKnownLocation="Klassediagram.uml" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint
+                    Id="7aae4592-ac04-4489-a070-bd082c7b5f98">
+                    <maxInt>
+                      <literalString
+                        Id="53c744a5-275b-47b0-bd5b-fc4caa1d9c6c"
+                        name="LiteralString1" />
+                    </maxInt>
+                    <minInt>
+                      <literalString
+                        Id="94657fe4-0b86-4cc0-a98b-160d907d645f"
+                        name="LiteralString2" />
+                    </minInt>
+                  </interactionConstraint>
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="0f1540a4-0128-4a8c-a36e-666f13a733b5"
+                    LastKnownName="OperandOccurrenceSpecification1"
+                    LastKnownLocation="Klassediagram.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="4610346e-68b8-41e8-ae44-3d40f3678398"
+                    LastKnownName="OperandOccurrenceSpecification2"
+                    LastKnownLocation="Klassediagram.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="89ef7c56-cd0d-424a-9ceb-2f088a5af50d"
+                    LastKnownName="OperandOccurrenceSpecification3"
+                    LastKnownLocation="Klassediagram.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="85e24881-0659-40ef-a916-97b966cafdf3"
+                    LastKnownName="OperandOccurrenceSpecification4"
+                    LastKnownLocation="Klassediagram.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification
+            Id="89ef7c56-cd0d-424a-9ceb-2f088a5af50d"
+            name="OperandOccurrenceSpecification3">
             <covered>
               <lifelineMoniker
-                Id="eb69c0b3-aa85-47ad-891b-04dfa7b8a843"
-                LastKnownName="Kok"
+                Id="ea79ebe3-2be9-4078-80fd-2182551099f1"
+                LastKnownName=": KuvertCatalogSingleton"
                 LastKnownLocation="Klassediagram.uml" />
             </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="008f97f0-e6a4-4954-882d-1885388e0183"
-            name="MessageOccurrenceSpecification13">
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="0f1540a4-0128-4a8c-a36e-666f13a733b5"
+            name="OperandOccurrenceSpecification1">
             <covered>
               <lifelineMoniker
-                Id="b197cf07-e884-4ec0-b386-85d71557a42c"
-                LastKnownName="System"
+                Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+                LastKnownName=": PrisBeregning"
+                LastKnownLocation="Klassediagram.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ca575ee6-f619-4352-9c68-35b1db68382d"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+                LastKnownName=": PrisBeregning"
                 LastKnownLocation="Klassediagram.uml" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="16212425-87ba-4fd8-a22f-46e62c330238"
-            name="MessageOccurrenceSpecification14">
-            <covered>
-              <lifelineMoniker
-                Id="eb69c0b3-aa85-47ad-891b-04dfa7b8a843"
-                LastKnownName="Kok"
-                LastKnownLocation="Klassediagram.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="3840e172-25e6-4603-af52-b75ee292545e"
-            name="ExecutionOccurrenceSpecification10">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="ad399ef1-abf4-478d-9f5c-018e8ada559c"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="Klassediagram.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="eb69c0b3-aa85-47ad-891b-04dfa7b8a843"
-                LastKnownName="Kok"
-                LastKnownLocation="Klassediagram.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
           <behaviorExecutionSpecification
-            Id="18055777-bd7f-4ca8-b866-4b5292577ebe"
+            Id="6ed2cdba-2d81-4637-8b33-9595d0381d87"
             name="BehaviorExecutionSpecification3">
             <coveredLifelines>
               <lifelineMoniker
-                Id="b197cf07-e884-4ec0-b386-85d71557a42c"
-                LastKnownName="System"
+                Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+                LastKnownName=": PrisBeregning"
                 LastKnownLocation="Klassediagram.uml" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
-                Id="66bcb8d5-e4d7-4497-9d64-4f4d56076d3c"
+                Id="8f681ea0-b916-4166-9fd2-77accce5be56"
                 LastKnownName="ExecutionOccurrenceSpecification6"
                 LastKnownLocation="Klassediagram.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
-                Id="5e832c1c-73fe-4741-bea4-8a94f9487b16"
+                Id="a30edf79-b2a8-47e6-a536-976e30e67c3f"
                 LastKnownName="ExecutionOccurrenceSpecification5"
                 LastKnownLocation="Klassediagram.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
-                Id="c3f59c81-1442-45bb-96bc-fea7323d6217"
-                LastKnownName="MessageOccurrenceSpecification8"
+                Id="501f202a-4dfb-4378-8056-e92ff79806a7"
+                LastKnownName="MessageOccurrenceSpecification10"
                 LastKnownLocation="Klassediagram.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="5e832c1c-73fe-4741-bea4-8a94f9487b16"
+            Id="a30edf79-b2a8-47e6-a536-976e30e67c3f"
             name="ExecutionOccurrenceSpecification5">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="eb1aa7a6-02f2-4592-8241-065f0a1ff684"
+                  Id="b26fb732-1a5a-43df-a733-7881422cb189"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="Klassediagram.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
-                Id="b197cf07-e884-4ec0-b386-85d71557a42c"
-                LastKnownName="System"
+                Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+                LastKnownName=": PrisBeregning"
                 LastKnownLocation="Klassediagram.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="7af39624-efff-4a65-8480-bb315cb1f253"
-            name="MessageOccurrenceSpecification7">
+            Id="501f202a-4dfb-4378-8056-e92ff79806a7"
+            name="MessageOccurrenceSpecification10">
             <covered>
               <lifelineMoniker
-                Id="eb69c0b3-aa85-47ad-891b-04dfa7b8a843"
-                LastKnownName="Kok"
-                LastKnownLocation="Klassediagram.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="c3f59c81-1442-45bb-96bc-fea7323d6217"
-            name="MessageOccurrenceSpecification8">
-            <covered>
-              <lifelineMoniker
-                Id="b197cf07-e884-4ec0-b386-85d71557a42c"
-                LastKnownName="System"
+                Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+                LastKnownName=": PrisBeregning"
                 LastKnownLocation="Klassediagram.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
-            Id="66bcb8d5-e4d7-4497-9d64-4f4d56076d3c"
+            Id="8f681ea0-b916-4166-9fd2-77accce5be56"
             name="ExecutionOccurrenceSpecification6">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="6720b2fd-6776-48bf-98ea-bfe704500236"
+                  Id="c3dfc103-4eb5-4ec3-bc40-ce224369c245"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="Klassediagram.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
-                Id="b197cf07-e884-4ec0-b386-85d71557a42c"
-                LastKnownName="System"
+                Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+                LastKnownName=": PrisBeregning"
                 LastKnownLocation="Klassediagram.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <behaviorExecutionSpecification
-            Id="14b3331e-8f86-4c99-8d1f-aa55d3b6f863"
-            name="BehaviorExecutionSpecification6">
+            Id="67a13859-2d9d-4590-89d0-718e82df44ed"
+            name="BehaviorExecutionSpecification4">
             <coveredLifelines>
               <lifelineMoniker
-                Id="eb69c0b3-aa85-47ad-891b-04dfa7b8a843"
-                LastKnownName="Kok"
+                Id="ea79ebe3-2be9-4078-80fd-2182551099f1"
+                LastKnownName=": KuvertCatalogSingleton"
                 LastKnownLocation="Klassediagram.uml" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
-                Id="9c401691-cf52-41ea-93d0-3f8056a7daee"
-                LastKnownName="ExecutionOccurrenceSpecification12"
+                Id="f5f400ba-9a40-4ff1-8295-8fa86110ef42"
+                LastKnownName="ExecutionOccurrenceSpecification8"
                 LastKnownLocation="Klassediagram.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
-                Id="48b9c1a7-d0ed-4173-8c53-c0b9afe224aa"
-                LastKnownName="ExecutionOccurrenceSpecification11"
+                Id="cdb11f53-674f-4c9e-a0a7-dc98a6bdbe81"
+                LastKnownName="ExecutionOccurrenceSpecification7"
                 LastKnownLocation="Klassediagram.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
-                Id="31e1e2ef-2536-480a-8935-c5cffb5271aa"
-                LastKnownName="MessageOccurrenceSpecification16"
+                Id="2e94f65a-07c6-463b-b1e0-60b620e1eee3"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="Klassediagram.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="a9756424-80f6-4d1d-98b6-97d3fed9aa51"
+                LastKnownName="MessageOccurrenceSpecification13"
                 LastKnownLocation="Klassediagram.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="48b9c1a7-d0ed-4173-8c53-c0b9afe224aa"
-            name="ExecutionOccurrenceSpecification11">
+            Id="cdb11f53-674f-4c9e-a0a7-dc98a6bdbe81"
+            name="ExecutionOccurrenceSpecification7">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="3778ebaf-30fd-46f2-9602-f5ed64981b38"
+                  Id="5062e16b-db44-4afc-af14-608eb14f967d"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="Klassediagram.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
-                Id="eb69c0b3-aa85-47ad-891b-04dfa7b8a843"
-                LastKnownName="Kok"
+                Id="ea79ebe3-2be9-4078-80fd-2182551099f1"
+                LastKnownName=": KuvertCatalogSingleton"
                 LastKnownLocation="Klassediagram.uml" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="2eb181ac-b5c9-4739-8807-b85dbd811129"
-            name="MessageOccurrenceSpecification15">
+            Id="2e94f65a-07c6-463b-b1e0-60b620e1eee3"
+            name="MessageOccurrenceSpecification12">
             <covered>
               <lifelineMoniker
-                Id="b197cf07-e884-4ec0-b386-85d71557a42c"
-                LastKnownName="System"
+                Id="ea79ebe3-2be9-4078-80fd-2182551099f1"
+                LastKnownName=": KuvertCatalogSingleton"
                 LastKnownLocation="Klassediagram.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="31e1e2ef-2536-480a-8935-c5cffb5271aa"
-            name="MessageOccurrenceSpecification16">
+            Id="8c186721-e1f2-4ea2-83d5-8f40901918c3"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+                LastKnownName=": PrisBeregning"
+                LastKnownLocation="Klassediagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f4ea9904-35ca-4849-af3f-a76ba3ed4500"
+            name="MessageOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+                LastKnownName=": PrisBeregning"
+                LastKnownLocation="Klassediagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a9756424-80f6-4d1d-98b6-97d3fed9aa51"
+            name="MessageOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="ea79ebe3-2be9-4078-80fd-2182551099f1"
+                LastKnownName=": KuvertCatalogSingleton"
+                LastKnownLocation="Klassediagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="f5f400ba-9a40-4ff1-8295-8fa86110ef42"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="83b1b916-4808-4a65-9f16-1a9271dfeb4a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Klassediagram.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ea79ebe3-2be9-4078-80fd-2182551099f1"
+                LastKnownName=": KuvertCatalogSingleton"
+                LastKnownLocation="Klassediagram.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="85e24881-0659-40ef-a916-97b966cafdf3"
+            name="OperandOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="ea79ebe3-2be9-4078-80fd-2182551099f1"
+                LastKnownName=": KuvertCatalogSingleton"
+                LastKnownLocation="Klassediagram.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="4610346e-68b8-41e8-ae44-3d40f3678398"
+            name="OperandOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+                LastKnownName=": PrisBeregning"
+                LastKnownLocation="Klassediagram.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f09913ba-83c4-4146-bf33-1f6d196d8dd6"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="b197cf07-e884-4ec0-b386-85d71557a42c"
+                LastKnownName=": KuvertViewModel"
+                LastKnownLocation="Klassediagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2b2a6d57-3236-4ced-aac0-8ec33b604644"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+                LastKnownName=": PrisBeregning"
+                LastKnownLocation="Klassediagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="88686879-ca9a-461b-81a1-55accf912991"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="2df168b8-0f70-4dcc-9469-627abf7d9ca4"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Klassediagram.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
+                LastKnownName=": PrisBeregning"
+                LastKnownLocation="Klassediagram.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="54d1026c-d8f8-4e67-804f-a6b4f97dbf04"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="b197cf07-e884-4ec0-b386-85d71557a42c"
+                LastKnownName=": KuvertViewModel"
+                LastKnownLocation="Klassediagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="138b4ec5-c82d-4e15-84c2-1b3b31bb7b35"
+            name="MessageOccurrenceSpecification4">
             <covered>
               <lifelineMoniker
                 Id="eb69c0b3-aa85-47ad-891b-04dfa7b8a843"
@@ -775,20 +987,20 @@
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
-            Id="9c401691-cf52-41ea-93d0-3f8056a7daee"
-            name="ExecutionOccurrenceSpecification12">
+            Id="9e1ef425-02f4-4581-828f-1a430f66d9a7"
+            name="ExecutionOccurrenceSpecification2">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="733cf5eb-5799-4756-9c97-8ad762d3c307"
+                  Id="06aedea1-e42b-43e7-a73b-794d4f29518c"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="Klassediagram.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
-                Id="eb69c0b3-aa85-47ad-891b-04dfa7b8a843"
-                LastKnownName="Kok"
+                Id="b197cf07-e884-4ec0-b386-85d71557a42c"
+                LastKnownName=": KuvertViewModel"
                 LastKnownLocation="Klassediagram.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -801,188 +1013,231 @@
             lifelineDisplayName="Kok">
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker
-                Id="3cfa5eca-3971-407e-9c4b-c46e4c0c695e"
-                LastKnownName="MessageOccurrenceSpecification5"
-                LastKnownLocation="Klassediagram.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="e92b1893-5aed-48b0-b6bd-37559eda9197"
-                LastKnownName="ExecutionOccurrenceSpecification9"
-                LastKnownLocation="Klassediagram.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="3840e172-25e6-4603-af52-b75ee292545e"
-                LastKnownName="ExecutionOccurrenceSpecification10"
+                Id="9866f971-0d0c-4f63-a976-95f6776d6db3"
+                LastKnownName="MessageOccurrenceSpecification1"
                 LastKnownLocation="Klassediagram.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="7af39624-efff-4a65-8480-bb315cb1f253"
-                LastKnownName="MessageOccurrenceSpecification7"
-                LastKnownLocation="Klassediagram.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="48b9c1a7-d0ed-4173-8c53-c0b9afe224aa"
-                LastKnownName="ExecutionOccurrenceSpecification11"
-                LastKnownLocation="Klassediagram.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="9c401691-cf52-41ea-93d0-3f8056a7daee"
-                LastKnownName="ExecutionOccurrenceSpecification12"
+                Id="138b4ec5-c82d-4e15-84c2-1b3b31bb7b35"
+                LastKnownName="MessageOccurrenceSpecification4"
                 LastKnownLocation="Klassediagram.uml" />
             </topLevelOccurrences>
           </lifeline>
           <lifeline
             Id="b197cf07-e884-4ec0-b386-85d71557a42c"
-            name="System"
+            name=": KuvertViewModel"
             isActor="false"
-            lifelineDisplayName="System">
+            lifelineDisplayName=": KuvertViewModel">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
-                Id="7bf3e913-6da9-41b9-a8bd-85bc63df5163"
-                LastKnownName="ExecutionOccurrenceSpecification3"
+                Id="e4d464f5-e35a-47da-bd32-bd8357188c5b"
+                LastKnownName="ExecutionOccurrenceSpecification1"
                 LastKnownLocation="Klassediagram.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="3a9c12e3-6e40-4026-a274-978d5adc3bda"
-                LastKnownName="ExecutionOccurrenceSpecification4"
-                LastKnownLocation="Klassediagram.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="008f97f0-e6a4-4954-882d-1885388e0183"
-                LastKnownName="MessageOccurrenceSpecification13"
-                LastKnownLocation="Klassediagram.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="5e832c1c-73fe-4741-bea4-8a94f9487b16"
-                LastKnownName="ExecutionOccurrenceSpecification5"
-                LastKnownLocation="Klassediagram.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="66bcb8d5-e4d7-4497-9d64-4f4d56076d3c"
-                LastKnownName="ExecutionOccurrenceSpecification6"
-                LastKnownLocation="Klassediagram.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="2eb181ac-b5c9-4739-8807-b85dbd811129"
-                LastKnownName="MessageOccurrenceSpecification15"
+                Id="9e1ef425-02f4-4581-828f-1a430f66d9a7"
+                LastKnownName="ExecutionOccurrenceSpecification2"
                 LastKnownLocation="Klassediagram.uml" />
             </topLevelOccurrences>
           </lifeline>
           <lifeline
             Id="e1c69a36-8dae-455c-bf53-6107b1fadb32"
-            name="R2 : System"
+            name=": PrisBeregning"
             isActor="false"
-            lifelineDisplayName="R2 : System" />
+            lifelineDisplayName=": PrisBeregning">
+            <represents>
+              <propertyMoniker
+                Id="7d16e7b5-4bad-469f-a5f7-39c85a0d6dd5"
+                LastKnownLocation="Klassediagram.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="774be0c9-060c-47b1-8859-15e21c193aa0"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="Klassediagram.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="88686879-ca9a-461b-81a1-55accf912991"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="Klassediagram.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="ea79ebe3-2be9-4078-80fd-2182551099f1"
+            name=": KuvertCatalogSingleton"
+            isActor="false"
+            lifelineDisplayName=": KuvertCatalogSingleton">
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker
+                Id="89ef7c56-cd0d-424a-9ceb-2f088a5af50d"
+                LastKnownName="OperandOccurrenceSpecification3"
+                LastKnownLocation="Klassediagram.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="cdb11f53-674f-4c9e-a0a7-dc98a6bdbe81"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="Klassediagram.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="f5f400ba-9a40-4ff1-8295-8fa86110ef42"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="Klassediagram.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="85e24881-0659-40ef-a916-97b966cafdf3"
+                LastKnownName="OperandOccurrenceSpecification4"
+                LastKnownLocation="Klassediagram.uml" />
+            </topLevelOccurrences>
+          </lifeline>
         </lifelines>
         <messages>
           <message
-            Id="20ef912d-8962-4b69-ab50-56d34897aa5d"
-            name="AddNewMadplan(UgeNr, UgeDag, Ret)"
+            Id="772c1150-0d50-4694-bf28-44fe8ae94bd8"
+            name="PrisErTest"
             messageKind="Complete"
-            messageSort="AsynchCall"
+            messageSort="SynchCall"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="3cfa5eca-3971-407e-9c4b-c46e4c0c695e"
+                Id="9866f971-0d0c-4f63-a976-95f6776d6db3"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="Klassediagram.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="14baca42-a9e4-41c8-9316-3fd46beb1962"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="Klassediagram.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="f0b32d1a-7d79-4bc9-9759-077ac0a65d6e"
+            name="Pris"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="924edb7f-520f-4bc5-8fc3-714a660ece3a"
                 LastKnownName="MessageOccurrenceSpecification5"
                 LastKnownLocation="Klassediagram.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="ea15a668-cf70-41f7-baf8-32a8973adb27"
+                Id="dc14bac0-b566-47b9-b2a6-69cc0c2ca0a9"
                 LastKnownName="MessageOccurrenceSpecification6"
                 LastKnownLocation="Klassediagram.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="2f01c38b-7563-4f8a-8e2d-3581d801d1a3"
-            name="Antal tilmeldte vises"
+            Id="750fab79-535e-4587-b766-487a6baea254"
+            name="KokUdlæg"
             messageKind="Complete"
-            messageSort="AsynchCall"
+            messageSort="SynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ca575ee6-f619-4352-9c68-35b1db68382d"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="Klassediagram.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="501f202a-4dfb-4378-8056-e92ff79806a7"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="Klassediagram.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="66187e5c-e05f-4dd2-b671-b2c4e527503b"
+            name="kuverterForDagen"
+            messageKind="Complete"
+            messageSort="SynchCall"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="008f97f0-e6a4-4954-882d-1885388e0183"
+                Id="8c186721-e1f2-4ea2-83d5-8f40901918c3"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="Klassediagram.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2e94f65a-07c6-463b-b1e0-60b620e1eee3"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="Klassediagram.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="3f139d81-87be-4b75-a12d-a484502540b2"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a9756424-80f6-4d1d-98b6-97d3fed9aa51"
                 LastKnownName="MessageOccurrenceSpecification13"
                 LastKnownLocation="Klassediagram.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="16212425-87ba-4fd8-a22f-46e62c330238"
+                Id="f4ea9904-35ca-4849-af3f-a76ba3ed4500"
                 LastKnownName="MessageOccurrenceSpecification14"
                 LastKnownLocation="Klassediagram.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="900558af-7524-4992-b5bf-bcfbfcedb798"
-            name="BeregnKuvertPris(indkøbspris, antalTilmeldte, antalDage)"
+            Id="e2e0607f-a7ba-4102-857a-58feaccfd0ce"
+            name="&lt;&lt;return&gt;&gt;"
             messageKind="Complete"
-            messageSort="AsynchCall"
+            messageSort="Reply"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="7af39624-efff-4a65-8480-bb315cb1f253"
+                Id="2b2a6d57-3236-4ced-aac0-8ec33b604644"
                 LastKnownName="MessageOccurrenceSpecification7"
                 LastKnownLocation="Klassediagram.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="c3f59c81-1442-45bb-96bc-fea7323d6217"
+                Id="f09913ba-83c4-4146-bf33-1f6d196d8dd6"
                 LastKnownName="MessageOccurrenceSpecification8"
                 LastKnownLocation="Klassediagram.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="afab28af-ebee-483d-931c-bb11583a6173"
-            name="KurvertPris"
+            Id="179d5e94-0785-49c3-9072-71ca732675c6"
+            name="&lt;&lt;return&gt;&gt;"
             messageKind="Complete"
-            messageSort="AsynchCall"
+            messageSort="Reply"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="2eb181ac-b5c9-4739-8807-b85dbd811129"
-                LastKnownName="MessageOccurrenceSpecification15"
+                Id="54d1026c-d8f8-4e67-804f-a6b4f97dbf04"
+                LastKnownName="MessageOccurrenceSpecification3"
                 LastKnownLocation="Klassediagram.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="31e1e2ef-2536-480a-8935-c5cffb5271aa"
-                LastKnownName="MessageOccurrenceSpecification16"
+                Id="138b4ec5-c82d-4e15-84c2-1b3b31bb7b35"
+                LastKnownName="MessageOccurrenceSpecification4"
                 LastKnownLocation="Klassediagram.uml" />
             </receiveEvent>
           </message>
         </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="7d16e7b5-4bad-469f-a5f7-39c85a0d6dd5"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="918b432e-5bad-4a1d-9299-a55c333a5ea7"
+                LastKnownName="PrisBeregning"
+                LastKnownLocation="Klassediagram.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
       </interaction>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="eb1aa7a6-02f2-4592-8241-065f0a1ff684"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="6720b2fd-6776-48bf-98ea-bfe704500236"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="e5adde48-d1cb-42b9-a56a-0d2add3739da"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="9c8c4b03-1bda-434f-88f5-6888379b7d38"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="73c4f38b-e831-474c-9051-7f56ca30a9e5"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="ad399ef1-abf4-478d-9f5c-018e8ada559c"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="3778ebaf-30fd-46f2-9602-f5ed64981b38"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="733cf5eb-5799-4756-9c97-8ad762d3c307"
-        name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -1038,6 +1293,46 @@
         Id="8cb15fb4-56fd-407f-9482-31eae45ccaf4"
         LastKnownName="View"
         LastKnownLocation="Package_1339.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="cf30f18e-089b-4ccc-8a85-8f0ae9ac3be8"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="06aedea1-e42b-43e7-a73b-794d4f29518c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="4b9f3fa6-88db-4b68-b6f7-da3adf375176"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="2df168b8-0f70-4dcc-9469-627abf7d9ca4"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b26fb732-1a5a-43df-a733-7881422cb189"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c3dfc103-4eb5-4ec3-bc40-ce224369c245"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="5062e16b-db44-4afc-af14-608eb14f967d"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="83b1b916-4808-4a65-9f16-1a9271dfeb4a"
+        name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
