@@ -32,11 +32,6 @@ namespace kodning.View
             this.Frame.Navigate(typeof(Tilmeld), null);
         }
 
-        private void SeKuvTir_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
         private void ErDuKokSide(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(ErDuKok), null);
