@@ -79,7 +79,7 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     
-                    <TextBox Grid.Row="0" Grid.Column="0" Height="50" Width="50" x:Name="textBox"  Text="{Binding NewMad.UgeNr, Mode=TwoWay}"/>
+                    <TextBox Grid.Row="0" Grid.Column="0" Height="40" Width="50" x:Name="textBox" Background="White" FontSize="20" Text="{Binding NewMad.UgeNr, Mode=TwoWay}"/>
                 </Grid>
                 
             
