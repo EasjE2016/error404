@@ -31,5 +31,10 @@ namespace kodning.View
         {
             this.Frame.Navigate(typeof(Forside), null);
         }
+
+        private void GåTilForside_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Forside), null);
+        }
     }
 }

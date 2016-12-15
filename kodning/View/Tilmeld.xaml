@@ -24,8 +24,10 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="Bolig nr. " Margin="0,0,150,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="50"/>
-        <TextBox x:Name="Husnr" Grid.Row="0" Grid.Column="0" Text="{Binding Kuverter.Husnummer, Mode=TwoWay}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="30" Margin="0,10,70,0" Background="White" Height="50"/>
+        <Button x:Name="ToFrontPage" Content="Gå til forside" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,0" Height="65" Width="250" FontSize="30" FontWeight="Bold" Click="GåTilForside_Click"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource OverskriftStyle}" Text="Fællesspisning i Boligvænget"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Bolig nr. " Margin="0,11,150,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="50"/>
+        <TextBox x:Name="Husnr" Grid.Row="0" Grid.Column="0" Text="{Binding Kuverter.Husnummer, Mode=TwoWay}" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="30" Margin="0,22,70,0" Background="White" Height="50"/>
 
         <!--Række 2 er inddelt i 2 kolonner
         Kolonne 1 indeholder en menu
@@ -37,11 +39,12 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
 
                 <!--Denne knap virker ikke!-->
@@ -53,7 +56,7 @@
                 <!--Denne knap virker!-->
                 <Button x:Name="ErDuKok" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
                 <!--Denne knap virker ikke!-->
-                <Button x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement"/>
+                <Button x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement" />
             </Grid>
             
             <!--Tilmeldingsdelen er delt i 3 kolonner
@@ -260,16 +263,16 @@
         </Grid>
 
         <!--Række 3 er delt ind i 3 kolonner
-        Kolonne 1 indeholder tilbageknap
-        Kolonne 2 indeholder en tilmeldingsbekræftelse der strækker sig ind i kolonne 3-->
+        Kolonne 1 er tom
+        Kolonne indeholder en tilmeldingsbekræftelse der strækker sig ind i kolonne 3-->
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="ToFrontPage" Content="Gå til forside" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,0" Height="65" Width="250" FontSize="30" FontWeight="Bold" Click="GåTilForside_Click"/>
-        <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" VerticalAlignment="Center" ItemsSource="{Binding Instance.MandagListe}"/>
+            
+        <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" ItemsSource="{Binding Instance.MandagListe}" Background="Black"/>
 
         
 </Grid>

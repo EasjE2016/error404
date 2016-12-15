@@ -8,17 +8,86 @@
     xmlns:ViewModel="using:kodning.ViewModel"
     x:Class="kodning.View.ChangeMenu"
     mc:Ignorable="d">
-    
+
     <Page.DataContext>
         <ViewModel:MadPlanViewModel/>
     </Page.DataContext>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="193" Margin="10,10,0,0" VerticalAlignment="Top" Width="1422" ItemsSource="{Binding MadplanListen, Mode=TwoWay}" SelectedItem="{Binding SelectedMadplan,Mode=TwoWay}">
-        </ListView>
+    <Grid Margin="10,20,10,20" Style="{StaticResource GridStyle}">
 
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="28,246,0,0" TextWrapping="Wrap" Text="{Binding NewMad.UgeNr, Mode=TwoWay}" VerticalAlignment="Top" Width="183">
-        </TextBox>
+        <!--Siden er delt i tre rækker
+        Række 1 indeholder overskrift samt 'tilbage til forsiden'-knap
+        Række 2 indeholder selve indholdet på siden
+        Række 3 er tom-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="ToFrontPage" Content="Gå til forside" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,0" Height="65" Width="250" FontSize="30" FontWeight="Bold" Click="GåTilForside_Click"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource OverskriftStyle}" Text="Fællesspisning i Boligvænget"/>
+
+        <!--Række 2 er delt i 3 kolonner
+        Kolonne 1 indeholder en menu
+        kolonne 2 indeholder selve området med ændring af menu-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+
+                <!--Denne knap virker ikke!-->
+                <Button x:Name="ChangeTilmelding" Grid.Row="0" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre tilmelding"/>
+                <!--Denne knap virker!-->
+                <Button x:Name="ChangeMenu" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenuClick"/>
+                <!--Denne knap vikrer ikke!-->
+                <Button x:Name="HvemErKok" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvem er kok?"/>
+                <!--Denne knap virker!-->
+                <Button x:Name="ErDuKok" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
+                <!--Denne knap virker ikke!-->
+                <Button x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement"/>
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                
+                <ListView Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" x:Name="MadplanListView" HorizontalAlignment="Center" ItemsSource="{Binding MadplanListen, Mode=TwoWay}" SelectedItem="{Binding SelectedMadplan, Mode=TwoWay}"/>
+
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    
+                    <TextBox Grid.Row="0" Grid.Column="0" Height="50" Width="50" x:Name="textBox"  Text="{Binding NewMad.UgeNr, Mode=TwoWay}"/>
+                </Grid>
+                
+            
+            </Grid>
+        </Grid>
+
+        
+      
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="29,325,0,0" TextWrapping="Wrap" Text="{Binding NewMad.UgeDag, Mode=TwoWay}" VerticalAlignment="Top" Width="182">
         </TextBox>
         <Button x:Name="button" HorizontalAlignment="Left" Margin="291,552,0,0" VerticalAlignment="Top" Command="{Binding AddMadPlanCommand, Mode=TwoWay}" Content="Tilføj">
@@ -32,6 +101,5 @@
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="28,221,0,0" TextWrapping="Wrap" Text="Uge nummer" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="28,300,0,0" TextWrapping="Wrap" Text="Uge dag" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="28,405,0,0" TextWrapping="Wrap" Text="Ret" VerticalAlignment="Top"/>
-        <Button x:Name="GåTilForside" Content="Gå til forside" HorizontalAlignment="Left" Margin="1529,76,0,0" VerticalAlignment="Top" Height="96" Width="229" Click="button_Click"/>
     </Grid>
 </Page>

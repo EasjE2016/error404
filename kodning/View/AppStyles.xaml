@@ -63,7 +63,27 @@
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="FontSize" Value="35"/>
+        <Setter Property="FontSize" Value="31"/>
+    </Style>
+
+    <Style x:Key="OverskriftStyleTop" TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="FontSize" Value="60"/>
+        <Setter Property="FontStretch" Value="Condensed"/>
+    </Style>
+
+    <Style x:Key="OverskriftStyleBottom" TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="FontSize" Value="60"/>
+        <Setter Property="FontStretch" Value="Condensed"/>
+    </Style>
+
+    <Style x:Key="OverskriftStyle" TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="40"/>
     </Style>
         
 </ResourceDictionary>
