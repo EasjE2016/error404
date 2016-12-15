@@ -28,28 +28,28 @@ namespace kodning.ViewModel
         {
             get
             {
-                return Instance.ReturKuvert(Instance.MandagListe);
+                return PrisBeregning.ReturKuvert(Instance.MandagListe);
             }
         }
         public double GivAlleKuverterTirsdag
         {
             get
             {
-                return Instance.ReturKuvertTirsdag(Instance.TirsdagListe);
+                return PrisBeregning.ReturKuvertTirsdag(Instance.TirsdagListe);
             }
         }
         public double GivAlleKuverterOnsdag
         {
             get
             {
-                return Instance.ReturKuvertOnsdag(Instance.OnsdagListe);
+                return PrisBeregning.ReturKuvertOnsdag(Instance.OnsdagListe);
             }
         }
         public double GivAlleKuverterTorsdag
         {
             get
             {
-                return Instance.ReturKuvertTorsdag(Instance.TorsdagListe);
+                return PrisBeregning.ReturKuvertTorsdag(Instance.TorsdagListe);
             }
         }
 
@@ -59,7 +59,7 @@ namespace kodning.ViewModel
         {
             set
             {
-                PrisBeregning.Pris = +(PrisBeregning.Kok1Udlæg+ PrisBeregning.Kok2Udlæg+PrisBeregning.Kok3Udlæg+ PrisBeregning.Kok4Udlæg)/ +(Instance.kuverterForDagen + Instance.kuverterForTirsdag + Instance.kuverterForOnsdag + Instance.kuverterForTorsdag);
+                PrisBeregning.Pris = +(PrisBeregning.Kok1Udlæg+ PrisBeregning.Kok2Udlæg+PrisBeregning.Kok3Udlæg+ PrisBeregning.Kok4Udlæg)/ +(PrisBeregning.kuverterForDagen + PrisBeregning.kuverterForTirsdag + PrisBeregning.kuverterForOnsdag + PrisBeregning.kuverterForTorsdag);
             }
             get
             { return PrisBeregning.Pris; }

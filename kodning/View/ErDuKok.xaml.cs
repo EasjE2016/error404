@@ -51,5 +51,6 @@ namespace kodning.View
         {
             this.Frame.Navigate(typeof(Forside), null);
         }
+
     }
 }
