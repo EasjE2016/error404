@@ -492,14 +492,14 @@
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
-            <class Id="77019dc6-191b-4fbb-8184-94f6b6481a12" name="Tobias" isAbstract="false" isLeaf="false" isActiveClass="false">
+            <class Id="77019dc6-191b-4fbb-8184-94f6b6481a12" name="ChangeMenu" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="e070c545-9e6d-43a4-be93-aa125594c669" />
               <targetEnds>
-                <association Id="19e729be-53ab-4ecd-a9e3-7f882e88a5e6" isDerived="false" sourceEndRoleName="Tobias" targetEndRoleName="MadplanViewModel" isLeaf="false" isAbstract="false">
+                <association Id="19e729be-53ab-4ecd-a9e3-7f882e88a5e6" isDerived="false" sourceEndRoleName="ChangeMenu" targetEndRoleName="MadplanViewModel" isLeaf="false" isAbstract="false">
                   <classMoniker Id="d8437fbc-1e5e-4364-b885-3c3aec1ba3ee" LastKnownName="MadplanViewModel" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="2a911cd6-c557-4fa5-ad01-e9a797747da7" name="Tobias" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                      <memberEnd Id="2a911cd6-c557-4fa5-ad01-e9a797747da7" name="ChangeMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                         <elementDefinition Id="97d1bacc-387a-4a6d-ba92-adc636cdc657" />
                       </memberEnd>
                     </associationHasOwnedEnds>
