@@ -14,19 +14,19 @@
     <Style x:Key="TilmeldType" TargetType="TextBlock">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="FontSize" Value="40"/>
+        <Setter Property="FontSize" Value="30"/>
     </Style>
 
     <Style x:Key="TilmeldToLinjerTop" TargetType="TextBlock">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
-        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="FontSize" Value="20"/>
     </Style>
 
     <Style x:Key="TilmeldToLinjerButtom" TargetType="TextBlock">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
-        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="FontSize" Value="20"/>
     </Style>
 
     <Style x:Key="TilmeldTextBox" TargetType="TextBox">
@@ -34,7 +34,7 @@
         <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="Background" Value="White"/>
         <Setter Property="Width" Value="50"/>
-        <Setter Property="Height" Value="50"/>
+        <Setter Property="Height" Value="45"/>
         <Setter Property="FontSize" Value="30"/>
     </Style>
 
@@ -46,7 +46,7 @@
 
     <Style x:Key="TilmeldKnap" TargetType="Button">
         <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="Height" Value="55"/>
         <Setter Property="Width" Value="130"/>
         <Setter Property="FontSize" Value="30"/>
@@ -56,14 +56,14 @@
     <Style x:Key="Ugenr" TargetType="TextBlock">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="FontSize" Value="100"/>
+        <Setter Property="FontSize" Value="70"/>
     </Style>
 
     <Style x:Key="MenuKnap" TargetType="Button">
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="FontSize" Value="50"/>
+        <Setter Property="FontSize" Value="35"/>
     </Style>
         
 </ResourceDictionary>

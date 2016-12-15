@@ -33,7 +33,7 @@
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
@@ -44,10 +44,15 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
+                <!--Denne knap virker ikke!-->
                 <Button x:Name="ChangeTilmelding" Grid.Row="0" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre tilmelding"/>
+                <!--Denne knap virker!-->
                 <Button x:Name="ChangeMenu" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu"/>
+                <!--Denne knap vikrer ikke!-->
                 <Button x:Name="HvemErKok" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvem er kok?"/>
+                <!--Denne knap virker!-->
                 <Button x:Name="ErDuKok" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
+                <!--Denne knap virker ikke!-->
                 <Button x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement"/>
             </Grid>
             
@@ -65,8 +70,8 @@
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width ="*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width ="2*"/>
                 </Grid.ColumnDefinitions>
 
                 <!--Ugedagene-->
@@ -139,7 +144,7 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
-                        <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="7-15 år"/>
+                        <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="7-15 år" Margin="12,0,12,-16" VerticalAlignment="Stretch"/>
                     </Grid>
                     <TextBox x:Name="TirsagBarn715" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.TirsdagTeens, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="2">
