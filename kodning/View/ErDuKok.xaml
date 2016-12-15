@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ViewModel="using:kodning.ViewModel"
+    xmlns:Model="using:kodning.Model"
     x:Class="kodning.View.ErDuKok"
     mc:Ignorable="d">
     <Page.DataContext>
@@ -79,6 +80,7 @@
         </Grid>
         <Button x:Name="button" Content="Gå tilbage" HorizontalAlignment="Left" Margin="84,61,0,0" VerticalAlignment="Top" Height="64" Width="140" Click="button_Click"/>
         <Button x:Name="button1" Content="Beregn Kuvert Pris" HorizontalAlignment="Left" Margin="1094,38,0,0" Grid.Row="2" VerticalAlignment="Top" Command="{Binding KuvertPerDagCommand, Mode=TwoWay}"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="1480,38,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="226" Text="{Binding Instance.Instance.Pris.Pris}"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="1264,38,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="226" Text="{Binding PrisBeregning.Pris, Mode=TwoWay}">
+        </TextBlock>
     </Grid>
 </Page>

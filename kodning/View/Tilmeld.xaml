@@ -50,7 +50,7 @@
                 <!--Denne knap virker ikke!-->
                 <Button x:Name="ChangeTilmelding" Grid.Row="0" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre tilmelding"/>
                 <!--Denne knap virker!-->
-                <Button x:Name="ChangeMenu" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenuClick"/>
+                <Button x:Name="ChangeTheMenu" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenuClick"/>
                 <!--Denne knap vikrer ikke!-->
                 <Button x:Name="HvemErKok" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvem er kok?"/>
                 <!--Denne knap virker!-->
@@ -272,8 +272,8 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             
-        <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" ItemsSource="{Binding Instance.MandagListe}"/>
-            <Button x:Name="button" Content="Tilmeld Alle" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="65" Width="117" Style="{StaticResource TilmeldKnap}" Command="{Binding TilmeldAlleCommand}" />
+        <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" ItemsSource="{Binding Instance.MandagListe}" Background="Black" Header="Dette er mandagsliste"/>
+            <Button x:Name="button" Content="Tilmeld Alle" Grid.Column="2" HorizontalAlignment="Left" Margin="433,42,0,0" VerticalAlignment="Top" Height="65" Width="117" Style="{StaticResource TilmeldKnap}" Command="{Binding TilmeldAlleCommand}" />
 
         </Grid>
     </Grid>
