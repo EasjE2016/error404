@@ -19,6 +19,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+        <Button x:Name="ToFrontPage" Content="Gå til forside" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,0" Height="65" Width="250" FontSize="30" FontWeight="Bold" Click="GåTilForside_Click"/>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -26,17 +27,23 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0" Grid.Column="0" Text="Ændre tilmelding" FontSize="50"/>
-                <TextBlock Grid.Row="1" Grid.Column="0" Text="Ændre menu" FontSize="50"/>
-                <TextBlock Grid.Row="2" Grid.Column="0" Text="Se kokke og hjælpere" FontSize="50"/>
-                <TextBlock Grid.Row="3" Grid.Column="0" Text="Er du kok?" FontSize="50"/>
-                <TextBlock x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Text="Særarrangementets navn" FontSize="50"/>
+
+                <Button x:Name="ChangeTilmelding" Grid.Row="0" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre tilmelding"/>
+                <!--Denne knap virker!-->
+                <Button x:Name="ChangeTheMenu" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenuClick" Margin="0,0,0,3" VerticalAlignment="Bottom"/>
+                <!--Denne knap vikrer ikke!-->
+                <Button x:Name="HvemErKok" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvem er kok?"/>
+                <!--Denne knap virker!-->
+                <Button x:Name="ErDuKok" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
+                <!--Denne knap virker ikke!-->
+                <Button x:Name="SpecialDay" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement" />
             </Grid>
 
             <Grid Grid.Row="1" Grid.Column="1">
@@ -78,7 +85,6 @@
                 <Button x:Name="button2_Copy2" Content="Accepter udlæg" Grid.Column="1" HorizontalAlignment="Left" Margin="461,10,0,0" Grid.Row="8" VerticalAlignment="Top" Height="62" Width="162" Command="{Binding AccepterUdlægCommand}"/>
             </Grid>
         </Grid>
-        <Button x:Name="button" Content="Gå tilbage" HorizontalAlignment="Left" Margin="84,61,0,0" VerticalAlignment="Top" Height="64" Width="140" Click="button_Click"/>
         <Button x:Name="button1" Content="Beregn Kuvert Pris" HorizontalAlignment="Left" Margin="1094,38,0,0" Grid.Row="2" VerticalAlignment="Top" Command="{Binding KuvertPerDagCommand, Mode=TwoWay}"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="1264,38,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="226" Text="{Binding PrisBeregning.Pris, Mode=TwoWay}">
         </TextBlock>

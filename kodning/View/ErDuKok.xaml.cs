@@ -36,5 +36,20 @@ namespace kodning.View
         {
             
         }
+
+        private void ErDuKokSide(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ErDuKok), null);
+        }
+
+        private void ChangeMenuClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ChangeMenu), null);
+        }
+
+        private void GåTilForside_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Forside), null);
+        }
     }
 }
