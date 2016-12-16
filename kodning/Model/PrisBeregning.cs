@@ -16,7 +16,7 @@ namespace kodning.Model
         public double Kok2Udlæg { get; set; }
         public double Kok3Udlæg { get; set; }
         public double Kok4Udlæg { get; set; }
-        public int KuvertIAlt { get; set; }
+        public double KuvertIAlt { get; set; }
         public double UdlægIAlt { get; set; }
         public double PrisIalt { get; set; }
         public double TotalKuvert { get; set; }
@@ -89,7 +89,14 @@ namespace kodning.Model
             }
         }
 
-
+        public double KuvertIAltTest
+        {
+            get
+            {
+                KuvertIAlt = kuverterForDagen + kuverterForTirsdag + kuverterForOnsdag + kuverterForTorsdag;
+                return KuvertIAlt;
+            }
+        }
         public double PrisIAlt
         {
             get

@@ -88,7 +88,7 @@ namespace kodning.ViewModel
         StorageFolder localfolder = null;
 
         private readonly string Madplanfilnavn = "JsonText.json";
-
+        
 
         public async void GemDataTilDiskAsync()
         {

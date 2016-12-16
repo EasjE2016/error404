@@ -18,7 +18,7 @@ namespace kodning.ViewModel
         //public UgeKuverter UgeKuverter { get; set; }
         public PrisBeregning PrisBeregning { get; set; }
         public string Kuvertfilnavn { get; private set; }
-        private KuverterListe _kuvertsliste;
+        //private KuverterListe _kuvertsliste;
         public KuvertCatalogSingleton Instance { get; set; }
 
 
@@ -59,18 +59,13 @@ namespace kodning.ViewModel
         {
             set
             {
-                PrisBeregning.Pris = +(PrisBeregning.Kok1Udlæg+ PrisBeregning.Kok2Udlæg+PrisBeregning.Kok3Udlæg+ PrisBeregning.Kok4Udlæg)/ +(PrisBeregning.kuverterForDagen + PrisBeregning.kuverterForTirsdag + PrisBeregning.kuverterForOnsdag + PrisBeregning.kuverterForTorsdag);
+                PrisBeregning.Pris = +(PrisBeregning.PrisIAlt)/ +(PrisBeregning.KuvertIAltTest);
             }
             get
             { return PrisBeregning.Pris; }
         }
         
-        public void prisErTest()
-        {
-            
-            PrisPerKuvertTest = PrisPerKuvertTest;
-            
-        }
+
 
 
         #endregion
@@ -90,14 +85,14 @@ namespace kodning.ViewModel
 
 
         #region Metode til at fortælle hvorvidt der er sket en ændring propertychange
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
+        //public event PropertyChangedEventHandler PropertyChanged;
+        //protected virtual void OnPropertyChanged(string propertyName)
+        //{
+        //    if (PropertyChanged != null)
+        //    {
+        //        PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        //    }
+        //}
         #endregion
 
         //public PrisBeregning Pris
@@ -124,33 +119,33 @@ namespace kodning.ViewModel
         //    }
         //}
 
-        public KuverterListe KuvertListenTirsdag
-        {
-            get { return _kuvertsliste; }
-            set
-            {
-                _kuvertsliste = value;
-                OnPropertyChanged(nameof(KuvertListenTirsdag));
-            }
-        }
-        public KuverterListe KuvertListenOnsdag
-        {
-            get { return _kuvertsliste; }
-            set
-            {
-                _kuvertsliste = value;
-                OnPropertyChanged(nameof(KuvertListenOnsdag));
-            }
-        }
-        public KuverterListe KuvertListenTorsdag
-        {
-            get { return _kuvertsliste; }
-            set
-            {
-                _kuvertsliste = value;
-                OnPropertyChanged(nameof(KuvertListenTorsdag));
-            }
-        }
+        //public KuverterListe KuvertListenTirsdag
+        //{
+        //    get { return _kuvertsliste; }
+        //    set
+        //    {
+        //        _kuvertsliste = value;
+        //        OnPropertyChanged(nameof(KuvertListenTirsdag));
+        //    }
+        //}
+        //public KuverterListe KuvertListenOnsdag
+        //{
+        //    get { return _kuvertsliste; }
+        //    set
+        //    {
+        //        _kuvertsliste = value;
+        //        OnPropertyChanged(nameof(KuvertListenOnsdag));
+        //    }
+        //}
+        //public KuverterListe KuvertListenTorsdag
+        //{
+        //    get { return _kuvertsliste; }
+        //    set
+        //    {
+        //        _kuvertsliste = value;
+        //        OnPropertyChanged(nameof(KuvertListenTorsdag));
+        //    }
+        //}
 
 
 
@@ -163,15 +158,15 @@ namespace kodning.ViewModel
 
 
         #region Metode til Tilføje Kuverter
-        public void AccepterUdlæg()
-        {
-            PrisBeregning Udlæg = new PrisBeregning();
-            Udlæg.Kok1Udlæg = PrisBeregning.Kok1Udlæg;
-            Udlæg.Kok2Udlæg = PrisBeregning.Kok2Udlæg;
-            Udlæg.Kok3Udlæg = PrisBeregning.Kok3Udlæg;
-            Udlæg.Kok4Udlæg = PrisBeregning.Kok4Udlæg;
-            Udlæg.UdlægIAlt = PrisBeregning.UdlægIAlt;
-        }
+        //public void AccepterUdlæg()
+        //{
+        //    PrisBeregning Udlæg = new PrisBeregning();
+        //    Udlæg.Kok1Udlæg = PrisBeregning.Kok1Udlæg;
+        //    Udlæg.Kok2Udlæg = PrisBeregning.Kok2Udlæg;
+        //    Udlæg.Kok3Udlæg = PrisBeregning.Kok3Udlæg;
+        //    Udlæg.Kok4Udlæg = PrisBeregning.Kok4Udlæg;
+        //    Udlæg.UdlægIAlt = PrisBeregning.UdlægIAlt;
+        //}
 
         public void AddNewKuvertMandag()
         {
@@ -223,12 +218,27 @@ namespace kodning.ViewModel
             Instance.TorsdagListe.Add(TorsdagKuvert);
 
         }
-
+        public void prisErTest()
+        {
+            PrisBeregning Udlæg = new PrisBeregning();
+            Udlæg.Kok1Udlæg = PrisBeregning.Kok1Udlæg;
+            Udlæg.Kok2Udlæg = PrisBeregning.Kok2Udlæg;
+            Udlæg.Kok3Udlæg = PrisBeregning.Kok3Udlæg;
+            Udlæg.Kok4Udlæg = PrisBeregning.Kok4Udlæg;
+            Udlæg.UdlægIAlt = PrisBeregning.UdlægIAlt;
+            PrisPerKuvertTest = PrisPerKuvertTest;
+            
+        }
+        #region Metode med IF statements der tilføjer kuverter til listen
         public void AddAlleDage()
         {
             if (Kuverter.Voksne == 0 && Kuverter.Teens == 0 && Kuverter.Boern == 0 && Kuverter.Baby == 0)
             {
-                throw new NullReferenceException();        
+                // her skal der tilføjes en exception - Måske Try catch? catch (System.IndexOutOfRangeException ex)
+                //{
+                //    System.ArgumentException argEx = new System.ArgumentException("noob text her ", ex);
+                //    throw argEx;
+                //}
             }
 
             else if (Kuverter.Voksne > 0 || Kuverter.Teens > 0 || Kuverter.Boern > 0 || Kuverter.Baby > 0)
@@ -248,21 +258,19 @@ namespace kodning.ViewModel
 
             if (Kuverter.TirsdagVoksne == 0 && Kuverter.TirsdagTeens == 0 && Kuverter.TirsdagBaby == 0 && Kuverter.TirsdagBaby == 0)
             {
-                throw new NullReferenceException();
+                
             }
 
             else if (Kuverter.TirsdagVoksne > 0 || Kuverter.TirsdagTeens > 0 || Kuverter.TirsdagBaby > 0 || Kuverter.TirsdagBaby > 0)
             {
                 Kuverter TirsdagKuvert = new Kuverter();
                 TirsdagKuvert.Husnummer = Kuverter.Husnummer;
-                TirsdagKuvert.Voksne = Kuverter.Voksne;
-                TirsdagKuvert.Teens = Kuverter.Teens;
-                TirsdagKuvert.Boern = Kuverter.Boern;
-                TirsdagKuvert.Baby = Kuverter.Baby;
-                TirsdagKuvert.Ugedag = "";
-
+                TirsdagKuvert.TirsdagVoksne = Kuverter.TirsdagVoksne;
+                TirsdagKuvert.TirsdagTeens = Kuverter.TirsdagTeens;
+                TirsdagKuvert.TirsdagBoern = Kuverter.TirsdagBoern;
+                TirsdagKuvert.TirsdagBaby = Kuverter.TirsdagBaby;
                 //referer til singleton
-                Instance.MandagListe.Add(TirsdagKuvert);
+                Instance.TirsdagListe.Add(TirsdagKuvert);
 
             }
 
@@ -270,21 +278,19 @@ namespace kodning.ViewModel
 
             if (Kuverter.OnsdagVoksne == 0 && Kuverter.OnsdagTeens == 0 && Kuverter.OnsdagBoern == 0 && Kuverter.OndagsBaby == 0)
             {
-              
+                
             }
 
             else if (Kuverter.OnsdagVoksne > 0 || Kuverter.OnsdagTeens > 0 || Kuverter.OnsdagBoern > 0 || Kuverter.OndagsBaby > 0)
             {
                 Kuverter OnsdagKuvert = new Kuverter();
                 OnsdagKuvert.Husnummer = Kuverter.Husnummer;
-                OnsdagKuvert.Voksne = Kuverter.Voksne;
-                OnsdagKuvert.Teens = Kuverter.Teens;
-                OnsdagKuvert.Boern = Kuverter.Boern;
-                OnsdagKuvert.Baby = Kuverter.Baby;
-                OnsdagKuvert.Ugedag = "";
-
+                OnsdagKuvert.OnsdagVoksne = Kuverter.OnsdagVoksne;
+                OnsdagKuvert.OnsdagTeens = Kuverter.OnsdagTeens;
+                OnsdagKuvert.OnsdagBoern = Kuverter.OnsdagBoern;
+                OnsdagKuvert.OndagsBaby = Kuverter.OndagsBaby;
                 //referer til singleton
-                Instance.MandagListe.Add(OnsdagKuvert);
+                Instance.OnsdagListe.Add(OnsdagKuvert);
 
             }
 
@@ -297,20 +303,19 @@ namespace kodning.ViewModel
             {
                 Kuverter TorsdagKuvert = new Kuverter();
                 TorsdagKuvert.Husnummer = Kuverter.Husnummer;
-                TorsdagKuvert.Voksne = Kuverter.Voksne;
-                TorsdagKuvert.Teens = Kuverter.Teens;
-                TorsdagKuvert.Boern = Kuverter.Boern;
-                TorsdagKuvert.Baby = Kuverter.Baby;
-                TorsdagKuvert.Ugedag = "";
-
+                TorsdagKuvert.TorsdagVoksne = Kuverter.TorsdagVoksne;
+                TorsdagKuvert.TorsdagTeens = Kuverter.TorsdagTeens;
+                TorsdagKuvert.TorsdagBoern = Kuverter.TorsdagBoern;
+                TorsdagKuvert.TorsdagBaby = Kuverter.TorsdagBaby;
                 //referer til singleton
-                Instance.MandagListe.Add(TorsdagKuvert);
+                Instance.TorsdagListe.Add(TorsdagKuvert);
 
             }
 
         }
-
         #endregion
+
+#endregion
 
         #region Konstruktør
         public KuvertViewModel()
@@ -323,7 +328,7 @@ namespace kodning.ViewModel
             TilMeldTirsdagCommand = new RelayCommand.RelayCommand(AddNewKuvertTirsdag);
             TilMeldOnsdagCommand = new RelayCommand.RelayCommand(AddNewKuvertOnsdag);
             TilMeldTorsdagCommand = new RelayCommand.RelayCommand(AddNewKuvertTorsdag);
-            AccepterUdlægCommand = new RelayCommand.RelayCommand(AccepterUdlæg);
+            //AccepterUdlægCommand = new RelayCommand.RelayCommand(AccepterUdlæg);
             KuvertPerDagCommand = new RelayCommand.RelayCommand(prisErTest);
 
         }
