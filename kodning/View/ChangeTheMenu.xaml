@@ -14,7 +14,7 @@
     </Page.DataContext>
 
     <Grid Margin="10,20,10,20" Style="{StaticResource GridStyle}">
-        
+
 
         <!--Siden er delt i tre rækker
         Række 1 indeholder overskrift samt 'tilbage til forsiden'-knap
@@ -70,7 +70,7 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
-                
+
                 <ListView Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" x:Name="MadplanListView" HorizontalAlignment="Center" ItemsSource="{Binding MadplanListen, Mode=TwoWay}" SelectedItem="{Binding SelectedMadplan, Mode=TwoWay}"/>
 
                 <Grid Grid.Row="2">
@@ -98,22 +98,24 @@
 
                 <Grid Grid.Row="3">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="4*"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="130*"/>
+                        <ColumnDefinition Width="265*"/>
+                        <ColumnDefinition Width="122*"/>
                         <ColumnDefinition Width="20"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="121*"/>
                         <ColumnDefinition Width="20"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="122*"/>
                         <ColumnDefinition Width="20"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="120*"/>
+                        <ColumnDefinition Width="485*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Button x:Name="AddButton" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding AddMadPlanCommand, Mode=TwoWay}" Content="Tilføj"/>
-                    <Button x:Name="RemoveButton" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding RemoveMadplanCommand, Mode=TwoWay}" Content="Slet"/>
-                    <Button x:Name="HentButton" Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding LoadMadplanCommand, Mode=TwoWay}" Content="Hent"/>
-                    <Button x:Name="GemButton" Grid.Row="0" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding SaveMadplanCommand, Mode=TwoWay}" Content="Gem"/>
-                
+                    <Button x:Name="AddButton" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding AddMadPlanCommand, Mode=TwoWay}" Content="Tilføj" Margin="35,15,34,15" Height="32" Width="53"/>
+                    <Button x:Name="RemoveButton" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding RemoveMadplanCommand, Mode=TwoWay}" Content="Slet" Margin="39,15,37,15" Height="32" Width="45"/>
+                    <Button x:Name="HentButton" Grid.Row="0" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding LoadMadplanCommand, Mode=TwoWay}" Content="Hent" Margin="35,15,34,15" Height="32" Width="53"/>
+                    <Button x:Name="GemButton" Grid.Row="0" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding SaveMadplanCommand, Mode=TwoWay}" Content="Gem" Margin="35,15,33,15" Height="32" Width="52"/>
+                    <Button x:Name="button" Content="Ryd Madplan" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="10,15,11,15" Height="32" Width="109" Command="{Binding RydMadPlanCommand}"/>
+
                 </Grid>
             </Grid>
         </Grid>
@@ -126,8 +128,8 @@
 
 
 
-        
-        
+
+
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="28,221,0,0" TextWrapping="Wrap" Text="Uge nummer" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="28,300,0,0" TextWrapping="Wrap" Text="Uge dag" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="28,405,0,0" TextWrapping="Wrap" Text="Ret" VerticalAlignment="Top"/>

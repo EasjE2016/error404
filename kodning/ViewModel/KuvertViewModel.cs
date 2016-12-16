@@ -405,10 +405,7 @@ namespace kodning.ViewModel
                 Instance.OnsdagListe = (KuverterListe)JsonConvert.DeserializeObject(jsonText2, typeof(KuverterListe));
                 Instance.TorsdagListe = (KuverterListe)JsonConvert.DeserializeObject(jsonText3,typeof(KuverterListe));
 
-                ////metoden på medarbejderlisten
-                ////KuvertListenMandag.IndsætJson(jsonText);
-                //Instance.MandagListe.HentJson(jsonText);
-
+                
                 // Try og catch for at fange en exception for at undgå grimme fejlmeddelser
             }
             catch (Exception ex)

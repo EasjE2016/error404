@@ -8,7 +8,7 @@ using System.Collections.ObjectModel;
 
 namespace kodning
 {
-    class MadplanListe : ObservableCollection<Madplan>
+    public class MadplanListe : ObservableCollection<Madplan>
     {
         public MadplanListe()
         {

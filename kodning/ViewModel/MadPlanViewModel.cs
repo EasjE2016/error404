@@ -23,7 +23,10 @@ namespace kodning.ViewModel
 
             MadplanListen.Add(tempMadplan);
         }
-
+        public void RydMadPlan()
+        {
+            MadplanListen.Clear();
+        }
         public void RemoveMadPlan()
         {
             MadplanListen.Remove(SelectedMadplan);
@@ -61,6 +64,7 @@ namespace kodning.ViewModel
         public RelayCommand.RelayCommand RemoveMadplanCommand { get; set; }
         public RelayCommand.RelayCommand LoadMadplanCommand { get; set; }
         public RelayCommand.RelayCommand SaveMadplanCommand { get; set; }
+        public RelayCommand.RelayCommand RydMadPlanCommand { get; set; }
         #endregion
 
 
@@ -136,7 +140,8 @@ namespace kodning.ViewModel
             AddMadPlanCommand = new RelayCommand.RelayCommand(AddNewMadplan);
             RemoveMadplanCommand = new RelayCommand.RelayCommand(RemoveMadPlan);
             LoadMadplanCommand = new RelayCommand.RelayCommand(HentDataFraDiskAsync);
-            SaveMadplanCommand = new RelayCommand.RelayCommand(GemDataTilDiskAsync);           
+            SaveMadplanCommand = new RelayCommand.RelayCommand(GemDataTilDiskAsync);
+            RydMadPlanCommand = new RelayCommand.RelayCommand(RydMadPlan);
         }
         #endregion
     }
