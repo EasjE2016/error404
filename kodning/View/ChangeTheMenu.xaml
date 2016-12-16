@@ -77,9 +77,9 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="50"/>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="50"/>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="3*"/>
                     </Grid.ColumnDefinitions>
@@ -91,9 +91,9 @@
                     <TextBlock Grid.Row="0" Grid.Column="1" Text="Ugenr" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="20"/>
                     <TextBox x:Name="UgenrTextBox" Grid.Row="1" Grid.Column="1" Height="40" Width="50" Background="White" FontSize="20" Text="{Binding NewMad.UgeNr, Mode=TwoWay}"/>
                     <TextBlock Grid.Row="0" Grid.Column="3" Text="Ugedag" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="20"/>
-                    <TextBox x:Name="UgeDagTextBox" Grid.Row="1" Grid.Column="3" Height="40" Width="50" Background="White" FontSize="20" Text="{Binding NewMad.UgeDag, Mode=TwoWay}" />
+                    <TextBox x:Name="UgeDagTextBox" Grid.Row="1" Grid.Column="3" Height="40" Width="75" TextWrapping="Wrap" Background="White" FontSize="20" Text="{Binding NewMad.UgeDag, Mode=TwoWay}" />
                     <TextBlock Grid.Row="0" Grid.Column="5" Text="Ny ret" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="20"/>
-                    <TextBox x:Name="NyRetTextBox" Grid.Row="1" Grid.Column="5" Height="40" Width="50" Background="White" Text="{Binding NewMad.Madplannen, Mode=TwoWay}"/>
+                    <TextBox x:Name="NyRetTextBox" Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="2" Height="40" Width="375" TextWrapping="Wrap" Background="White" Text="{Binding NewMad.Madplannen, Mode=TwoWay}"/>
                 </Grid>
 
                 <Grid Grid.Row="3">

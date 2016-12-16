@@ -258,10 +258,13 @@
                     </Grid>
                     <TextBox x:Name="TorsdagBarn02" Grid.Row="1" Grid.Column="3" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.TorsdagBaby, Mode=TwoWay}"/>
                 </Grid>
+                <Button x:Name="TilmeldAlle" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilmeldAlleCommand}" />
+                <!--
                 <Button Grid.Row="1" Grid.Column="2" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilmeldCommand}"/>
                 <Button Grid.Row="2" Grid.Column="2" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilMeldTirsdagCommand}"/>
                 <Button Grid.Row="3" Grid.Column="2" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilMeldOnsdagCommand}"/>
                 <Button Grid.Row="4" Grid.Column="2" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilMeldTorsdagCommand}"/>
+                    -->
             </Grid>
         </Grid>
 
@@ -275,9 +278,8 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             
-        <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" ItemsSource="{Binding Instance.MandagListe}"/>
-            <Button x:Name="button" Content="Tilmeld Alle" Grid.Column="2" HorizontalAlignment="Left" Margin="81,32,0,0" VerticalAlignment="Top" Height="65" Width="117" Style="{StaticResource TilmeldKnap}" Command="{Binding TilmeldAlleCommand}" />
-            <TextBlock x:Name="TestTextBlock" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Her er din textBlock, Kasper!" FontSize="30"/>
+            <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" ItemsSource="{Binding Instance.MandagListe}"/>
+            
         </Grid>
     </Grid>
 
