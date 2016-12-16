@@ -55,16 +55,16 @@ namespace kodning.ViewModel
 
         // Dette SKAL ordnes. 
 
-       public double PrisPerKuvertTest
+        public double PrisPerKuvertTest
         {
             set
             {
-                PrisBeregning.Pris = +(PrisBeregning.PrisIAlt)/ +(PrisBeregning.KuvertIAltTest);
+                PrisBeregning.Pris = +(PrisBeregning.PrisIAlt) / +(PrisBeregning.KuvertIAltTest);
             }
             get
             { return PrisBeregning.Pris; }
         }
-        
+
 
 
 
@@ -177,7 +177,7 @@ namespace kodning.ViewModel
             Kuvert.Boern = Kuverter.Boern;
             Kuvert.Baby = Kuverter.Baby;
             Kuvert.Ugedag = "";
-            
+
             //referer til singleton
             Instance.MandagListe.Add(Kuvert);
 
@@ -227,95 +227,122 @@ namespace kodning.ViewModel
             Udlæg.Kok4Udlæg = PrisBeregning.Kok4Udlæg;
             Udlæg.UdlægIAlt = PrisBeregning.UdlægIAlt;
             PrisPerKuvertTest = PrisPerKuvertTest;
-            
+
         }
         #region Metode med IF statements der tilføjer kuverter til listen
         public void AddAlleDage()
         {
-            if (Kuverter.Voksne == 0 && Kuverter.Teens == 0 && Kuverter.Boern == 0 && Kuverter.Baby == 0)
+            //if (Kuverter.Voksne == 0 && Kuverter.Teens == 0 && Kuverter.Boern == 0 && Kuverter.Baby == 0)
+            //{
+            //    // her skal der tilføjes en exception - Måske Try catch? catch (System.IndexOutOfRangeException ex)
+            //    //{
+            //    //    System.ArgumentException argEx = new System.ArgumentException("noob text her ", ex);
+            //    //    throw argEx;
+            //    //}
+            //}
+
+            bool erNulTilmeldte = true;
+
+            if (Kuverter.Husnummer != 0)
             {
-                // her skal der tilføjes en exception - Måske Try catch? catch (System.IndexOutOfRangeException ex)
+                if (Kuverter.Voksne > 0 || Kuverter.Teens > 0 || Kuverter.Boern > 0 || Kuverter.Baby > 0)
+                {
+                    erNulTilmeldte = false;
+                    Kuverter Kuvert = new Kuverter();
+                    Kuvert.Husnummer = Kuverter.Husnummer;
+                    Kuvert.Voksne = Kuverter.Voksne;
+                    Kuvert.Teens = Kuverter.Teens;
+                    Kuvert.Boern = Kuverter.Boern;
+                    Kuvert.Baby = Kuverter.Baby;
+                    Kuvert.Ugedag = "";
+
+                    //referer til singleton
+                    Instance.MandagListe.Add(Kuvert);
+
+
+                }
+
+                //if (Kuverter.TirsdagVoksne == 0 && Kuverter.TirsdagTeens == 0 && Kuverter.TirsdagBaby == 0 && Kuverter.TirsdagBaby == 0)
                 //{
-                //    System.ArgumentException argEx = new System.ArgumentException("noob text her ", ex);
-                //    throw argEx;
+
                 //}
-            }
 
-            else if (Kuverter.Voksne > 0 || Kuverter.Teens > 0 || Kuverter.Boern > 0 || Kuverter.Baby > 0)
+                if (Kuverter.TirsdagVoksne > 0 || Kuverter.TirsdagTeens > 0 || Kuverter.TirsdagBaby > 0 || Kuverter.TirsdagBaby > 0)
+                {
+                    erNulTilmeldte = false;
+
+                    Kuverter TirsdagKuvert = new Kuverter();
+                    TirsdagKuvert.Husnummer = Kuverter.Husnummer;
+                    TirsdagKuvert.TirsdagVoksne = Kuverter.TirsdagVoksne;
+                    TirsdagKuvert.TirsdagTeens = Kuverter.TirsdagTeens;
+                    TirsdagKuvert.TirsdagBoern = Kuverter.TirsdagBoern;
+                    TirsdagKuvert.TirsdagBaby = Kuverter.TirsdagBaby;
+                    //referer til singleton
+                    Instance.TirsdagListe.Add(TirsdagKuvert);
+
+                }
+
+
+
+                //if (Kuverter.OnsdagVoksne == 0 && Kuverter.OnsdagTeens == 0 && Kuverter.OnsdagBoern == 0 && Kuverter.OndagsBaby == 0)
+                //{
+
+                //}
+
+                if (Kuverter.OnsdagVoksne > 0 || Kuverter.OnsdagTeens > 0 || Kuverter.OnsdagBoern > 0 || Kuverter.OndagsBaby > 0)
+                {
+                    erNulTilmeldte = false;
+
+                    Kuverter OnsdagKuvert = new Kuverter();
+                    OnsdagKuvert.Husnummer = Kuverter.Husnummer;
+                    OnsdagKuvert.OnsdagVoksne = Kuverter.OnsdagVoksne;
+                    OnsdagKuvert.OnsdagTeens = Kuverter.OnsdagTeens;
+                    OnsdagKuvert.OnsdagBoern = Kuverter.OnsdagBoern;
+                    OnsdagKuvert.OndagsBaby = Kuverter.OndagsBaby;
+                    //referer til singleton
+                    Instance.OnsdagListe.Add(OnsdagKuvert);
+
+                }
+
+                //if (Kuverter.TorsdagVoksne == 0 && Kuverter.TorsdagTeens == 0 && Kuverter.TorsdagBoern == 0 && Kuverter.TorsdagBaby == 0)
+                //{
+
+                //}
+
+                if (Kuverter.TorsdagVoksne > 0 || Kuverter.TorsdagTeens > 0 || Kuverter.TorsdagBoern > 0 || Kuverter.TorsdagBaby > 0)
+                {
+                    erNulTilmeldte = false;
+
+                    Kuverter TorsdagKuvert = new Kuverter();
+                    TorsdagKuvert.Husnummer = Kuverter.Husnummer;
+                    TorsdagKuvert.TorsdagVoksne = Kuverter.TorsdagVoksne;
+                    TorsdagKuvert.TorsdagTeens = Kuverter.TorsdagTeens;
+                    TorsdagKuvert.TorsdagBoern = Kuverter.TorsdagBoern;
+                    TorsdagKuvert.TorsdagBaby = Kuverter.TorsdagBaby;
+                    //referer til singleton
+                    Instance.TorsdagListe.Add(TorsdagKuvert);
+
+                }
+
+                if (erNulTilmeldte)
+                {
+                    new MessageDialog("Du skal huske at tilmelde dig en af dagene").ShowAsync();
+                }
+                else if (!erNulTilmeldte)
+                {
+                    this.GemDataTilDiskAsync();
+                }
+            }
+            else
             {
-                Kuverter Kuvert = new Kuverter();
-                Kuvert.Husnummer = Kuverter.Husnummer;
-                Kuvert.Voksne = Kuverter.Voksne;
-                Kuvert.Teens = Kuverter.Teens;
-                Kuvert.Boern = Kuverter.Boern;
-                Kuvert.Baby = Kuverter.Baby;
-                Kuvert.Ugedag = "";
-
-                //referer til singleton
-                Instance.MandagListe.Add(Kuvert);
-
+                new MessageDialog("Bolignummer mangler").ShowAsync();
             }
-
-            if (Kuverter.TirsdagVoksne == 0 && Kuverter.TirsdagTeens == 0 && Kuverter.TirsdagBaby == 0 && Kuverter.TirsdagBaby == 0)
-            {
-                
-            }
-
-            else if (Kuverter.TirsdagVoksne > 0 || Kuverter.TirsdagTeens > 0 || Kuverter.TirsdagBaby > 0 || Kuverter.TirsdagBaby > 0)
-            {
-                Kuverter TirsdagKuvert = new Kuverter();
-                TirsdagKuvert.Husnummer = Kuverter.Husnummer;
-                TirsdagKuvert.TirsdagVoksne = Kuverter.TirsdagVoksne;
-                TirsdagKuvert.TirsdagTeens = Kuverter.TirsdagTeens;
-                TirsdagKuvert.TirsdagBoern = Kuverter.TirsdagBoern;
-                TirsdagKuvert.TirsdagBaby = Kuverter.TirsdagBaby;
-                //referer til singleton
-                Instance.TirsdagListe.Add(TirsdagKuvert);
-
-            }
-
-
-
-            if (Kuverter.OnsdagVoksne == 0 && Kuverter.OnsdagTeens == 0 && Kuverter.OnsdagBoern == 0 && Kuverter.OndagsBaby == 0)
-            {
-                
-            }
-
-            else if (Kuverter.OnsdagVoksne > 0 || Kuverter.OnsdagTeens > 0 || Kuverter.OnsdagBoern > 0 || Kuverter.OndagsBaby > 0)
-            {
-                Kuverter OnsdagKuvert = new Kuverter();
-                OnsdagKuvert.Husnummer = Kuverter.Husnummer;
-                OnsdagKuvert.OnsdagVoksne = Kuverter.OnsdagVoksne;
-                OnsdagKuvert.OnsdagTeens = Kuverter.OnsdagTeens;
-                OnsdagKuvert.OnsdagBoern = Kuverter.OnsdagBoern;
-                OnsdagKuvert.OndagsBaby = Kuverter.OndagsBaby;
-                //referer til singleton
-                Instance.OnsdagListe.Add(OnsdagKuvert);
-
-            }
-
-            if (Kuverter.TorsdagVoksne == 0 && Kuverter.TorsdagTeens == 0 && Kuverter.TorsdagBoern == 0 && Kuverter.TorsdagBaby == 0)
-            {
-                
-            }
-
-            else if (Kuverter.TorsdagVoksne > 0 || Kuverter.TorsdagTeens > 0 || Kuverter.TorsdagBoern > 0 || Kuverter.TorsdagBaby > 0)
-            {
-                Kuverter TorsdagKuvert = new Kuverter();
-                TorsdagKuvert.Husnummer = Kuverter.Husnummer;
-                TorsdagKuvert.TorsdagVoksne = Kuverter.TorsdagVoksne;
-                TorsdagKuvert.TorsdagTeens = Kuverter.TorsdagTeens;
-                TorsdagKuvert.TorsdagBoern = Kuverter.TorsdagBoern;
-                TorsdagKuvert.TorsdagBaby = Kuverter.TorsdagBaby;
-                //referer til singleton
-                Instance.TorsdagListe.Add(TorsdagKuvert);
-
-            }
+            
 
         }
         #endregion
 
-#endregion
+        #endregion
 
         #region Konstruktør
         public KuvertViewModel()
@@ -339,10 +366,19 @@ namespace kodning.ViewModel
         StorageFolder localfolder = null;
         public async void GemDataTilDiskAsync()
         {
-            string jsonText = Instance.MandagListe.GetJson();
+            string jsonText = Instance.MandagListe.SaveJson();
+            string jsonText1 = Instance.TirsdagListe.SaveJson();
+            string jsonText2 = Instance.OnsdagListe.SaveJson();
+            string jsonText3 = Instance.TorsdagListe.SaveJson();
 
-            StorageFile lisa = await localfolder.CreateFileAsync(Kuvertfilnavn, CreationCollisionOption.ReplaceExisting);
-            await FileIO.WriteTextAsync(lisa, jsonText);
+            StorageFile MandagListen = await ApplicationData.Current.LocalFolder.CreateFileAsync("MandagsListen.json", CreationCollisionOption.ReplaceExisting);
+            await FileIO.WriteTextAsync(MandagListen, jsonText);
+            StorageFile TirsdagListen = await ApplicationData.Current.LocalFolder.CreateFileAsync("TirsdagsListen.json", CreationCollisionOption.ReplaceExisting);
+            await FileIO.WriteTextAsync(TirsdagListen, jsonText1);
+            StorageFile OnsdagListen = await ApplicationData.Current.LocalFolder.CreateFileAsync("OnsdagsListen.json", CreationCollisionOption.ReplaceExisting);
+            await FileIO.WriteTextAsync(OnsdagListen, jsonText2);
+            StorageFile TorsdagListen = await ApplicationData.Current.LocalFolder.CreateFileAsync("TorsdagsListen.json", CreationCollisionOption.ReplaceExisting);
+            await FileIO.WriteTextAsync(TorsdagListen, jsonText3);
         }
 
 
@@ -351,17 +387,17 @@ namespace kodning.ViewModel
 
             try
             {
-                StorageFile lisa = await localfolder.GetFileAsync(Kuvertfilnavn);
+                StorageFile MandagListen = await localfolder.GetFileAsync(Kuvertfilnavn);
 
-                string jsonText = await FileIO.ReadTextAsync(lisa);
+                string jsonText = await FileIO.ReadTextAsync(MandagListen);
 
                 Instance.MandagListe.Clear();
                 //this.KuvertListenMandag.Clear();
 
                 //metoden på medarbejderlisten
                 //KuvertListenMandag.IndsætJson(jsonText);
-                Instance.MandagListe.IndsætJson(jsonText);
-                
+                Instance.MandagListe.HentJson(jsonText);
+
                 // Try og catch for at fange en exception for at undgå grimme fejlmeddelser
             }
             catch (Exception)

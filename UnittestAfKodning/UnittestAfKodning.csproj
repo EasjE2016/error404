@@ -4,19 +4,20 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{F0B131B5-866B-4B50-A3B1-6C2C662CDA6C}</ProjectGuid>
+    <ProjectGuid>{386EB0EC-739B-4EE9-B919-764981400023}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>kodning</RootNamespace>
-    <AssemblyName>kodning</AssemblyName>
+    <RootNamespace>UnittestAfKodning</RootNamespace>
+    <AssemblyName>UnittestAfKodning</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
+    <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>kodning_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>UnittestAfKodning_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <UnitTestPlatformVersion Condition="'$(UnitTestPlatformVersion)' == ''">14.0</UnitTestPlatformVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -88,53 +89,32 @@
     <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <!--A reference to the entire .Net Framework and Windows SDK are automatically included-->
     <None Include="project.json" />
+    <SDKReference Include="MSTestFramework.Universal, Version=$(UnitTestPlatformVersion)" />
+    <SDKReference Include="TestPlatform.Universal, Version=$(UnitTestPlatformVersion)" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Model\KuvertCatalogSingleton.cs" />
-    <Compile Include="Model\Kuverter.cs" />
-    <Compile Include="Model\KuverterListe.cs" />
-    <Compile Include="Model\NotifyProp.cs" />
-    <Compile Include="Model\PrisBeregning.cs" />
-    <Compile Include="Model\UgeKuverter.cs" />
-    <Compile Include="Persistency\JsonPersistency.cs" />
-    <Compile Include="ViewModel\KuvertViewModel.cs" />
-    <Compile Include="View\ErDuKok.xaml.cs">
-      <DependentUpon>ErDuKok.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Forside.xaml.cs">
-      <DependentUpon>Forside.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="InAkivKode\Arbejdere.cs" />
-    <Compile Include="InAkivKode\ArbejderListe.cs" />
-    <Compile Include="Model\Madplan.cs" />
-    <Compile Include="Model\MadplanListe.cs" />
-    <Compile Include="View\Kasser.xaml.cs">
-      <DependentUpon>Kasser.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Tilmeld.xaml.cs">
-      <DependentUpon>Tilmeld.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RelayCommand\RelayCommand.cs" />
-    <Compile Include="InAkivKode\ArbejderPlanViewModel.cs" />
-    <Compile Include="ViewModel\MadPlanViewModel.cs" />
-    <Compile Include="View\ChangeTheMenu.xaml.cs">
-      <DependentUpon>ChangeTheMenu.xaml</DependentUpon>
+    <Compile Include="UnitTestApp.xaml.cs">
+      <DependentUpon>UnitTestApp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UnitTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="UnitTestApp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="kodning_TemporaryKey.pfx" />
+    <None Include="UnittestAfKodning_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Properties\UnitTestApp.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
@@ -144,37 +124,11 @@
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Page Include="View\ErDuKok.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Kasser.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\AppStyles.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Page>
-    <Page Include="View\Forside.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Tilmeld.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\ChangeTheMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <ProjectReference Include="..\kodning\kodning.csproj">
+      <Project>{f0b131b5-866b-4b50-a3b1-6c2c662cda6c}</Project>
+      <Name>kodning</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

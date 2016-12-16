@@ -17,7 +17,7 @@ namespace kodning
 
             this.Add(new Madplan() { UgeDag = "Mandag", Madplannen = "Kylling og kartofler", UgeNr = 41});
             this.Add(new Madplan() { UgeDag = "Fredag",  Madplannen = "Pariser toast", UgeNr = 42});
-            this.Add(new Madplan() { UgeDag = "Tirsdag", Madplannen = "Orve testikler", UgeNr = 43});
+            this.Add(new Madplan() { UgeDag = "Tirsdag", Madplannen = "Orve testikler", UgeNr = 43 });
             
 
         }

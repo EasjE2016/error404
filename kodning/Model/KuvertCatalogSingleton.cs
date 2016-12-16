@@ -14,7 +14,7 @@ namespace kodning.Model
         public KuverterListe TirsdagListe { get; set; } = new KuverterListe();
         public KuverterListe OnsdagListe { get; set; } = new KuverterListe();
         public KuverterListe TorsdagListe { get; set; } = new KuverterListe();
-        public Func<KuverterListe, double> ReturAlleKuverter { get; private set; }
+        //public Func<KuverterListe, double> ReturAlleKuverter { get; private set; }
         //public double kuverterForTirsdag { get; set; }
         //public double kuverterForDagen { get; set; }
         //public double kuverterForOnsdag { get; set; }
@@ -24,13 +24,13 @@ namespace kodning.Model
         private KuvertCatalogSingleton()
         {
             MandagListe = new KuverterListe();
-            MandagListe.GetJson();
+            //MandagListe.HentJson();
             TirsdagListe = new KuverterListe();
-            TirsdagListe.GetJson();
+            //TirsdagListe.HentJson();
             OnsdagListe = new KuverterListe();
-            OnsdagListe.GetJson();
+            //OnsdagListe.HentJson();
             TorsdagListe = new KuverterListe();
-            TorsdagListe.GetJson();
+            //TorsdagListe.HentJson();
 
         }
         //public double ReturKuvert(KuverterListe listen)
