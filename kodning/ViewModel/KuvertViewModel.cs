@@ -8,7 +8,7 @@ using System.ComponentModel;
 using Windows.Storage;
 using Windows.UI.Popups;
 using kodning.RelayCommand;
-
+using Newtonsoft.Json;
 
 namespace kodning.ViewModel
 {
@@ -358,6 +358,7 @@ namespace kodning.ViewModel
             //AccepterUdlægCommand = new RelayCommand.RelayCommand(AccepterUdlæg);
             KuvertPerDagCommand = new RelayCommand.RelayCommand(prisErTest);
 
+            this.HentDataFraDiskAsync();
         }
         #endregion
 
@@ -387,23 +388,33 @@ namespace kodning.ViewModel
 
             try
             {
-                StorageFile MandagListen = await localfolder.GetFileAsync(Kuvertfilnavn);
+
+
+                StorageFile MandagListen = await ApplicationData.Current.LocalFolder.GetFileAsync("MandagsListen.Json");
+                StorageFile TirsdagListen = await ApplicationData.Current.LocalFolder.GetFileAsync("TirsdagsListen.Json");
+                StorageFile OnsdagListen = await ApplicationData.Current.LocalFolder.GetFileAsync("OnsdagsListen.Json");
+                StorageFile TorsdagListen = await ApplicationData.Current.LocalFolder.GetFileAsync("TorsdagsListen.Json");
 
                 string jsonText = await FileIO.ReadTextAsync(MandagListen);
+                string jsonText1 = await FileIO.ReadTextAsync(TirsdagListen);
+                string jsonText2 = await FileIO.ReadTextAsync(OnsdagListen);
+                string jsonText3 = await FileIO.ReadTextAsync(TorsdagListen);
 
-                Instance.MandagListe.Clear();
-                //this.KuvertListenMandag.Clear();
+                Instance.MandagListe = (KuverterListe)JsonConvert.DeserializeObject(jsonText, typeof(KuverterListe));
+                Instance.TirsdagListe = (KuverterListe)JsonConvert.DeserializeObject(jsonText1, typeof(KuverterListe));
+                Instance.OnsdagListe = (KuverterListe)JsonConvert.DeserializeObject(jsonText2, typeof(KuverterListe));
+                Instance.TorsdagListe = (KuverterListe)JsonConvert.DeserializeObject(jsonText3,typeof(KuverterListe));
 
-                //metoden på medarbejderlisten
-                //KuvertListenMandag.IndsætJson(jsonText);
-                Instance.MandagListe.HentJson(jsonText);
+                ////metoden på medarbejderlisten
+                ////KuvertListenMandag.IndsætJson(jsonText);
+                //Instance.MandagListe.HentJson(jsonText);
 
                 // Try og catch for at fange en exception for at undgå grimme fejlmeddelser
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 //Popup vindue til at fortælle brugeren at filen ikke blev fundet. 
-                MessageDialog messageDialog = new MessageDialog("Filen ikke fundet. Har du fjernet den?");
+                MessageDialog messageDialog = new MessageDialog(ex.Message,"Filen ikke fundet");
                 await messageDialog.ShowAsync();
                 //throw;
             }

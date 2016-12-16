@@ -31,6 +31,7 @@ namespace kodning.Model
             //OnsdagListe.HentJson();
             TorsdagListe = new KuverterListe();
             //TorsdagListe.HentJson();
+            
 
         }
         //public double ReturKuvert(KuverterListe listen)
