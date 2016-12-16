@@ -46,5 +46,10 @@ namespace kodning.View
         {
             this.Frame.Navigate(typeof(kodning.View.ChangeMenu), null);
         }
+
+        private void TilmeldBolig_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Tilmeld), null);
+        }
     }
 }
