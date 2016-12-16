@@ -45,7 +45,6 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
                     <RowDefinition Height="2*"/>
                 </Grid.RowDefinitions>
 
@@ -59,10 +58,8 @@
                 <Button x:Name="HvemErKok1" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvem er kok?"/>
                 <!--Denne knap virker!-->
                 <Button x:Name="ErDuKok1" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
-                <!--Denne knap virker!-->
-                <Button x:Name="Tilmeld1" Grid.Row="5" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Tilmeld bolig" Click="TilmeldBolig_Click"/>
                 <!--Denne knap virker ikke!-->
-                <Button x:Name="SpecialDay1" Grid.Row="6" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement" />
+                <Button x:Name="SpecialDay1" Grid.Row="5" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement" />
             </Grid>
             
             <!--Tilmeldingsdelen er delt i 3 kolonner
