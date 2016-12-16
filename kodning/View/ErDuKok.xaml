@@ -8,9 +8,11 @@
     xmlns:Model="using:kodning.Model"
     x:Class="kodning.View.ErDuKok"
     mc:Ignorable="d">
+    
     <Page.DataContext>
         <ViewModel:KuvertViewModel/>
     </Page.DataContext>
+    
     <Grid Margin="10,20,10,20" Style="{StaticResource GridStyle}">
 
         <Grid.RowDefinitions>
@@ -20,10 +22,11 @@
         </Grid.RowDefinitions>
 
         <Button x:Name="ToFrontPage" Content="Gå til forside" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,0" Height="65" Width="250" FontSize="30" FontWeight="Bold" Click="GåTilForside_Click"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource OverskriftStyle}" Text=" Fællesspisning i Boligvænget"/>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
@@ -32,61 +35,71 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
                 </Grid.RowDefinitions>
 
-                <Button x:Name="ChangeTilmelding2" Grid.Row="0" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre tilmelding"/>
-                <!--Denne knap virker!-->
-                <Button x:Name="ChangeTheMenu2" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenuClick" Margin="0,0,0,3" VerticalAlignment="Bottom"/>
-                <!--Denne knap vikrer ikke!-->
-                <Button x:Name="HvemErKok2" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvem er kok?"/>
-                <!--Denne knap virker!-->
-                <Button x:Name="ErDuKokken2" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
                 <!--Denne knap virker ikke!-->
-                <Button x:Name="SpecialDay2" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement" />
+                <Button x:Name="ChangeTilmelding2" Grid.Row="0" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre tilmelding"/>
+                <!--Denne knap virker ikke!-->
+                <Button x:Name="WhatIsTheMenu2" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvad er menuen?"/>
+                <!--Denne knap virker!-->
+                <Button x:Name="ChangeTheMenu2" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenuClick" Margin="0,0,0,3" VerticalAlignment="Bottom"/>
+                <!--Denne knap vikrer ikke!-->
+                <Button x:Name="HvemErKok2" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvem er kok?"/>
+                <!--Denne knap virker!-->
+                <Button x:Name="ErDuKokken2" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
+                <!--Denne knap virker ikke!-->
+                <Button x:Name="SpecialDay2" Grid.Row="5" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement" />
             </Grid>
 
-            <Grid Grid.Row="1" Grid.Column="1">
+            <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Row="0" Grid.Column="0" Text="Uge 47" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBlock Grid.Row="1" Grid.Column="0" Text="Mandag"/>
-                <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" Text="{Binding GivAlleKuverterMandag, Mode=TwoWay}" Margin="0,10,32,0" Height="62" Width="50" />
-                <TextBlock Grid.Row="3" Grid.Column="0" Text="Tirsdag"/>
-                <TextBlock Grid.Row="5" Grid.Column="0" Text="Onsdag"/>
-                <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Antal kuv" FontSize="20" Margin="0,10,631,0" Grid.ColumnSpan="2"/>
-                <TextBlock Grid.Row="7" Grid.Column="0" Text="Torsdag"/>
-                <TextBlock Grid.Row="7" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Antal kuv" FontSize="20" Grid.ColumnSpan="2" Margin="0,10,630,0"/>
-                <TextBlock Grid.Row="0" Grid.Column="1" Text="Uge 48"/>
 
-                <TextBlock Grid.Row="1" Grid.Column="1" Text="Mandag"/>
-                <TextBox x:Name="MandagPris" Grid.Row="2" Grid.Column="1" Background="White" Width="200" Text="{Binding PrisBeregning.Kok1Udlæg, Mode=TwoWay}"/>
+                <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource Ugenr}" Text="Uge 47"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldToLinjerTop}" FontSize="38" Text="Antal kuverter:"/>
+                <TextBlock Grid.Row="1" Grid.Column="2" Style="{StaticResource TilmeldToLinjerTop}" FontSize="38" Text="Kokkens udlæg"/>
 
-                <TextBox x:Name="TirsdagPris" Grid.Row="4" Grid.Column="1" Background="White" Width="200" Text="{Binding PrisBeregning.Kok2Udlæg, Mode=TwoWay}"/>
-                <TextBox x:Name="OnsdagPris" Grid.Row="6" Grid.Column="1" Background="White" Width="200" Text="{Binding PrisBeregning.Kok3Udlæg, Mode=TwoWay}"/>
-                <TextBox x:Name="TorsdagPris" Grid.Row="8" Grid.Column="1" Background="White" Width="200" Text="{Binding PrisBeregning.Kok4Udlæg, Mode=TwoWay}"/>
-                <TextBlock Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" Text="Antal kuv" FontSize="20" Grid.ColumnSpan="2" Margin="0,10,632,0"/>
-                <TextBlock Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" Margin="0,10,32,0" Height="62" Width="50" Text="{Binding GivAlleKuverterTirsdag, Mode=TwoWay}" />
-                <TextBlock Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" Margin="0,10,32,0" Height="62" Width="50" Text="{Binding GivAlleKuverterOnsdag, Mode=OneWay}" />
-                <TextBlock Grid.Row="8" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" Margin="0,10,32,0" Height="62" Width="50" Text="{Binding GivAlleKuverterTorsdag, Mode=TwoWay}" />
-                <Button x:Name="button2_Copy2" Content="Accepter udlæg" Grid.Column="1" HorizontalAlignment="Left" Margin="461,10,0,0" Grid.Row="8" VerticalAlignment="Top" Height="62" Width="162" Command="{Binding AccepterUdlægCommand}"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource Dagnavn}" Text="Mandag" FontSize="50" FontWeight="SemiBold"/>
+                <TextBlock Grid.Row="2" Grid.Column="1" FontSize="40" Text="{Binding GivAlleKuverterMandag, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBox x:Name="MandagPris" Grid.Row="2" Grid.Column="2" Style="{StaticResource TilmeldTextBox}" Text="{Binding PrisBeregning.Kok1Udlæg, Mode=TwoWay}" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource Dagnavn}" Text="Tirsdag" FontSize="50" FontWeight="SemiBold"/>
+                <TextBlock Grid.Row="3" Grid.Column="1" FontSize="40" Text="{Binding GivAlleKuverterTirsdag, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBox x:Name="TirsdagPris" Grid.Row="3" Grid.Column="2" Style="{StaticResource TilmeldTextBox}" Text="{Binding PrisBeregning.Kok2Udlæg, Mode=TwoWay}" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="4" Grid.Column="0" Style="{StaticResource Dagnavn}" Text="Onsdag" FontSize="50" FontWeight="SemiBold"/>
+                <TextBlock Grid.Row="4" Grid.Column="1" FontSize="40" Text="{Binding GivAlleKuverterOnsdag, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBox x:Name="OnsdagPris" Grid.Row="4" Grid.Column="2" Style="{StaticResource TilmeldTextBox}" Text="{Binding PrisBeregning.Kok3Udlæg, Mode=TwoWay}" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="5" Grid.Column="0" Style="{StaticResource Dagnavn}" Text="Torsdag" FontSize="50" FontWeight="SemiBold"/>
+                <TextBlock Grid.Row="5" Grid.Column="1" FontSize="40" Text="{Binding GivAlleKuverterTorsdag, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBox x:Name="TorsdagPris" Grid.Row="5" Grid.Column="2" Style="{StaticResource TilmeldTextBox}" Text="{Binding PrisBeregning.Kok4Udlæg, Mode=TwoWay}" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Grid>
+            </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="button1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Beregn Kuvert Pris" Command="{Binding KuvertPerDagCommand, Mode=TwoWay}" Height="50" FontSize="25"/>
+            <TextBlock x:Name="TotalKuvPris" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding PrisBeregning.Pris, Mode=TwoWay}" FontSize="50" FontWeight="SemiBold"/>
+
         </Grid>
-        <Button x:Name="button1" Content="Beregn Kuvert Pris" HorizontalAlignment="Left" Margin="1094,38,0,0" Grid.Row="2" VerticalAlignment="Top" Command="{Binding KuvertPerDagCommand, Mode=TwoWay}"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="1264,38,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="64" Width="226" Text="{Binding PrisBeregning.Pris, Mode=TwoWay}">
-        </TextBlock>
-    </Grid>
+        
+        </Grid>
+        
 </Page>

@@ -14,6 +14,7 @@
     </Page.DataContext>
 
     <Grid Margin="10,20,10,20" Style="{StaticResource GridStyle}">
+        
 
         <!--Siden er delt i tre rækker
         Række 1 indeholder overskrift samt 'tilbage til forsiden'-knap
@@ -43,19 +44,22 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
                 </Grid.RowDefinitions>
 
                 <!--Denne knap virker ikke!-->
                 <Button x:Name="ChangeTilmelding3" Grid.Row="0" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre tilmelding"/>
-                <!--Denne knap virker!-->
-                <Button x:Name="ChangeMenu3" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenu3_Click"/>
-                <!--Denne knap vikrer ikke!-->
-                <Button x:Name="HvemErKok3" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvem er kok?"/>
-                <!--Denne knap virker!-->
-                <Button x:Name="ErDuKok3" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
                 <!--Denne knap virker ikke!-->
-                <Button x:Name="SpecialDay3" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement"/>
+                <Button x:Name="WhatIsTheMenu3" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvad er menuen?"/>
+                <!--Denne knap virker!-->
+                <Button x:Name="ChangeMenu3" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenu3_Click"/>
+                <!--Denne knap vikrer ikke!-->
+                <Button x:Name="HvemErKok3" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvem er kok?"/>
+                <!--Denne knap virker!-->
+                <Button x:Name="ErDuKok3" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
+                <!--Denne knap virker ikke!-->
+                <Button x:Name="SpecialDay3" Grid.Row="5" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement"/>
             </Grid>
 
             <Grid Grid.Column="2">
