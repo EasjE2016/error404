@@ -101,6 +101,7 @@
     <Compile Include="Model\NotifyProp.cs" />
     <Compile Include="Model\PrisBeregning.cs" />
     <Compile Include="Model\UgeKuverter.cs" />
+    <Compile Include="Persistency\JsonPersistency.cs" />
     <Compile Include="ViewModel\KuvertViewModel.cs" />
     <Compile Include="View\ErDuKok.xaml.cs">
       <DependentUpon>ErDuKok.xaml</DependentUpon>

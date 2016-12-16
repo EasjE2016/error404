@@ -17,12 +17,12 @@ namespace kodning.Model
         }
 
         #region Json
-        public string GetJson()
+        public string SaveJson()
         {
             string json = JsonConvert.SerializeObject(this);
             return json;
         }
-        public void IndsætJson(string jsonText)
+        public void HentJson(string jsonText)
         {
             List<Kuverter> nyListeLisa = JsonConvert.DeserializeObject<List<Kuverter>>(jsonText);
 

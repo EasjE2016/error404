@@ -10,7 +10,7 @@ namespace kodning.Model
     {
         public UgeKuverter()
         {
-            KuvertListeMandag.GetJson();
+            KuvertListeMandag.SaveJson();
         }
         public KuverterListe KuvertListeMandag { get; set; } = new KuverterListe();        
     }
