@@ -142,6 +142,9 @@ namespace kodning.ViewModel
             LoadMadplanCommand = new RelayCommand.RelayCommand(HentDataFraDiskAsync);
             SaveMadplanCommand = new RelayCommand.RelayCommand(GemDataTilDiskAsync);
             RydMadPlanCommand = new RelayCommand.RelayCommand(RydMadPlan);
+
+            this.HentDataFraDiskAsync();
+
         }
         #endregion
     }
