@@ -174,7 +174,7 @@ namespace kodning.ViewModel
         }
         #endregion
 
-        #region
+        #region Metode til at starte en ny uge
         public void StartNyUge()
         {
             Instance.MandagListe.Clear();
