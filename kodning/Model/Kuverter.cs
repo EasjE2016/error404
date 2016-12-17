@@ -20,24 +20,26 @@ namespace kodning.Model
 
         #endregion
 
+        #region Tirsdag Kuverter
         public double TirsdagVoksne { get; set; }
         public double TirsdagTeens { get; set; }
         public double TirsdagBoern { get; set; }
         public double TirsdagBaby { get; set; }
+        #endregion
 
-
-
+        #region Onsdag Kuverter
         public double OnsdagVoksne { get; set; }
         public double OnsdagTeens { get; set; }
         public double OnsdagBoern { get; set; }
         public double OndagsBaby { get; set; }
+        #endregion
 
-
+        #region Torsdag Kuverter
         public double TorsdagVoksne { get; set; }
         public double TorsdagTeens { get; set; }
         public double TorsdagBoern { get; set; }
         public double TorsdagBaby { get; set; }
-
+        #endregion
 
 
 
