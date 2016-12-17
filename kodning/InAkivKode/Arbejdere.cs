@@ -8,9 +8,22 @@ namespace kodning.Model
 {
     public class Arbejdere
     {
-        public string Title { get; set; }
-        public string UgeDag { get; set; }
-        public int UgeNR { get; set; }
+        public string MandagTitle { get; set; }
+        public string MandagNavn { get; set; }
+        public string TirsdagTitle { get; set; }
+        public string TirsdagNavn { get; set; }
+        public string OnsdagTitle { get; set; }
+        public string OnsdagNavn { get; set; }
+        public string TorsdagTitle { get; set; }
+        public string TorsdagNavn { get; set; }
+
+
+   
+        public override string ToString()
+        {
+            return "Opgave: " + MandagTitle + " Navn på ansvarlig: " + MandagNavn;
+        }
+
 
 
     }

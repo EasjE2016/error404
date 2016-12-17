@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="InAkivKode\ArbejderCatalogSingleton.cs" />
     <Compile Include="Model\KuvertCatalogSingleton.cs" />
     <Compile Include="Model\Kuverter.cs" />
     <Compile Include="Model\KuverterListe.cs" />
