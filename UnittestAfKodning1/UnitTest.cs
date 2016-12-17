@@ -47,7 +47,7 @@ namespace UnittestAfKodning
         {
             PrisBeregning beregn3 = new PrisBeregning();
 
-            beregn3.kuverterForDagen = 2;
+            beregn3.kuverterForMandag = 2;
             beregn3.kuverterForTirsdag = 2;
             beregn3.kuverterForOnsdag = 2;
             beregn3.kuverterForTorsdag = 2;

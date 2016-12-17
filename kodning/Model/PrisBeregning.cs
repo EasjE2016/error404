@@ -27,7 +27,7 @@ namespace kodning.Model
 
         public double kuverterForTirsdag { get; set; }
 
-        public double kuverterForDagen { get; set; }
+        public double kuverterForMandag { get; set; }
 
         public double kuverterForOnsdag { get; set; }
 
@@ -40,9 +40,9 @@ namespace kodning.Model
 
             foreach (var kuverter in listen)
             {
-                kuverterForDagen += (kuverter.MandagVoksne * 1) + (kuverter.MandagTeens * 0.5) + (kuverter.MandagBoern * 0.25) + (kuverter.MandagBaby * 0);
+                kuverterForMandag += (kuverter.MandagVoksne * 1) + (kuverter.MandagTeens * 0.5) + (kuverter.MandagBoern * 0.25) + (kuverter.MandagBaby * 0);
             }
-            return kuverterForDagen;
+            return kuverterForMandag;
         }
 
         public double ReturKuvertTirsdag(KuverterListe Tirsdaglisten)
@@ -82,7 +82,7 @@ namespace kodning.Model
         {
             get
             {
-                KuvertIAlt = kuverterForDagen + kuverterForTirsdag + kuverterForOnsdag + kuverterForTorsdag;
+                KuvertIAlt = kuverterForMandag + kuverterForTirsdag + kuverterForOnsdag + kuverterForTorsdag;
                 return KuvertIAlt;
             }
         }
