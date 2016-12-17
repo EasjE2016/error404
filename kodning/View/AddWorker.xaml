@@ -143,7 +143,7 @@
                 <ColumnDefinition Width="30*"/>
                 <ColumnDefinition Width="10*"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Row="2" Grid.Column="1" Style="{StaticResource TilmeldKnap}" HorizontalAlignment="Center"  VerticalAlignment="Center" Content="Tilmeld" Click="Button_Click"/>
+            <Button Grid.Row="2" Grid.Column="1" Style="{StaticResource TilmeldKnap}" HorizontalAlignment="Center"  VerticalAlignment="Center" Content="Tilmeld"/>
         </Grid>
     </Grid>
 </Page>
