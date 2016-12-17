@@ -8,33 +8,18 @@ using Newtonsoft.Json;
 
 namespace kodning.Model
 {
-    class ArbejderListe : ObservableCollection<Arbejdere>
+    public class ArbejderListe : ObservableCollection<Arbejdere>
     {
         public ArbejderListe()
         {
-            Arbejdere Nr1 = new Arbejdere();
-            Nr1.Title = "Kok";
-            Nr1.UgeDag = "Mandag";
-            Nr1.UgeNR = 48;
 
-            Add(Nr1);
         }
 
         #region Json
-        public string GetJson()
+        public string SaveArbejderJson()
         {
             string json = JsonConvert.SerializeObject(this);
             return json;
-        }
-        public void IndsætJson(string jsonText)
-        {
-            List<Arbejdere> nyListe2 = JsonConvert.DeserializeObject<List<Arbejdere>>(jsonText);
-
-
-            foreach (var Arbejdere in nyListe2)
-            {
-                this.Add(Arbejdere);
-            }
         }
         #endregion
     }
