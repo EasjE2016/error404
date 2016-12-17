@@ -94,16 +94,15 @@ namespace kodning.ViewModel
 
             if (Kuverter.Husnummer != 0)
             {
-                if (Kuverter.Voksne > 0 || Kuverter.Teens > 0 || Kuverter.Boern > 0 || Kuverter.Baby > 0)
+                if (Kuverter.MandagVoksne > 0 || Kuverter.MandagTeens > 0 || Kuverter.MandagBoern > 0 || Kuverter.MandagBaby > 0)
                 {
                     erNulTilmeldte = false;
                     Kuverter Kuvert = new Kuverter();
                     Kuvert.Husnummer = Kuverter.Husnummer;
-                    Kuvert.Voksne = Kuverter.Voksne;
-                    Kuvert.Teens = Kuverter.Teens;
-                    Kuvert.Boern = Kuverter.Boern;
-                    Kuvert.Baby = Kuverter.Baby;
-                    Kuvert.Ugedag = "";
+                    Kuvert.MandagVoksne = Kuverter.MandagVoksne;
+                    Kuvert.MandagTeens = Kuverter.MandagTeens;
+                    Kuvert.MandagBoern = Kuverter.MandagBoern;
+                    Kuvert.MandagBaby = Kuverter.MandagBaby;
 
                     //referer til singleton
                     Instance.MandagListe.Add(Kuvert);

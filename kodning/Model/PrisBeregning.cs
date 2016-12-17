@@ -40,7 +40,7 @@ namespace kodning.Model
 
             foreach (var kuverter in listen)
             {
-                kuverterForDagen += (kuverter.Voksne * 1) + (kuverter.Teens * 0.5) + (kuverter.Boern * 0.25) + (kuverter.Baby * 0);
+                kuverterForDagen += (kuverter.MandagVoksne * 1) + (kuverter.MandagTeens * 0.5) + (kuverter.MandagBoern * 0.25) + (kuverter.MandagBaby * 0);
             }
             return kuverterForDagen;
         }

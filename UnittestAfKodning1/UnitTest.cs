@@ -25,7 +25,7 @@ namespace UnittestAfKodning
         {
             PrisBeregning beregn1 = new PrisBeregning();
             KuverterListe liste1 = new KuverterListe();
-            liste1.Add(new Kuverter() { Voksne = 2, Teens = 2, Boern = 4, Baby = 2 });
+            liste1.Add(new Kuverter() { MandagVoksne = 2, MandagTeens = 2, MandagBoern = 4, MandagBaby = 2 });
 
             double aktuel1 = beregn1.ReturKuvert(liste1);
             Assert.AreEqual(4, aktuel1);
@@ -36,8 +36,8 @@ namespace UnittestAfKodning
         {
             PrisBeregning beregn2 = new PrisBeregning();
             KuverterListe liste2 = new KuverterListe();
-            liste2.Add(new Kuverter() { Voksne = 2, Teens = 2, Boern = 4, Baby = 2 });
-            liste2.Add(new Kuverter() { Voksne = 3 });
+            liste2.Add(new Kuverter() { MandagVoksne = 2, MandagTeens = 2, MandagBoern = 4, MandagBaby = 2 });
+            liste2.Add(new Kuverter() { MandagVoksne = 3 });
 
             double aktuel2 = beregn2.ReturKuvert(liste2);
             Assert.AreEqual(7, aktuel2);

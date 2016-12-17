@@ -100,7 +100,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TilmeldType}" Text="Voksne"/>
-                    <TextBox x:Name="MandagVoksen" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.Voksne, Mode=TwoWay}"/>
+                    <TextBox x:Name="MandagVoksen" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.MandagVoksne, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -109,7 +109,7 @@
                         <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
                         <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="7-15 år"/>
                     </Grid>
-                    <TextBox x:Name="MandagBarn715" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.Teens, Mode=TwoWay}"/>
+                    <TextBox x:Name="MandagBarn715" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.MandagTeens, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="2">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -118,7 +118,7 @@
                         <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
                         <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="3-6 år"/>
                     </Grid>
-                    <TextBox x:Name="MandagBarn36" Grid.Row="1" Grid.Column="2" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.Boern, Mode=TwoWay}"/>
+                    <TextBox x:Name="MandagBarn36" Grid.Row="1" Grid.Column="2" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.MandagBoern, Mode=TwoWay}"/>
                     <Grid Grid.Row="0" Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
@@ -127,7 +127,7 @@
                         <TextBlock Grid.Row="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Børn"/>
                         <TextBlock Grid.Row="1" Style="{StaticResource TilmeldToLinjerButtom}" Text="0-2 år"/>
                     </Grid>
-                    <TextBox x:Name="Mandag02" Grid.Row="1" Grid.Column="3" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.Baby, Mode=TwoWay}"/>
+                    <TextBox x:Name="Mandag02" Grid.Row="1" Grid.Column="3" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.MandagBaby, Mode=TwoWay}"/>
                 </Grid>
 
 <!--Tilmelding til tirsdag-->

@@ -10,15 +10,15 @@ namespace kodning.Model
 {
     public class Kuverter
     {
+        #region Mandag kuverter
 
-        public string Ugedag { get; set; }
         public int Husnummer { get; set; }
-        public double Voksne { get; set; }
-        public double Teens { get; set; }
-        public double Boern { get; set; }
-        public double Baby { get; set; }
+        public double MandagVoksne { get; set; }
+        public double MandagTeens { get; set; }
+        public double MandagBoern { get; set; }
+        public double MandagBaby { get; set; }
 
-
+        #endregion
 
         public double TirsdagVoksne { get; set; }
         public double TirsdagTeens { get; set; }
