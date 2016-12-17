@@ -41,5 +41,6 @@ namespace kodning.View
         {
             this.Frame.Navigate(typeof(ChangeMenu), null);
         }
+
     }
 }

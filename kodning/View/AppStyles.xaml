@@ -4,7 +4,7 @@
     xmlns:local="using:kodning">
 
     <Style x:Key="GridStyle" TargetType="Grid">
-        <Setter Property="Background" Value="Azure"/>
+        <Setter Property="Background" Value="Beige"/>
     </Style>
     
     <Style x:Key="SkriftStyle" TargetType="TextBlock">
