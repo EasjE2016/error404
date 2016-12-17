@@ -18,9 +18,8 @@ namespace kodning.Model
         public double Kok4Udlæg { get; set; }
         public double KuvertIAlt { get; set; }
         public double UdlægIAlt { get; set; }
-        public double PrisIalt { get; set; }
-        public double TotalKuvert { get; set; }
-        //public double Pris { get; set; }
+
+
         public double kuverterForTirsdag { get; set; }
         public double kuverterForDagen { get; set; }
         public double kuverterForOnsdag { get; set; }

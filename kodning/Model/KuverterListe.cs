@@ -12,28 +12,14 @@ namespace kodning.Model
     {
         public KuverterListe()
         {
-            Kuverter KuvertInstance = new Kuverter();
-            
+
         }
 
-        #region Json
+
         public string SaveJson()
         {
             string json = JsonConvert.SerializeObject(this);
             return json;
         }
-        public void HentJson(string jsonText)
-        {
-            List<Kuverter> nyListeLisa = JsonConvert.DeserializeObject<List<Kuverter>>(jsonText);
-
-
-            foreach (var kuverter in nyListeLisa)
-            {
-                this.Add(kuverter);
-            }
-        }
-
-
-        #endregion
     }
 }

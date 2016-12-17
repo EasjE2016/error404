@@ -191,6 +191,8 @@ namespace kodning.ViewModel
             Instance = KuvertCatalogSingleton.Instance;
             PrisBeregning = new PrisBeregning();
             Kuverter = new Kuverter();
+
+
             TilmeldAlleCommand = new RelayCommand.RelayCommand(AddAlleDage);
             KuvertPerDagCommand = new RelayCommand.RelayCommand(prisPerKuvertEr);
             RydListeOverDeltagere = new RelayCommand.RelayCommand(StartNyUge);
