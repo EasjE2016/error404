@@ -46,5 +46,10 @@ namespace kodning.View
         {
             this.Frame.Navigate(typeof(kodning.View.ChangeMenu), null);
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(kodning.View.AddWorker), null);
+        }
     }
 }

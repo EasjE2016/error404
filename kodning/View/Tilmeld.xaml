@@ -60,6 +60,7 @@
                 <Button x:Name="ErDuKok1" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
                 <!--Denne knap virker ikke!-->
                 <Button x:Name="SpecialDay1" Grid.Row="5" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement" />
+                <Button x:Name="button" Content="Tilmeld dig til arbejde" HorizontalAlignment="Left" Margin="38,30,0,0" Grid.Row="6" VerticalAlignment="Top" Width="369" Click="button_Click"/>
             </Grid>
             
             <!--Tilmeldingsdelen er delt i 3 kolonner

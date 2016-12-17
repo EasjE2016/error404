@@ -14,8 +14,10 @@ namespace kodning.ViewModel
 {
     class ArbejderPlanViewModel : NotifyPropNotifications
     {
-        public Arbejdere Arbejdere { get; set; }
-
+        public Arbejdere MandagsArbejdere { get; set; }
+        public Arbejdere TirsdagsArbejdere { get; set; }
+        public Arbejdere OnsdagsArbejdere { get; set; }
+        public Arbejdere TorsdagsArbejdere { get; set; }
         public ArbejderCatalogSingleton Instance { get; set; }
 
         #region Relaycommands
@@ -39,64 +41,66 @@ namespace kodning.ViewModel
         {
             bool ErLigNulTilmeldte = true;
 
-            if (Arbejdere.MandagTitle == null && Arbejdere.MandagNavn == null)
+
+            if (!string.IsNullOrEmpty(MandagsArbejdere.Title) && !string.IsNullOrEmpty(MandagsArbejdere.Navn))
             {
-                if (Arbejdere.MandagTitle == "" && Arbejdere.MandagNavn == "")
-                {
-                    ErLigNulTilmeldte = false;
-                    Arbejdere MandagArbejder = new Arbejdere();
-                    MandagArbejder.MandagNavn = Arbejdere.MandagNavn;
-                    MandagArbejder.MandagTitle = Arbejdere.MandagTitle;
+                ErLigNulTilmeldte = false;
+                Arbejdere MandagArbejder = new Arbejdere();
+                MandagArbejder.Navn = MandagsArbejdere.Navn;
+                MandagArbejder.Title = MandagsArbejdere.Title;
 
-                    Instance.ArbejderMandagListe.Add(MandagArbejder);
-                }
-
-
-                if (Arbejdere.TirsdagTitle == "" && Arbejdere.TirsdagNavn == "")
-                {
-                    ErLigNulTilmeldte = false;
-                    Arbejdere TirsdagArbejder = new Arbejdere();
-                    TirsdagArbejder.TirsdagNavn = Arbejdere.TirsdagNavn;
-                    TirsdagArbejder.TirsdagTitle = Arbejdere.TirsdagTitle;
-
-                    Instance.ArbejderTirsdagListe.Add(TirsdagArbejder);
-                }
+                Instance.ArbejderMandagListe.Add(MandagArbejder);
+                MandagArbejder = new Arbejdere();
+            }
 
 
-                if (Arbejdere.OnsdagTitle == "" && Arbejdere.OnsdagNavn == "")
-                {
-                    ErLigNulTilmeldte = false;
-                    Arbejdere OnsdagArbejder = new Arbejdere();
-                    OnsdagArbejder.OnsdagNavn = Arbejdere.OnsdagNavn;
-                    OnsdagArbejder.OnsdagTitle = Arbejdere.OnsdagTitle;
+            if (!string.IsNullOrEmpty(TirsdagsArbejdere.Title) && !string.IsNullOrEmpty(TirsdagsArbejdere.Navn))
+            {
+                ErLigNulTilmeldte = false;
+                Arbejdere TirsdagArbejder = new Arbejdere();
+                TirsdagArbejder.Navn = TirsdagsArbejdere.Navn;
+                TirsdagArbejder.Title = TirsdagsArbejdere.Title;
 
-                    Instance.ArbejderOnsdagListe.Add(OnsdagArbejder);
-                 }
+                Instance.ArbejderTirsdagListe.Add(TirsdagArbejder);
+            }
 
 
-                         if (Arbejdere.TorsdagTitle == "" && Arbejdere.TorsdagNavn == "")
-                            {
-                                ErLigNulTilmeldte = false;
-                                Arbejdere TorsdagArbejder = new Arbejdere();
-                                TorsdagArbejder.OnsdagNavn = Arbejdere.TorsdagNavn;
-                                TorsdagArbejder.OnsdagTitle = Arbejdere.TorsdagTitle;
+            if (!string.IsNullOrEmpty(OnsdagsArbejdere.Title) && !string.IsNullOrEmpty(OnsdagsArbejdere.Navn))
+            {
+                ErLigNulTilmeldte = false;
+                Arbejdere OnsdagArbejder = new Arbejdere();
+                OnsdagArbejder.Navn = OnsdagsArbejdere.Navn;
+                OnsdagArbejder.Title = OnsdagsArbejdere.Title;
 
-                                Instance.ArbejderOnsdagListe.Add(TorsdagArbejder);
-                            }
-                            if (ErLigNulTilmeldte)
-                            {
-                                new MessageDialog("Du skal huske at tilmelde dig en af dagene").ShowAsync();
-                            }
-                            else if (!ErLigNulTilmeldte)
-                            {
-                                this.GemDataTilDiskAsync();
-                            }
-                        }
-                        else
-                        {
-                            new MessageDialog("Du skal huske at tilmelde dig en af dagene").ShowAsync();
-                        }
-                    }
+                Instance.ArbejderOnsdagListe.Add(OnsdagArbejder);
+            }
+
+
+            if (!string.IsNullOrEmpty(TorsdagsArbejdere.Title) && !string.IsNullOrEmpty(TorsdagsArbejdere.Navn))
+            {
+                ErLigNulTilmeldte = false;
+                Arbejdere TorsdagArbejder = new Arbejdere();
+                TorsdagArbejder.Navn = TorsdagsArbejdere.Navn;
+                TorsdagArbejder.Title = TorsdagsArbejdere.Title;
+                Instance.ArbejderOnsdagListe.Add(TorsdagArbejder);
+            }
+            if (ErLigNulTilmeldte)
+            {
+                new MessageDialog("Du skal huske at tilmelde dig en af dagene").ShowAsync();
+            }
+            else if (!ErLigNulTilmeldte)
+            {
+                this.GemDataTilDiskAsync();
+            }
+
+            else
+            {
+                new MessageDialog("Du skal huske at tilmelde dig en af dagene").ShowAsync();
+            }
+
+        }
+
+
 
         #endregion
 
@@ -104,7 +108,10 @@ namespace kodning.ViewModel
         public ArbejderPlanViewModel()
         {
             Instance = ArbejderCatalogSingleton.Instance;
-            Arbejdere = new Arbejdere();
+            MandagsArbejdere = new Arbejdere();
+            TirsdagsArbejdere = new Arbejdere();
+            OnsdagsArbejdere = new Arbejdere();
+            TorsdagsArbejdere = new Arbejdere();
 
             TilmeldArbejderCommand = new RelayCommand.RelayCommand(TilmeldArbejde);
             RydListeOverArbejdere = new RelayCommand.RelayCommand(StartNyUge);
@@ -159,9 +166,9 @@ namespace kodning.ViewModel
             }
             catch (Exception ex)
             {
-                //Popup vindue til at fortælle brugeren at filen ikke blev fundet. 
-                MessageDialog messageDialog = new MessageDialog(ex.Message, "Filen ikke fundet");
-                await messageDialog.ShowAsync();
+                ////Popup vindue til at fortælle brugeren at filen ikke blev fundet. 
+                //MessageDialog messageDialog = new MessageDialog(ex.Message, "Filen ikke fundet");
+                //await messageDialog.ShowAsync();
             }
         }
         #endregion
