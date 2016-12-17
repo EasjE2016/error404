@@ -95,7 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InAkivKode\ArbejderCatalogSingleton.cs" />
+    <Compile Include="Model\ArbejderCatalogSingleton.cs" />
     <Compile Include="Model\KuvertCatalogSingleton.cs" />
     <Compile Include="Model\Kuverter.cs" />
     <Compile Include="Model\KuverterListe.cs" />
@@ -112,8 +112,8 @@
     <Compile Include="View\Forside.xaml.cs">
       <DependentUpon>Forside.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InAkivKode\Arbejdere.cs" />
-    <Compile Include="InAkivKode\ArbejderListe.cs" />
+    <Compile Include="Model\Arbejdere.cs" />
+    <Compile Include="Model\ArbejderListe.cs" />
     <Compile Include="Model\Madplan.cs" />
     <Compile Include="Model\MadplanListe.cs" />
     <Compile Include="View\Kasser.xaml.cs">
@@ -124,7 +124,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelayCommand\RelayCommand.cs" />
-    <Compile Include="InAkivKode\ArbejderPlanViewModel.cs" />
+    <Compile Include="ViewModel\ArbejderPlanViewModel.cs" />
     <Compile Include="ViewModel\MadPlanViewModel.cs" />
     <Compile Include="View\ChangeTheMenu.xaml.cs">
       <DependentUpon>ChangeTheMenu.xaml</DependentUpon>
