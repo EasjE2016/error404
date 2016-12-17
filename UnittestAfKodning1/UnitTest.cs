@@ -9,20 +9,10 @@ namespace UnittestAfKodning
     [TestClass]
     public class UnitTest1
     {
-        // private KuvertViewModel kvm;
-
-        //[TestInitialize]
-        //public void FørHverTest()
-        //{
-        //    kvm = new KuvertViewModel();
-        //}
-
         [TestMethod]
         // Ingen tilmeldte
         public void TestMethod1()
         {
-            //kvm.AddNewKuvertMandag();
-
             PrisBeregning beregn = new PrisBeregning();
             KuverterListe liste = new KuverterListe();
 
@@ -51,6 +41,22 @@ namespace UnittestAfKodning
 
             double aktuel2 = beregn2.ReturKuvert(liste2);
             Assert.AreEqual(7, aktuel2);
+        }
+        [TestMethod]
+        public void TestMethod4()
+        {
+            PrisBeregning beregn3 = new PrisBeregning();
+
+            beregn3.kuverterForDagen = 2;
+            beregn3.kuverterForTirsdag = 2;
+            beregn3.kuverterForOnsdag = 2;
+            beregn3.kuverterForTorsdag = 2;
+
+            double aktuel3 = 8;
+            double HvadSomHelst = beregn3.KuvertIAlt;
+            Assert.AreEqual(8, aktuel3);
+
+            //Assert.AreEqual(expected, HvadSomHelst, 8, "tag dig sammen");
         }
         //[TestMethod]
         //// Udregn kokkens udlæg. Vi har ikke testet metoder
