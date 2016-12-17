@@ -13,20 +13,28 @@ namespace kodning.Model
         public double _Pris;
 
         public double Kok1Udlæg { get; set; }
+
         public double Kok2Udlæg { get; set; }
+
         public double Kok3Udlæg { get; set; }
+
         public double Kok4Udlæg { get; set; }
+
         public double KuvertIAlt { get; set; }
+
         public double UdlægIAlt { get; set; }
 
 
         public double kuverterForTirsdag { get; set; }
+
         public double kuverterForDagen { get; set; }
+
         public double kuverterForOnsdag { get; set; }
+
         public double kuverterForTorsdag { get; set; }
 
 
-        #region
+        #region Kuverter for de forskellige dage
         public double ReturKuvert(KuverterListe listen)
         {
 
@@ -70,9 +78,17 @@ namespace kodning.Model
             }
             return kuverterForTorsdag;
         }
+        public double KuvertIAltTest
+        {
+            get
+            {
+                KuvertIAlt = kuverterForDagen + kuverterForTirsdag + kuverterForOnsdag + kuverterForTorsdag;
+                return KuvertIAlt;
+            }
+        }
         #endregion
 
-
+        #region PrisOnPorpertyChanged + PrisIAlt
 
 
         public double Pris
@@ -88,14 +104,7 @@ namespace kodning.Model
             }
         }
 
-        public double KuvertIAltTest
-        {
-            get
-            {
-                KuvertIAlt = kuverterForDagen + kuverterForTirsdag + kuverterForOnsdag + kuverterForTorsdag;
-                return KuvertIAlt;
-            }
-        }
+
         public double PrisIAlt
         {
             get
@@ -106,6 +115,6 @@ namespace kodning.Model
             }
         }
 
-
+        #endregion
     }
 }
