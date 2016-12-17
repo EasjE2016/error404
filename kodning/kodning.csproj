@@ -102,6 +102,9 @@
     <Compile Include="Model\PrisBeregning.cs" />
     <Compile Include="Persistency\JsonPersistency.cs" />
     <Compile Include="ViewModel\KuvertViewModel.cs" />
+    <Compile Include="View\AddWorker.xaml.cs">
+      <DependentUpon>AddWorker.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ErDuKok.xaml.cs">
       <DependentUpon>ErDuKok.xaml</DependentUpon>
     </Compile>
@@ -147,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\AddWorker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ErDuKok.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

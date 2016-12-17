@@ -51,7 +51,7 @@
                 <!--Denne knap virker ikke!-->
                 <Button x:Name="ChangeTilmelding1" Grid.Row="0" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre tilmelding"/>
                 <!--Denne knap virker ikke!-->
-                <Button x:Name="WhatIsTheMenu1" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvad er menuen?"/>
+                <Button x:Name="WhatIsTheMenu1" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvad er menuen?" />
                 <!--Denne knap virker!-->
                 <Button x:Name="ChangeTheMenu1" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenuClick"/>
                 <!--Denne knap vikrer ikke!-->
