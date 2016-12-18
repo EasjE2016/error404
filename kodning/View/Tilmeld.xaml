@@ -37,6 +37,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
+            
             <Grid Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -80,7 +81,6 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width ="2*"/>
                 </Grid.ColumnDefinitions>
 
                 <!--Ugedagene-->
@@ -261,8 +261,7 @@
                     </Grid>
                     <TextBox x:Name="TorsdagBarn02" Grid.Row="1" Grid.Column="3" Style="{StaticResource TilmeldTextBox}" Text="{Binding Kuverter.TorsdagBaby, Mode=TwoWay}"/>
                 </Grid>
-                <Button x:Name="TilmeldAlle" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilmeldAlleCommand}" />
-                <Button x:Name="button1" Content="Start ny uge" HorizontalAlignment="Left" Margin="71,35,0,0" VerticalAlignment="Top" Height="86" Width="271" Command="{Binding RydListeOverDeltagere}"/>
+               
                 <!--
                 <Button Grid.Row="1" Grid.Column="2" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilmeldCommand}"/>
                 <Button Grid.Row="2" Grid.Column="2" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilMeldTirsdagCommand}"/>
@@ -285,6 +284,16 @@
             <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" ItemsSource="{Binding Instance.MandagListe}"/>
             
         </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="TilmeldAlle" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilmeldAlleCommand}" />
+            <Button x:Name="StartUge" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Slet alle deltagere" Height="65" Width="270" FontSize="30" FontWeight="SemiBold" Command="{Binding RydListeOverDeltagere}"/>
+        </Grid>
+       
     </Grid>
 
 </Page>
