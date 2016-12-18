@@ -99,7 +99,7 @@
                     <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Navn" FontSize="35"/>
                     <TextBox x:Name="TirsdagNavnWorker" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" FontSize="20" Width="230"/>
                     <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource TilmeldToLinjerTop}" Text="Rolle" FontSize="35"/>
-                    <TextBox x:Name="TirsdagRolleWorker" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" FontSize="30"/>
+                    <TextBox x:Name="TirsdagRolleWorker" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" FontSize="30" Width="230"/>
                 </Grid>
 
                 <Grid Grid.Column="1" Grid.Row="3">
@@ -115,7 +115,7 @@
                     <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Navn" FontSize="35"/>
                     <TextBox x:Name="OnsdagNavnWorker" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" FontSize="20" Width="230"/>
                     <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource TilmeldToLinjerTop}" Text="Rolle" FontSize="35"/>
-                    <TextBox x:Name="OnsdagRolleWorker" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" FontSize="30"/>
+                    <TextBox x:Name="OnsdagRolleWorker" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" FontSize="30" Width="230"/>
                 </Grid>
 
                 <Grid Grid.Column="1" Grid.Row="4">
@@ -131,7 +131,7 @@
                     <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Navn" FontSize="35"/>
                     <TextBox x:Name="TorsdagNavnWorker" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" FontSize="20" TextWrapping="Wrap" Width="230"/>
                     <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource TilmeldToLinjerTop}" Text="Rolle" FontSize="35"/>
-                    <TextBox x:Name="TorsdagRolleWorker" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" FontSize="30"/>
+                    <TextBox x:Name="TorsdagRolleWorker" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" FontSize="30" Width="230"/>
                 </Grid>
 
                 

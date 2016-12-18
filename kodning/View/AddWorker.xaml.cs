@@ -42,5 +42,9 @@ namespace kodning.View
             this.Frame.Navigate(typeof(ChangeMenu), null);
         }
 
+        private void TorsdagRolleWorker_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
