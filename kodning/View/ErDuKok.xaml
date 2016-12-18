@@ -44,7 +44,7 @@
                 <!--Denne knap virker ikke!-->
                 <Button x:Name="WhatIsTheMenu2" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvad er menuen?"/>
                 <!--Denne knap virker!-->
-                <Button x:Name="ChangeTheMenu2" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenuClick" Margin="0,0,0,3" VerticalAlignment="Bottom"/>
+                <Button x:Name="ChangeTheMenu2" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenuClick"/>
                 <!--Denne knap vikrer ikke!-->
                 <Button x:Name="HvemErKok2" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvem er kok?"/>
                 <!--Denne knap virker!-->
