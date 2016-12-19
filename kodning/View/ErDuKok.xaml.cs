@@ -27,12 +27,12 @@ namespace kodning.View
             this.InitializeComponent();
         }
 
-        private void ErDuKokSide(object sender, RoutedEventArgs e)
+        private void ErDuKok_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(ErDuKok), null);
         }
 
-        private void ChangeMenuClick(object sender, RoutedEventArgs e)
+        private void ChangeMenu_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(ChangeMenu), null);
         }
@@ -50,6 +50,16 @@ namespace kodning.View
         private void TilmeldBolig_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Tilmeld), null);
+        }
+
+        private void ShowTilmeldte_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ShowTilmeldte), null);
+        }
+
+        private void SeWorkers_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ShowWorkers), null);
         }
     }
 }

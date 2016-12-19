@@ -52,19 +52,19 @@
                <!--Denne knap virker!-->
                 <Button x:Name="TilmeldBolig3" Grid.Row="0" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Tilmeld bolig" Click="TilmeldBolig_Click"/>
                 <!--Denne knap virker ikke!-->
-                <Button x:Name="ChangeTilmelding3" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre tilmelding"/>
+                <Button x:Name="SeTilmeldte3" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Se tilmeldte" Click="ShowTilmeldte_Click"/>
                 <!--Denne knap virker ikke!-->
                 <Button x:Name="WhatIsTheMenu3" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvad er menuen?"/>
                 <!--Denne knap virker!-->
-                <Button x:Name="ChangeMenu3" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenu3_Click"/>
+                <Button x:Name="ChangeMenu3" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenu_Click"/>
                 <!--Denne knap vikrer ikke!-->
-                <Button x:Name="HvemErKok3" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvem er kok?"/>
+                <Button x:Name="SeWorkers3" Grid.Row="5" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Se arbejdere" Click="ShowWorkers_Click"/>
                 <!--Denne knap virker!-->
-                <Button x:Name="ErDuKok3" Grid.Row="5" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
+                <Button x:Name="ErDuKok3" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKok_Click"/>
                 <!--Denne knap virker ikke!-->
                 <Button x:Name="SpecialDay3" Grid.Row="7" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement"/>
                 <!--Denne knap virker!-->
-                <Button x:Name="TilmeldArbejde" Grid.Row="6" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Tilmeld dig til arbejde" Click="AddWorker_Click"/>
+                <Button x:Name="TilmeldArbejde3" Grid.Row="6" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Tilmeld dig til arbejde" Click="AddWorker_Click"/>
 
             </Grid>
 
@@ -120,7 +120,7 @@
                     <Button x:Name="RemoveButton" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding RemoveMadplanCommand, Mode=TwoWay}" Content="Slet" Height="35" Width="55"/>
                     <Button x:Name="HentButton" Grid.Row="0" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding LoadMadplanCommand, Mode=TwoWay}" Content="Hent" Height="35" Width="55"/>
                     <Button x:Name="GemButton" Grid.Row="0" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding SaveMadplanCommand, Mode=TwoWay}" Content="Gem" Height="35" Width="55"/>
-                    <Button x:Name="RydMadplanButton" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding RydMadPlanCommand}" Style="{StaticResource TilmeldKnap}" Content="Ryd madplan" FontSize="18"/>
+                    <Button x:Name="RydMadplanButton" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding RydMadPlanCommand}" Style="{StaticResource TilmeldKnap}" Content="Ryd madplan" FontSize="18" Grid.ColumnSpan="2" Margin="55,-9,68,-6"/>
 
                 </Grid>
             </Grid>

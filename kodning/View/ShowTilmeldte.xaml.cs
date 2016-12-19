@@ -37,10 +37,6 @@ namespace kodning.View
             this.Frame.Navigate(typeof(ErDuKok), null);
         }
 
-        private void ChangeMenu3_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(ChangeMenu), null);
-        }
 
         private void TilmeldBolig_Click(object sender, RoutedEventArgs e)
         {
@@ -57,9 +53,15 @@ namespace kodning.View
             this.Frame.Navigate(typeof(ShowTilmeldte), null);
         }
 
-        private void ChangeMenuClick(object sender, RoutedEventArgs e)
+        private void ChangeMenu_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(ChangeMenu), null);
         }
+
+        private void SeWorkers_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ShowWorkers), null);
+        }
+
     }
 }

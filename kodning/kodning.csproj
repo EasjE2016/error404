@@ -118,6 +118,9 @@
     <Compile Include="View\ShowTilmeldte.xaml.cs">
       <DependentUpon>ShowTilmeldte.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ShowWorkers.xaml.cs">
+      <DependentUpon>ShowWorkers.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Tilmeld.xaml.cs">
       <DependentUpon>Tilmeld.xaml</DependentUpon>
     </Compile>
@@ -168,6 +171,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ShowTilmeldte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ShowWorkers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

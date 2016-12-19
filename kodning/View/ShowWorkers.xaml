@@ -6,7 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ViewModel="using:kodning.ViewModel"
     xmlns:Model="using:kodning.Model"
-    x:Class="kodning.View.ShowTilmeldte"
+    x:Class="kodning.View.ShowWorkers"
     mc:Ignorable="d">
 
     <Grid Margin="10,20,10,20" Style="{StaticResource GridStyle}">
@@ -52,11 +52,11 @@
                 <!--Denne knap virker ikke!-->
                 <Button x:Name="WhatIsTheMenu6" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvad er menuen?" />
                 <!--Denne knap virker!-->
-                <Button x:Name="ChangeTheMenu6" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenu_Click"/>
-                <!--Denne knap vikrer!-->
-                <Button x:Name="SeWorkers6" Grid.Row="5" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Se arbejdere?" Click="SeWorkers_Click" />
+                <Button x:Name="ChangeTheMenu6" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenuClick"/>
+                <!--Denne knap vikrer ikke!-->
+                <Button x:Name="HvemErKok6" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvem er kok?"/>
                 <!--Denne knap virker!-->
-                <Button x:Name="ErDuKok6" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
+                <Button x:Name="ErDuKok6" Grid.Row="5" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
                 <!--Denne knap virker ikke!-->
                 <Button x:Name="SpecialDay6" Grid.Row="7" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement"/>
                 <!--Denne knap virker!-->
@@ -88,16 +88,16 @@
                 <TextBlock Grid.Row="4" Grid.Column="0" Style="{StaticResource Dagnavn}" Text="Torsdag"/>
 
                 <!--Tilmeldinger til mandag-->
-                <ListView x:Name="TilmeldteMandag" Grid.Row="1" Grid.Column="1" Header="Listview"/>
+                <ListView x:Name="WorkersMandag" Grid.Row="1" Grid.Column="1" Header="Listview"/>
 
                 <!--Tilmeldinger til tirsdag-->
-                <ListView x:Name="TilmeldteTirsdag" Grid.Row="2" Grid.Column="1" Header="Listview"/>
+                <ListView x:Name="WorkersTirsdag" Grid.Row="2" Grid.Column="1" Header="Listview"/>
 
                 <!--Tilmeldinger til onsdag-->
-                <ListView x:Name="TilmeldteOnsdag" Grid.Row="3" Grid.Column="1" Header="Listview"/>
+                <ListView x:Name="WorkersOnsdag" Grid.Row="3" Grid.Column="1" Header="Listview"/>
 
                 <!--Tilmelding til torsdag-->
-                <ListView x:Name="TilmeldteTorsdag" Grid.Row="4" Grid.Column="1" Header="Listview"/>
+                <ListView x:Name="WorkersTorsdag" Grid.Row="4" Grid.Column="1" Header="Listview"/>
 
                 <!--
                 <Button Grid.Row="1" Grid.Column="2" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilmeldCommand}"/>
