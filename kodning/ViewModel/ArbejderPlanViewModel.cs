@@ -91,6 +91,7 @@ namespace kodning.ViewModel
             else if (!ErLigNulTilmeldte)
             {
                 this.GemDataTilDiskAsync();
+                new MessageDialog("Du er nu tilmeldt").ShowAsync();
             }
 
             else

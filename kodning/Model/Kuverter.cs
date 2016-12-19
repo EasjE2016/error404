@@ -89,7 +89,12 @@ namespace kodning.Model
         #endregion
 
 
-
+        /// <summary>
+        /// Problemet med hele den her klasse er åbenlys der er ikke generaliseret nok, grunden er dog som følgende: ToString herunder skal spytte Husnummer ud, hvis jeg generalisere klassen
+        /// ville jeg for hvert object af denne klasse skulle tilføje tilsvarende husnummer dvs. At der i "view" skal være 4 bokse til husnummer hvor vi kun ønsker 1. Har ikke kunne komme udenom dette.
+        /// En mere generaliseret klasse kan ses under "Arbejdere"
+        /// </summary>
+        /// <returns></returns>
 
         public override string ToString()
         {
