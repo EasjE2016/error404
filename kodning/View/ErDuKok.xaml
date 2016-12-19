@@ -15,6 +15,10 @@
     
     <Grid Margin="10,10,10,10" Style="{StaticResource GridStyle}">
 
+        <!--Sitet er delt i tre rækker. 
+        Række 1 indeholder overskrift og en 'tilbage til forsiden-knap
+        Række 2 indeholder selve indholdet
+        Række 3 indeholder en knap til udregning af kuvertpris-->
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="5*"/>
@@ -23,6 +27,10 @@
 
         <Button x:Name="ToFrontPage" Content="Gå til forside" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="50,0,0,0" Height="65" Width="250" FontSize="30" FontWeight="Bold" Click="GåTilForside_Click"/>
         <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource OverskriftStyle}" Text=" Fællesspisning i Boligvænget"/>
+        
+        <!--Række 2 er delt i 2 kolonner
+        Kolonne 1 indeholder menuen
+        Kolonne 2 indeholder kokkens information-->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -55,9 +63,13 @@
                 <!--Denne knap virker ikke!-->
                 <Button x:Name="SpecialDay2" Grid.Row="7" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement" />
                 <!--Denne knap virker!-->
-                <Button x:Name="TilmeldArbejde2" Grid.Row="6" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Tilmeld dig til arbejde" Click="AddWorker_Click"/>
+                <Button x:Name="TilmeldArbejde2" Grid.Row="6" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Tilmeld dig arbejde" Click="AddWorker_Click"/>
             </Grid>
 
+            <!--Kolonne 2 er delt i 6 rækker
+            Række 1 indeholder ugenummer
+            Række 2 indeholder overskrifter
+            Række 3, 4, 5 og 6 indeholder navne på dagene samt information til kokken-->
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*"/>
@@ -77,23 +89,29 @@
                 <TextBlock Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldToLinjerTop}" FontSize="38" Text="Antal kuverter:"/>
                 <TextBlock Grid.Row="1" Grid.Column="2" Style="{StaticResource TilmeldToLinjerTop}" FontSize="38" Text="Kokkens udlæg"/>
 
+                <!--Mandag info-->
                 <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource Dagnavn}" Text="Mandag" FontSize="50" FontWeight="SemiBold"/>
                 <TextBlock Grid.Row="2" Grid.Column="1" FontSize="40" Text="{Binding GivAlleKuverterMandag, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <TextBox x:Name="MandagPris" Grid.Row="2" Grid.Column="2" Style="{StaticResource TilmeldTextBox}" Text="{Binding PrisBeregning.Kok1Udlæg, Mode=TwoWay}" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
+                <!--Tirsdag info-->
                 <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource Dagnavn}" Text="Tirsdag" FontSize="50" FontWeight="SemiBold"/>
                 <TextBlock Grid.Row="3" Grid.Column="1" FontSize="40" Text="{Binding GivAlleKuverterTirsdag, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <TextBox x:Name="TirsdagPris" Grid.Row="3" Grid.Column="2" Style="{StaticResource TilmeldTextBox}" Text="{Binding PrisBeregning.Kok2Udlæg, Mode=TwoWay}" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
+                <!--Onsdag info-->
                 <TextBlock Grid.Row="4" Grid.Column="0" Style="{StaticResource Dagnavn}" Text="Onsdag" FontSize="50" FontWeight="SemiBold"/>
                 <TextBlock Grid.Row="4" Grid.Column="1" FontSize="40" Text="{Binding GivAlleKuverterOnsdag, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <TextBox x:Name="OnsdagPris" Grid.Row="4" Grid.Column="2" Style="{StaticResource TilmeldTextBox}" Text="{Binding PrisBeregning.Kok3Udlæg, Mode=TwoWay}" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
+                <!--Torsdag info-->
                 <TextBlock Grid.Row="5" Grid.Column="0" Style="{StaticResource Dagnavn}" Text="Torsdag" FontSize="50" FontWeight="SemiBold"/>
                 <TextBlock Grid.Row="5" Grid.Column="1" FontSize="40" Text="{Binding GivAlleKuverterTorsdag, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <TextBox x:Name="TorsdagPris" Grid.Row="5" Grid.Column="2" Style="{StaticResource TilmeldTextBox}" Text="{Binding PrisBeregning.Kok4Udlæg, Mode=TwoWay}" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Grid>
             </Grid>
+        
+        <!--Række -->
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>

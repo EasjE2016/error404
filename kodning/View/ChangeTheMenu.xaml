@@ -13,7 +13,7 @@
         <ViewModel:MadPlanViewModel/>
     </Page.DataContext>
 
-    <Grid Margin="10,20,10,20" Style="{StaticResource GridStyle}">
+    <Grid Margin="10,10,10,10" Style="{StaticResource GridStyle}">
 
 
         <!--Siden er delt i tre rækker
@@ -64,10 +64,15 @@
                 <!--Denne knap virker ikke!-->
                 <Button x:Name="SpecialDay3" Grid.Row="7" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement"/>
                 <!--Denne knap virker!-->
-                <Button x:Name="TilmeldArbejde3" Grid.Row="6" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Tilmeld dig til arbejde" Click="AddWorker_Click"/>
+                <Button x:Name="TilmeldArbejde3" Grid.Row="6" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Tilmeld dig arbejde" Click="AddWorker_Click"/>
 
             </Grid>
 
+            <!--Kolonne to er indelt i 5 rækker
+            Række 1 og 2 indeholder et listview over menuen
+            Række 3 indeholder textboxe til ændring
+            Række 4 indeholder kanpperne
+            Række 5 er tom-->
             <Grid Grid.Column="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="3*"/>
