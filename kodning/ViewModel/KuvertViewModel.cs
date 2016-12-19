@@ -57,7 +57,7 @@ namespace kodning.ViewModel
         {
             set
             {
-                PrisBeregning.Pris = +(PrisBeregning.PrisIAlt) / +(PrisBeregning.KuvertIAltTest);
+                PrisBeregning.Pris = + (PrisBeregning.PrisIAlt()) / +(PrisBeregning.KuvertIAltTest);
             }
             get
             { return PrisBeregning.Pris; }

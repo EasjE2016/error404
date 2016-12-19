@@ -58,22 +58,25 @@ namespace UnittestAfKodning
 
             //Assert.AreEqual(expected, HvadSomHelst, 8, "tag dig sammen");
         }
-        //[TestMethod]
-        //// Udregn kokkens udlæg. Vi har ikke testet metoder
-        //public void TestMethod4()
-        //{
-        //    PrisBeregning beregn3 = new PrisBeregning();
+        [TestMethod]
+        // Udregn kokkens udlæg. Vi har ikke testet metoder
+        public void TestMethod5()
+        {
+            PrisBeregning beregn3 = new PrisBeregning();
 
-        //    double Kok1Udlæg = 100;
-        //    double Kok2Udlæg = 100;
-        //    double Kok3Udlæg = 100;
-        //    double Kok4Udlæg = 400;
+            beregn3.Kok1Udlæg = 100;
+            beregn3.Kok2Udlæg = 100;
+            beregn3.Kok3Udlæg = 100;
+            beregn3.Kok4Udlæg = 100;
 
-        //    double aktuel4 = beregn3.PrisIAlt();
-        //    Assert.AreEqual(400, beregn3);
-        //}
-        
-        
+            double aktuel4 = beregn3.PrisIAlt();
+            Assert.AreEqual(400, aktuel4);
+        }
+
+        [TestMethod]
+        //
+
+
     }
 }
 

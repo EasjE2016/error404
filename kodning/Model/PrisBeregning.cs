@@ -105,14 +105,13 @@ namespace kodning.Model
         }
 
 
-        public double PrisIAlt
+        public double PrisIAlt()
         {
-            get
-            {
+         
 
                 UdlægIAlt = Kok1Udlæg + Kok2Udlæg + Kok3Udlæg + Kok4Udlæg;
                 return UdlægIAlt;
-            }
+           
         }
 
         #endregion

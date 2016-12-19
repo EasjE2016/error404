@@ -96,7 +96,7 @@
                 <ListView x:Name="TilmeldteTirsdag" Grid.Row="2" Grid.Column="1" Header="Listview" ItemsSource="{Binding Instance.TirsdagListe}"/>
 
                 <!--Tilmeldinger til onsdag-->
-                <ListView x:Name="TilmeldteOnsdag" Grid.Row="3" Grid.Column="1" Header="Listview" ItemsSource="{Binding Instance.OnsdagListe}"/>
+                <ListView x:Name="TilmeldteOnsdag" Grid.Row="3" Grid.Column="1" Header="Listview" ItemsSource="{Binding Instance.OnsdagListe}" SelectionChanged="TilmeldteOnsdag_SelectionChanged"/>
 
                 <!--Tilmelding til torsdag-->
                 <ListView x:Name="TilmeldteTorsdag" Grid.Row="4" Grid.Column="1" Header="Listview" ItemsSource="{Binding Instance.TorsdagListe}"/>

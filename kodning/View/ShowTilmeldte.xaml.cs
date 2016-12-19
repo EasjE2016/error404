@@ -63,5 +63,9 @@ namespace kodning.View
             this.Frame.Navigate(typeof(ShowWorkers), null);
         }
 
+        private void TilmeldteOnsdag_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
