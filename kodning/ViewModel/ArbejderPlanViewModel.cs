@@ -82,7 +82,7 @@ namespace kodning.ViewModel
                 Arbejdere TorsdagArbejder = new Arbejdere();
                 TorsdagArbejder.Navn = TorsdagsArbejdere.Navn;
                 TorsdagArbejder.Title = TorsdagsArbejdere.Title;
-                Instance.ArbejderOnsdagListe.Add(TorsdagArbejder);
+                Instance.ArbejderTorsdagListe.Add(TorsdagArbejder);
             }
             if (ErLigNulTilmeldte)
             {
