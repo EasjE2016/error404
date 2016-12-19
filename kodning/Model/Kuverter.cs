@@ -89,9 +89,18 @@ namespace kodning.Model
         #endregion
 
 
-        /// <summary>
+        /// <summary> Kaspers Summary
+        /// 
+        /// 
         /// Problemet med hele den her klasse er åbenlys der er ikke generaliseret nok, grunden er dog som følgende: ToString herunder skal spytte Husnummer ud, hvis jeg generalisere klassen
         /// ville jeg for hvert object af denne klasse skulle tilføje tilsvarende husnummer dvs. At der i "view" skal være 4 bokse til husnummer hvor vi kun ønsker 1. Har ikke kunne komme udenom dette.
+        /// 
+        /// Eftertanke - klokken 02:15 Søndag nat: Jeg kunne have lavet klassen simpel og sagt i IF statement til tilføjelse af deltager at man nok kunne sige f.eks. 
+        /// TirsdagKuvert.Husnummer = MandagKuvert.Husnummer
+        /// OnsdagKuvert.Husnummer = MandagKuvert.Husnummer
+        /// TorsdagKuvert.Husnummer = MandagKuvert.Husnummer
+        /// Og derved binde boksen hvor man skriver husnummer ind til MandagKuvert.Husnummer. 
+        /// 
         /// En mere generaliseret klasse kan ses under "Arbejdere"
         /// </summary>
         /// <returns></returns>
