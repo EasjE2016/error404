@@ -115,6 +115,9 @@
     <Compile Include="Model\ArbejderListe.cs" />
     <Compile Include="Model\Madplan.cs" />
     <Compile Include="Model\MadplanListe.cs" />
+    <Compile Include="View\ShowTilmeldte.xaml.cs">
+      <DependentUpon>ShowTilmeldte.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Tilmeld.xaml.cs">
       <DependentUpon>Tilmeld.xaml</DependentUpon>
     </Compile>
@@ -161,6 +164,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
     <Page Include="View\Forside.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ShowTilmeldte.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
