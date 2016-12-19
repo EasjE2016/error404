@@ -103,7 +103,6 @@ namespace kodning.ViewModel
                     Kuvert.MandagTeens = Kuverter.MandagTeens;
                     Kuvert.MandagBoern = Kuverter.MandagBoern;
                     Kuvert.MandagBaby = Kuverter.MandagBaby;
-                    Kuvert.MandagKuvertForHustand = Kuverter.MandagKuvertForHustand;
 
                     //referer til singleton
                     Instance.MandagListe.Add(Kuvert);
@@ -121,7 +120,6 @@ namespace kodning.ViewModel
                     TirsdagKuvert.TirsdagTeens = Kuverter.TirsdagTeens;
                     TirsdagKuvert.TirsdagBoern = Kuverter.TirsdagBoern;
                     TirsdagKuvert.TirsdagBaby = Kuverter.TirsdagBaby;
-                    TirsdagKuvert.TirsdagAntalKuverterForHustand = Kuverter.TirsdagAntalKuverterForHustand;
 
                     //referer til singleton
                     Instance.TirsdagListe.Add(TirsdagKuvert);
@@ -138,7 +136,6 @@ namespace kodning.ViewModel
                     OnsdagKuvert.OnsdagTeens = Kuverter.OnsdagTeens;
                     OnsdagKuvert.OnsdagBoern = Kuverter.OnsdagBoern;
                     OnsdagKuvert.OnsdagBaby = Kuverter.OnsdagBaby;
-                    OnsdagKuvert.OnsdagKuvertForHustand = Kuverter.OnsdagKuvertForHustand;
 
                     //referer til singleton
                     Instance.OnsdagListe.Add(OnsdagKuvert);
@@ -155,7 +152,6 @@ namespace kodning.ViewModel
                     TorsdagKuvert.TorsdagTeens = Kuverter.TorsdagTeens;
                     TorsdagKuvert.TorsdagBoern = Kuverter.TorsdagBoern;
                     TorsdagKuvert.TorsdagBaby = Kuverter.TorsdagBaby;
-                    TorsdagKuvert.TorsdagAntalKuverterForHustand = Kuverter.TorsdagAntalKuverterForHustand;
 
                     //referer til singleton
                     Instance.TorsdagListe.Add(TorsdagKuvert);
