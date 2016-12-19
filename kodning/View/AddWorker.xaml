@@ -1,12 +1,15 @@
 ﻿<Page
-    x:Class="kodning.View.AddWorker"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:kodning.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModel="using:kodning.ViewModel"
+    x:Class="kodning.View.AddWorker"
     mc:Ignorable="d">
-
+    <Page.DataContext>
+        <ViewModel:ArbejderPlanViewModel/>
+    </Page.DataContext>
     <Grid Margin="10,10,10,10" Style="{StaticResource GridStyle}">
 
         <Grid.RowDefinitions>
@@ -86,9 +89,13 @@
                     </Grid.ColumnDefinitions>
 
                     <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Navn" FontSize="35"/>
-                    <TextBox x:Name="MandagNavnWorker" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" FontSize="20" Width="230"/>
+                    <TextBox x:Name="MandagNavnWorker" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" FontSize="20" Width="230" Text="{Binding MandagsArbejdere.Navn, Mode=TwoWay}">
+
+                    </TextBox>
                     <TextBlock Grid.Row="0" Grid.Column="2" Style="{StaticResource TilmeldToLinjerTop}" Text="Rolle" FontSize="35"/>
-                    <TextBox x:Name="MandagRolleWorker" Grid.Row="1" Grid.Column="26" Style="{StaticResource TilmeldTextBox}" FontSize="30" Width="230"/>
+                    <TextBox x:Name="MandagRolleWorker" Grid.Row="1" Grid.Column="26" Style="{StaticResource TilmeldTextBox}" FontSize="30" Width="230" Text="{Binding MandagsArbejdere.Title, Mode=TwoWay}">
+
+                    </TextBox>
                 </Grid>
 
                 <Grid Grid.Column="1" Grid.Row="2">
@@ -102,9 +109,9 @@
                     </Grid.ColumnDefinitions>
 
                     <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Navn" FontSize="35"/>
-                    <TextBox x:Name="TirsdagNavnWorker" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" FontSize="20" Width="230"/>
+                    <TextBox x:Name="TirsdagNavnWorker" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" FontSize="20" Width="230" Text="{Binding TirsdagsArbejdere.Navn, Mode=TwoWay}"/>
                     <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource TilmeldToLinjerTop}" Text="Rolle" FontSize="35"/>
-                    <TextBox x:Name="TirsdagRolleWorker" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" FontSize="30" Width="230"/>
+                    <TextBox x:Name="TirsdagRolleWorker" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" FontSize="30" Width="230" Text="{Binding TirsdagsArbejdere.Title, Mode=TwoWay}"/>
                 </Grid>
 
                 <Grid Grid.Column="1" Grid.Row="3">
@@ -118,9 +125,9 @@
                     </Grid.ColumnDefinitions>
 
                     <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Navn" FontSize="35"/>
-                    <TextBox x:Name="OnsdagNavnWorker" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" FontSize="20" Width="230"/>
+                    <TextBox x:Name="OnsdagNavnWorker" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" FontSize="20" Width="230" Text="{Binding OnsdagsArbejdere.Navn, Mode=TwoWay}"/>
                     <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource TilmeldToLinjerTop}" Text="Rolle" FontSize="35"/>
-                    <TextBox x:Name="OnsdagRolleWorker" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" FontSize="30" Width="230"/>
+                    <TextBox x:Name="OnsdagRolleWorker" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" FontSize="30" Width="230" Text="{Binding OnsdagsArbejdere.Title, Mode=TwoWay}"/>
                 </Grid>
 
                 <Grid Grid.Column="1" Grid.Row="4">
@@ -134,9 +141,9 @@
                     </Grid.ColumnDefinitions>
 
                     <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TilmeldToLinjerTop}" Text="Navn" FontSize="35"/>
-                    <TextBox x:Name="TorsdagNavnWorker" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" FontSize="20" TextWrapping="Wrap" Width="230"/>
+                    <TextBox x:Name="TorsdagNavnWorker" Grid.Row="1" Grid.Column="0" Style="{StaticResource TilmeldTextBox}" FontSize="20" TextWrapping="Wrap" Width="230" Text="{Binding TorsdagsArbejdere.Navn, Mode=TwoWay}"/>
                     <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource TilmeldToLinjerTop}" Text="Rolle" FontSize="35"/>
-                    <TextBox x:Name="TorsdagRolleWorker" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" FontSize="30" Width="230"/>
+                    <TextBox x:Name="TorsdagRolleWorker" Grid.Row="1" Grid.Column="1" Style="{StaticResource TilmeldTextBox}" FontSize="30" Width="230" Text="{Binding TorsdagsArbejdere.Title, Mode=TwoWay}"/>
                 </Grid>
 
 
@@ -148,7 +155,7 @@
                 <ColumnDefinition Width="30*"/>
                 <ColumnDefinition Width="10*"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="1" Style="{StaticResource TilmeldKnap}" HorizontalAlignment="Center"  VerticalAlignment="Center" Content="Tilmeld" />
+            <Button Grid.Column="1" Style="{StaticResource TilmeldKnap}" HorizontalAlignment="Center"  VerticalAlignment="Center" Content="Tilmeld" Command="{Binding TilmeldArbejderCommand}" />
         </Grid>
     </Grid>
 </Page>
