@@ -60,7 +60,7 @@ namespace kodning.Model
 
             foreach (var kuverter in Onsdaglisten)
             {
-                kuverterForOnsdag += (kuverter.OnsdagVoksne * 1) + (kuverter.OnsdagTeens * 0.5) + (kuverter.OnsdagBoern * 0.25) + (kuverter.OndagsBaby * 0);
+                kuverterForOnsdag += (kuverter.OnsdagVoksne * 1) + (kuverter.OnsdagTeens * 0.5) + (kuverter.OnsdagBoern * 0.25) + (kuverter.OnsdagBaby * 0);
             }
             return kuverterForOnsdag;
         }

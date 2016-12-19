@@ -103,6 +103,7 @@ namespace kodning.ViewModel
                     Kuvert.MandagTeens = Kuverter.MandagTeens;
                     Kuvert.MandagBoern = Kuverter.MandagBoern;
                     Kuvert.MandagBaby = Kuverter.MandagBaby;
+                    Kuvert.MandagKuvertForHustand = Kuverter.MandagKuvertForHustand;
 
                     //referer til singleton
                     Instance.MandagListe.Add(Kuvert);
@@ -120,12 +121,14 @@ namespace kodning.ViewModel
                     TirsdagKuvert.TirsdagTeens = Kuverter.TirsdagTeens;
                     TirsdagKuvert.TirsdagBoern = Kuverter.TirsdagBoern;
                     TirsdagKuvert.TirsdagBaby = Kuverter.TirsdagBaby;
+                    TirsdagKuvert.TirsdagAntalKuverterForHustand = Kuverter.TirsdagAntalKuverterForHustand;
+
                     //referer til singleton
                     Instance.TirsdagListe.Add(TirsdagKuvert);
 
                 }
 
-                if (Kuverter.OnsdagVoksne > 0 || Kuverter.OnsdagTeens > 0 || Kuverter.OnsdagBoern > 0 || Kuverter.OndagsBaby > 0)
+                if (Kuverter.OnsdagVoksne > 0 || Kuverter.OnsdagTeens > 0 || Kuverter.OnsdagBoern > 0 || Kuverter.OnsdagBaby > 0)
                 {
                     erNulTilmeldte = false;
 
@@ -134,7 +137,9 @@ namespace kodning.ViewModel
                     OnsdagKuvert.OnsdagVoksne = Kuverter.OnsdagVoksne;
                     OnsdagKuvert.OnsdagTeens = Kuverter.OnsdagTeens;
                     OnsdagKuvert.OnsdagBoern = Kuverter.OnsdagBoern;
-                    OnsdagKuvert.OndagsBaby = Kuverter.OndagsBaby;
+                    OnsdagKuvert.OnsdagBaby = Kuverter.OnsdagBaby;
+                    OnsdagKuvert.OnsdagKuvertForHustand = Kuverter.OnsdagKuvertForHustand;
+
                     //referer til singleton
                     Instance.OnsdagListe.Add(OnsdagKuvert);
 
@@ -150,6 +155,8 @@ namespace kodning.ViewModel
                     TorsdagKuvert.TorsdagTeens = Kuverter.TorsdagTeens;
                     TorsdagKuvert.TorsdagBoern = Kuverter.TorsdagBoern;
                     TorsdagKuvert.TorsdagBaby = Kuverter.TorsdagBaby;
+                    TorsdagKuvert.TorsdagAntalKuverterForHustand = Kuverter.TorsdagAntalKuverterForHustand;
+
                     //referer til singleton
                     Instance.TorsdagListe.Add(TorsdagKuvert);
 
@@ -162,6 +169,7 @@ namespace kodning.ViewModel
                 else if (!erNulTilmeldte)
                 {
                     this.GemDataTilDiskAsync();
+                    new MessageDialog("Du er nu tilmeldt").ShowAsync();
                 }
             }
             else
