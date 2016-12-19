@@ -51,13 +51,13 @@
 
                <!--Denne knap virker!-->
                 <Button x:Name="TilmeldBolig3" Grid.Row="0" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Tilmeld bolig" Click="TilmeldBolig_Click"/>
-                <!--Denne knap virker ikke!-->
+                <!--Denne knap virker!-->
                 <Button x:Name="SeTilmeldte3" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Se tilmeldte" Click="ShowTilmeldte_Click"/>
                 <!--Denne knap virker ikke!-->
                 <Button x:Name="WhatIsTheMenu3" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvad er menuen?"/>
                 <!--Denne knap virker!-->
                 <Button x:Name="ChangeMenu3" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenu_Click"/>
-                <!--Denne knap vikrer ikke!-->
+                <!--Denne knap vikrer!-->
                 <Button x:Name="SeWorkers3" Grid.Row="5" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Se arbejdere" Click="ShowWorkers_Click"/>
                 <!--Denne knap virker!-->
                 <Button x:Name="ErDuKok3" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKok_Click"/>

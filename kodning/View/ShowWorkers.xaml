@@ -46,21 +46,21 @@
                 </Grid.RowDefinitions>
 
                 <!--Denne knap virker!-->
-                <Button x:Name="TilmeldBolig6" Grid.Row="0" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Tilmeld bolig" Click="TilmeldBolig_Click"/>
+                <Button x:Name="TilmeldBolig7" Grid.Row="0" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Tilmeld bolig" Click="TilmeldBolig_Click"/>
                 <!--Denne knap virker!-->
-                <Button x:Name="SeTilmeldte6" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Se tilmeldte" Click="ShowTilmeldte_Click"/>
+                <Button x:Name="SeTilmeldte7" Grid.Row="1" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Se tilmeldte" Click="ShowTilmeldte_Click"/>
                 <!--Denne knap virker ikke!-->
-                <Button x:Name="WhatIsTheMenu6" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvad er menuen?" />
+                <Button x:Name="WhatIsTheMenu7" Grid.Row="2" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvad er menuen?"/>
                 <!--Denne knap virker!-->
-                <Button x:Name="ChangeTheMenu6" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenuClick"/>
+                <Button x:Name="ChangeTheMenu7" Grid.Row="3" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Ændre menu" Click="ChangeMenu_Click"/>
                 <!--Denne knap vikrer ikke!-->
-                <Button x:Name="HvemErKok6" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Hvem er kok?"/>
+                <Button x:Name="SeWorkers7" Grid.Row="5" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Se arbejdere" Click="ShowWorkers_Click"/>
                 <!--Denne knap virker!-->
-                <Button x:Name="ErDuKok6" Grid.Row="5" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
+                <Button x:Name="ErDuKok7" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKok_Click"/>
                 <!--Denne knap virker ikke!-->
-                <Button x:Name="SpecialDay6" Grid.Row="7" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement"/>
+                <Button x:Name="SpecialDay7" Grid.Row="7" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement"/>
                 <!--Denne knap virker!-->
-                <Button x:Name="TilmeldArbejde6" Grid.Row="6" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Tilmeld dig til arbejde" Click="AddWorker_Click"/>
+                <Button x:Name="TilmeldArbejde7" Grid.Row="6" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Tilmeld dig til arbejde" Click="AddWorker_Click"/>
             </Grid>
 
             <!--Tilmeldingsdelen er delt i 3 kolonner

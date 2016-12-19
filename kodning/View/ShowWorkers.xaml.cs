@@ -26,5 +26,40 @@ namespace kodning.View
         {
             this.InitializeComponent();
         }
+
+        private void GåTilForside_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Forside), null);
+        }
+
+        private void TilmeldBolig_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Tilmeld), null);
+        }
+
+        private void ErDuKok_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ErDuKok), null);
+        }
+
+        private void ChangeMenu_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ChangeMenu), null);
+        }
+
+        private void AddWorker_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AddWorker), null);
+        }
+
+        private void ShowTilmeldte_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ShowTilmeldte), null);
+        }
+
+        private void ShowWorkers_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ShowWorkers), null);
+        }
     }
 }

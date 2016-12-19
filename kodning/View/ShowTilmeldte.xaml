@@ -56,7 +56,7 @@
                 <!--Denne knap vikrer!-->
                 <Button x:Name="SeWorkers6" Grid.Row="5" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Se arbejdere?" Click="SeWorkers_Click" />
                 <!--Denne knap virker!-->
-                <Button x:Name="ErDuKok6" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKokSide"/>
+                <Button x:Name="ErDuKok6" Grid.Row="4" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Er du kok?" Click="ErDuKok_Click"/>
                 <!--Denne knap virker ikke!-->
                 <Button x:Name="SpecialDay6" Grid.Row="7" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Særarrangement"/>
                 <!--Denne knap virker!-->
