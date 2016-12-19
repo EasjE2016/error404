@@ -111,7 +111,11 @@
             </Grid>
             </Grid>
         
-        <!--Række -->
+        <!--Række 3 er delt i 3 kolonner
+        Kolonne 1 er tom
+        Kolonne 2 indeholder en udregn kuvert pris
+        Kolonne 3 indeholder kuvertantallet-->
+        
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>

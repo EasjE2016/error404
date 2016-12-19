@@ -14,9 +14,9 @@
     <Grid Margin="10,10,10,10" Style="{StaticResource GridStyle}">
 
         <!--Sitet er delt i tre rækker. 
-        Række 1 indeholder overskrift og husnummer
+        Række 1 indeholder overskrift samt en knap tilbage til forsiden
         Række 2 indeholder selve indholdet
-        Række 3 indeholder en bekræftelse på tilmeldingen samt en tilbageknap-->
+        Række 3 er tom-->
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="5*"/>
@@ -65,10 +65,9 @@
                 <Button x:Name="TilmeldArbejde7" Grid.Row="6" Grid.Column="0" Style="{StaticResource MenuKnap}" Content="Tilmeld dig arbejde" Click="AddWorker_Click"/>
             </Grid>
 
-            <!--Tilmeldingsdelen er delt i 3 kolonner
+            <!--Tilmeldingsdelen er delt i 2 kolonner
             Kolonne 1 indeholder ugedagene
-            Kolonne 2 indeholder textbokse til antal tilmeldte
-            Kolonne 3 indeholder knap til tilmelding-->
+            Kolonne 2 indeholder ugedage og lister over arbejdere-->
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -116,18 +115,10 @@
                     </ListView>
                 </ListView>
 
-                <!--
-                <Button Grid.Row="1" Grid.Column="2" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilmeldCommand}"/>
-                <Button Grid.Row="2" Grid.Column="2" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilMeldTirsdagCommand}"/>
-                <Button Grid.Row="3" Grid.Column="2" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilMeldOnsdagCommand}"/>
-                <Button Grid.Row="4" Grid.Column="2" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilMeldTorsdagCommand}"/>
-                    -->
             </Grid>
         </Grid>
 
-        <!--Række 3 er delt ind i 3 kolonner
-        Kolonne 1 er tom
-        Kolonne indeholder en tilmeldingsbekræftelse der strækker sig ind i kolonne 3-->
+        <!--Række 3 er tom-->
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -135,20 +126,6 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <ListView x:Name="TestRunKuverter" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" ItemsSource="{Binding Instance.MandagListe}"/>
-
-        </Grid>
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-
-            <!--
-            <Button x:Name="TilmeldAlle" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Tilmeld" Style="{StaticResource TilmeldKnap}" Command="{Binding TilmeldAlleCommand}" />
-            <Button x:Name="StartUge" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Slet alle deltagere" Height="65" Width="270" FontSize="30" FontWeight="SemiBold" Command="{Binding RydListeOverDeltagere}"/>
-        -->
         </Grid>
 
     </Grid>
