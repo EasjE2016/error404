@@ -27,11 +27,6 @@ namespace kodning.View
             this.InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Tilmeld), null);
-        }
-
         private void ErDuKokSide(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(ErDuKok), null);
@@ -47,5 +42,14 @@ namespace kodning.View
             this.Frame.Navigate(typeof(Forside), null);
         }
 
+        private void AddWorker_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AddWorker), null);
+        }
+
+        private void TilmeldBolig_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Tilmeld), null);
+        }
     }
 }

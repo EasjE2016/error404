@@ -115,9 +115,6 @@
     <Compile Include="Model\ArbejderListe.cs" />
     <Compile Include="Model\Madplan.cs" />
     <Compile Include="Model\MadplanListe.cs" />
-    <Compile Include="View\Kasser.xaml.cs">
-      <DependentUpon>Kasser.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Tilmeld.xaml.cs">
       <DependentUpon>Tilmeld.xaml</DependentUpon>
     </Compile>
@@ -155,10 +152,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ErDuKok.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Kasser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

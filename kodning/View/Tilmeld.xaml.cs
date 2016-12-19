@@ -27,9 +27,9 @@ namespace kodning.View
             this.InitializeComponent();
         }
 
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        private void TilmeldBolig_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(Tilmeld), null);
         }
 
         private void ErDuKokSide(object sender, RoutedEventArgs e)
@@ -44,12 +44,12 @@ namespace kodning.View
 
         private void ChangeMenuClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(kodning.View.ChangeMenu), null);
+            this.Frame.Navigate(typeof(ChangeMenu), null);
         }
 
         private void AddWorker_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(kodning.View.AddWorker), null);
+            this.Frame.Navigate(typeof(AddWorker), null);
         }
     }
 }
